@@ -10,7 +10,7 @@
   ],
   "browser": "dist/orango-dev-tools.js",
   "scripts": {
-    "publish" : "npm publish --access=public",
+    "publish": "npm publish --access=public",
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
@@ -19,6 +19,9 @@
     "test.watch": "NODE_ENV=test jest --watch --no-cache"
   },
   "dependencies": {
+    "@material/select": "^0.27.0",
+    "@material/snackbar": "^0.27.0",
+    "@material/toolbar": "^0.27.0",
     "@stencil/core": "0.0.9-2"
   },
   "devDependencies": {
