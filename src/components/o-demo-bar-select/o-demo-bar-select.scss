@@ -1,1 +1,13 @@
+@import "@material/menu/mdc-menu";
+@import "@material/list/mdc-list";
+@import "@material/select/mdc-select";
 
+:host {
+  .my-select-container .mdc-select {
+    min-width: 30em;
+  }
+
+  .mdc-simple-menu {
+    min-width: 30em;
+  }
+}
