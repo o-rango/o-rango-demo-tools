@@ -7,13 +7,15 @@ import { Component, Prop } from '@stencil/core';
 })
 export class DemoBarComponent {
 
-  @Prop() first: string;
+  @Prop() name: string;
   @Prop() last: string;
 
   render() {
-    return [
-        <o-demo-bar-toolbar></o-demo-bar-toolbar>,
-        <slot/>
-    ];
+    return (
+      <div>
+      <o-demo-bar-toolbar name={this.name}/>
+      <slot/>
+      </div>
+    );
   }
 }
