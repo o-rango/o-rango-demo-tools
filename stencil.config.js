@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'orango-dev-tools',
   generateDistribution: true,
   bundles: [
     { components: ['o-demo-bar' , 'o-demo-bar-toolbar' , 'o-demo-bar-select'] },
