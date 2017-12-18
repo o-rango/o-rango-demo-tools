@@ -1,5 +1,5 @@
 {
-  "name": "orango-dev-tools",
+  "name": "@o-rango/orango-dev-tools",
   "version": "0.0.1",
   "description": "Orango dev tools components",
   "main": "dist/collection/index.js",
@@ -63,5 +63,17 @@
   "bugs": {
     "url": "https://github.com/o-rango/orango-dev-tools/issues"
   },
-  "homepage": "https://github.com/o-rango/orango-dev-tools#readme"
+  "homepage": "https://github.com/o-rango/orango-dev-tools#readme",
+  "keywords": [
+    "web",
+    "components",
+    "dev",
+    "tools",
+    "front-end",
+    "stenciljs",
+    "angular",
+    "react",
+    "demo",
+    "scenarios"
+  ]
 }
