@@ -15,7 +15,7 @@
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
-    "test": "NODE_ENV=test --inspect jest --no-cache --coverage",
+    "test": "NODE_ENV=test jest --no-cache --coverage",
     "test.watch": "NODE_ENV=test --inspect jest --watch --no-cache"
   },
   "dependencies": {
