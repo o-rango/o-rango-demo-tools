@@ -12,9 +12,7 @@ export class DemoCaseComponent {
 
   render() {
     return (
-      <div>
-       Demo Case Component
-      </div>
+      <slot/>
     );
   }
 }
