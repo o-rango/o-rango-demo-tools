@@ -19,6 +19,9 @@ export class DemoSelectComponent {
           console.log(evt);
     });
    }
+   componentDidUnload() {
+    this.select.destroy();
+  }
 
   render() {
     return (
