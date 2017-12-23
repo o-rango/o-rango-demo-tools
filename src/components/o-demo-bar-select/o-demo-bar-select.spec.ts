@@ -1,7 +1,7 @@
 import { flush, render } from '@stencil/core/testing';
 import { DemoSelectComponent } from './o-demo-bar-select';
 
-describe('my-component', () => {
+describe('o-demo-bar-select', () => {
   it('should build', () => {
     expect(new DemoSelectComponent()).toBeTruthy();
   });
@@ -15,12 +15,5 @@ describe('my-component', () => {
         html: '<o-demo-bar-select></o-demo-bar-select>'
       });
     });
-
-    it('should work without parameters', async () => {
-      debugger;
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
-      await flush(element);
-    });
-
   });
 });
