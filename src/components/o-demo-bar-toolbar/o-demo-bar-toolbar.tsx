@@ -21,6 +21,9 @@ export class DemoToolbarComponent {
     this.toolbar.fixedAdjustElement = this.el.querySelector('.mdc-toolbar-fixed-adjust');
   }
 
+  componentDidUnload() {
+    this.toolbar.destroy();
+  }
 
   render() {
     return (
