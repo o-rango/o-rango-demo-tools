@@ -1,5 +1,5 @@
-import { Component, Prop,Element} from '@stencil/core';
-import {MDCToolbar} from '@material/toolbar';
+import { Component, Prop, Element } from '@stencil/core';
+import { MDCToolbar } from '@material/toolbar';
 
 @Component({
   tag: 'o-demo-bar-toolbar',
@@ -7,18 +7,17 @@ import {MDCToolbar} from '@material/toolbar';
   shadow: false
 })
 export class DemoToolbarComponent {
-
-  private toolbar:any;
+  private toolbar: any;
   @Element() el: HTMLElement;
-  @Prop() events: string;
   @Prop() name: string;
-  @Prop() description: string;
-
+  @Prop() options: any;
 
   componentDidLoad() {
     const rootEl = this.el.querySelector('.mdc-toolbar');
     this.toolbar = new MDCToolbar(rootEl);
-    this.toolbar.fixedAdjustElement = this.el.querySelector('.mdc-toolbar-fixed-adjust');
+    this.toolbar.fixedAdjustElement = this.el.querySelector(
+      '.mdc-toolbar-fixed-adjust'
+    );
   }
 
   componentDidUnload() {
@@ -32,21 +31,16 @@ export class DemoToolbarComponent {
           <div class="mdc-toolbar__row">
             <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
               <h3 class="mdc-typography--subheading2">{this.name}</h3>
+              <slot name="left"/>
             </section>
             <section class="mdc-toolbar__section">
-            <o-demo-bar-select/>
+            <slot name="center"/>
             </section>
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
-            <i class="material-icons">smartphone</i>
-            <i class="material-icons">laptop_chromebook</i>
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+            <slot name="right"/>
             </section>
           </div>
         </header>
-        <main class="mdc-toolbar-fixed-adjust">
-          <p class="demo-paragraph">
-            <slot/>
-          </p>
-        </main>
       </div>
     );
   }
