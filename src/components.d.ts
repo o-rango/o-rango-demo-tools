@@ -6,6 +6,36 @@
 
 
 import {
+  DemoButtonsComponent as ODemoBarButtons
+} from './components/o-demo-bar-buttons/o-demo-bar-buttons';
+
+declare global {
+  interface HTMLODemoBarButtonsElement extends ODemoBarButtons, HTMLElement {
+  }
+  var HTMLODemoBarButtonsElement: {
+    prototype: HTMLODemoBarButtonsElement;
+    new (): HTMLODemoBarButtonsElement;
+  };
+  interface HTMLElementTagNameMap {
+    "o-demo-bar-buttons": HTMLODemoBarButtonsElement;
+  }
+  interface ElementTagNameMap {
+    "o-demo-bar-buttons": HTMLODemoBarButtonsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "o-demo-bar-buttons": JSXElements.ODemoBarButtonsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoBarButtonsAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   DemoSelectComponent as ODemoBarSelect
 } from './components/o-demo-bar-select/o-demo-bar-select';
 
@@ -59,9 +89,8 @@ declare global {
   }
   namespace JSXElements {
     export interface ODemoBarToolbarAttributes extends HTMLAttributes {
-      description?: string;
-      events?: string;
       name?: string;
+      options?: any;
     }
   }
 }
@@ -91,8 +120,8 @@ declare global {
   }
   namespace JSXElements {
     export interface ODemoBarAttributes extends HTMLAttributes {
-      last?: string;
       name?: string;
+      pattern?: boolean;
     }
   }
 }
