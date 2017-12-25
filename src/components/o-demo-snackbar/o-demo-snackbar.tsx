@@ -46,11 +46,7 @@ export class DemoSnackbarComponent {
   }
 
   _computeEvents() {
-    if (this.events && this.events !== '') {
-      return this.events.split(',');
-    } else {
-      return false;
-    }
+    return this.events && this.events !== ''  ? this.events.split(',') : false
   }
 
   render() {
