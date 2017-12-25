@@ -57,8 +57,17 @@ export class DemoBarComponent {
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
-    let scripts = this.demoCases[this.caseOptionSelected].getAttribute('scripts');
-    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`;
+
+    // Temporary Scripts solution
+    var scripts: any = '';
+    if(this.demoCases[this.caseOptionSelected].getAttribute('scripts')){
+      let script = this.demoCases[this.caseOptionSelected].getAttribute('scripts').split(',');
+       scripts = script.reduce(function(acu , scp){
+        return acu+= `<script src="${scp}"></script>`
+      } , '');
+    }
+
+    html = `<html><head>${scripts}</head><body ontouchstart id="frameBody">${html}</body></html>`;
 
     iframe.height = (frameH - 85).toString();
     iframeContainer.appendChild(iframe);
