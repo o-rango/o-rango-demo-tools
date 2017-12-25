@@ -45,10 +45,8 @@ export class DemoSnackbarComponent {
     });
   }
 
-  _destroyEvents() {}
-
   _computeEvents() {
-    if (this.events !== '' && this.events.split(',').length > 0) {
+    if (this.events && this.events !== '') {
       return this.events.split(',');
     } else {
       return false;
