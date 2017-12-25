@@ -57,6 +57,7 @@ export class DemoBarComponent {
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
+    let scripts = this.demoCases[this.caseOptionSelected].getAttribute('scripts');
     html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`;
 
     iframe.height = (frameH - 85).toString();

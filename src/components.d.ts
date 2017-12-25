@@ -6,153 +6,30 @@
 
 
 import {
-  DemoButtonsComponent as ODemoBarButtons
-} from './components/o-demo-bar-buttons/o-demo-bar-buttons';
+  DemoSnackbarComponent as ODemoSnackbar
+} from './components/o-demo-snackbar/o-demo-snackbar';
 
 declare global {
-  interface HTMLODemoBarButtonsElement extends ODemoBarButtons, HTMLElement {
+  interface HTMLODemoSnackbarElement extends ODemoSnackbar, HTMLElement {
   }
-  var HTMLODemoBarButtonsElement: {
-    prototype: HTMLODemoBarButtonsElement;
-    new (): HTMLODemoBarButtonsElement;
+  var HTMLODemoSnackbarElement: {
+    prototype: HTMLODemoSnackbarElement;
+    new (): HTMLODemoSnackbarElement;
   };
   interface HTMLElementTagNameMap {
-    "o-demo-bar-buttons": HTMLODemoBarButtonsElement;
+    "o-demo-snackbar": HTMLODemoSnackbarElement;
   }
   interface ElementTagNameMap {
-    "o-demo-bar-buttons": HTMLODemoBarButtonsElement;
+    "o-demo-snackbar": HTMLODemoSnackbarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-demo-bar-buttons": JSXElements.ODemoBarButtonsAttributes;
+      "o-demo-snackbar": JSXElements.ODemoSnackbarAttributes;
     }
   }
   namespace JSXElements {
-    export interface ODemoBarButtonsAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  DemoSelectComponent as ODemoBarSelect
-} from './components/o-demo-bar-select/o-demo-bar-select';
-
-declare global {
-  interface HTMLODemoBarSelectElement extends ODemoBarSelect, HTMLElement {
-  }
-  var HTMLODemoBarSelectElement: {
-    prototype: HTMLODemoBarSelectElement;
-    new (): HTMLODemoBarSelectElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-demo-bar-select": HTMLODemoBarSelectElement;
-  }
-  interface ElementTagNameMap {
-    "o-demo-bar-select": HTMLODemoBarSelectElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-demo-bar-select": JSXElements.ODemoBarSelectAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface ODemoBarSelectAttributes extends HTMLAttributes {
-      options?: any;
-    }
-  }
-}
-
-
-import {
-  DemoToolbarComponent as ODemoBarToolbar
-} from './components/o-demo-bar-toolbar/o-demo-bar-toolbar';
-
-declare global {
-  interface HTMLODemoBarToolbarElement extends ODemoBarToolbar, HTMLElement {
-  }
-  var HTMLODemoBarToolbarElement: {
-    prototype: HTMLODemoBarToolbarElement;
-    new (): HTMLODemoBarToolbarElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-demo-bar-toolbar": HTMLODemoBarToolbarElement;
-  }
-  interface ElementTagNameMap {
-    "o-demo-bar-toolbar": HTMLODemoBarToolbarElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-demo-bar-toolbar": JSXElements.ODemoBarToolbarAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface ODemoBarToolbarAttributes extends HTMLAttributes {
-      name?: string;
-      options?: any;
-    }
-  }
-}
-
-
-import {
-  DemoBarComponent as ODemoBar
-} from './components/o-demo-bar/o-demo-bar';
-
-declare global {
-  interface HTMLODemoBarElement extends ODemoBar, HTMLElement {
-  }
-  var HTMLODemoBarElement: {
-    prototype: HTMLODemoBarElement;
-    new (): HTMLODemoBarElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-demo-bar": HTMLODemoBarElement;
-  }
-  interface ElementTagNameMap {
-    "o-demo-bar": HTMLODemoBarElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-demo-bar": JSXElements.ODemoBarAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface ODemoBarAttributes extends HTMLAttributes {
-      name?: string;
-      pattern?: boolean;
-    }
-  }
-}
-
-
-import {
-  DemoCaseComponent as ODemoCase
-} from './components/o-demo-case/o-demo-case';
-
-declare global {
-  interface HTMLODemoCaseElement extends ODemoCase, HTMLElement {
-  }
-  var HTMLODemoCaseElement: {
-    prototype: HTMLODemoCaseElement;
-    new (): HTMLODemoCaseElement;
-  };
-  interface HTMLElementTagNameMap {
-    "o-demo-case": HTMLODemoCaseElement;
-  }
-  interface ElementTagNameMap {
-    "o-demo-case": HTMLODemoCaseElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "o-demo-case": JSXElements.ODemoCaseAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface ODemoCaseAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface ODemoSnackbarAttributes extends HTMLAttributes {
+      events?: any;
     }
   }
 }
