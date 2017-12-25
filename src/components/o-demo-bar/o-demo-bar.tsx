@@ -72,7 +72,7 @@ export class DemoBarComponent {
     }
     return (
       <div id="demo-bar">
-        <o-demo-snackbar events={this.events}/>
+        {this.events ? <o-demo-snackbar events={this.events}/> : ''}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right" />
