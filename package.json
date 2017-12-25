@@ -1,5 +1,5 @@
 {
-  "name": "@o-rango/orango-dev-tools",
+  "name": "@o-rango/orango-demo-tools",
   "version": "0.0.1-1",
   "description": "Orango dev tools components",
   "main": "dist/collection/index.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist/"
   ],
-  "browser": "dist/orango-dev-tools.js",
+  "browser": "dist/orango-demo-tools.js",
   "scripts": {
     "publish": "npm publish --access=public",
     "build": "stencil build",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/o-rango/orango-dev-tools.git"
+    "url": "git+https://github.com/o-rango/orango-demo-tools.git"
   },
   "author": "Orango Team",
   "license": "MIT",
@@ -64,9 +64,9 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/o-rango/orango-dev-tools/issues"
+    "url": "https://github.com/o-rango/orango-demo-tools/issues"
   },
-  "homepage": "https://github.com/o-rango/orango-dev-tools#readme",
+  "homepage": "https://github.com/o-rango/orango-demo-tools#readme",
   "keywords": [
     "web",
     "components",
