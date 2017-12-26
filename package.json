@@ -2,8 +2,8 @@
   "name": "@o-rango/orango-demo-tools",
   "version": "0.0.1-1",
   "description": "Orango dev tools components",
-  "main": "dist/collection/index.js",
-  "types": "dist/collection/index.d.ts",
+  "main": "dist/orango-demo-tools.js",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
