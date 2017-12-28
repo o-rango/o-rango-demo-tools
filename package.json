@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "0.0.1-1",
+  "version": "0.1.0",
   "description": "Orango dev tools components",
   "main": "dist/orango-demo-tools.js",
   "types": "dist/types/index.d.ts",
@@ -10,6 +10,7 @@
   ],
   "browser": "dist/orango-demo-tools.js",
   "scripts": {
+    "release": "standard-version",
     "publish": "npm publish --access=public",
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
@@ -34,11 +35,12 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "22.0.4",
     "babel-preset-es2015": "6.24.1",
-    "conventional-changelog-cli": "1.3.5",
     "coveralls": "3.0.0",
     "jest": "22.0.4",
     "tslint": "5.8.0",
-    "tslint-react": "3.3.3"
+    "tslint-react": "3.3.3",
+    "makeshift": "^1.0.0",
+    "standard-version": "^4.2.0"
   },
   "repository": {
     "type": "git",
@@ -78,5 +80,8 @@
     "react",
     "demo",
     "scenarios"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
