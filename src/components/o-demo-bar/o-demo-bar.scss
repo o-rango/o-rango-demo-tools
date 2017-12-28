@@ -38,12 +38,14 @@
   }
 
   #iframeContainer {
-    margin: 65px auto;
-    box-sizing: content-box;
+    margin: 85px auto;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: translateZ(0);
     iframe {
-      width: 100%;
+      min-width: 480px;
       border: none;
       position: relative;
       background-color:transparent;

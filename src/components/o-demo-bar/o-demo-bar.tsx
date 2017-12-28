@@ -35,6 +35,13 @@ export class DemoBarComponent {
     this._setIframe();
   }
 
+  @Listen('resizeButtonClicked')
+  resizeButtonClickedHandler(event: CustomEvent) {
+    console.log(event.detail);
+    this.el.shadowRoot.querySelector('iframe').width=event.detail
+  }
+
+
   _setSelect() {
     return Array.from(this.demoCases).map(function(item: any) {
       return item.getAttribute('name');
@@ -55,10 +62,12 @@ export class DemoBarComponent {
     );
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
+    const frameW = Math.max(document.documentElement.clientWidth);
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
     // Optional Script Includes tags
     html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`.replace(/<!--includes/g, '').replace(/includes-->/g, '');
-    iframe.height = (frameH - 85).toString();
+    iframe.height = `${(frameH).toString()}px`
+    iframe.width = `${(frameW).toString()}px`
     iframeContainer.appendChild(iframe);
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(html);
@@ -77,8 +86,8 @@ export class DemoBarComponent {
           <o-demo-bar-buttons slot="right" />
           <o-demo-resizer slot="base"/>
         </o-demo-bar-toolbar>
-        <div id="frame-wrap" class={bgClasses}>
-          <div id="iframeContainer" />
+        <div id="frame-wrap">
+          <div id="iframeContainer" class={bgClasses}/>
         </div>
       </div>
     );
