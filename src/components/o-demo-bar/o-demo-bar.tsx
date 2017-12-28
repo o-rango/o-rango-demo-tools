@@ -56,23 +56,8 @@ export class DemoBarComponent {
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
-    /*
-        // Temporary Scripts solution
-        var scripts: any = '';
-        if(this.demoCases[this.caseOptionSelected].getAttribute('scripts')){
-          let script = this.demoCases[this.caseOptionSelected].getAttribute('scripts').split(',');
-           scripts = script.reduce(function(acu , scp){
-            return acu+= `<script src="${scp}"></script>`
-          } , '');
-        }
-
-        html = `<html><head>${scripts}</head><body ontouchstart id="frameBody">${html}</body></html>`;
-    */
-
     // Optional Script Includes tags
-    html.replace(/<!--includes/g, '').replace(/includes-->/g, '');
-    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`;
-
+    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`.replace(/<!--includes/g, '').replace(/includes-->/g, '');
     iframe.height = (frameH - 85).toString();
     iframeContainer.appendChild(iframe);
     iframe.contentWindow.document.open();
