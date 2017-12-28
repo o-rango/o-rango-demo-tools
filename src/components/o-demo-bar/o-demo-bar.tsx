@@ -66,7 +66,7 @@ export class DemoBarComponent {
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
     // Optional Script Includes tags
     html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`.replace(/<!--includes/g, '').replace(/includes-->/g, '');
-    iframe.height = `${(frameH).toString()}px`
+    iframe.height = `${(frameH - 85).toString()}px`
     iframe.width = `${(frameW).toString()}px`
     iframeContainer.appendChild(iframe);
     iframe.contentWindow.document.open();
