@@ -27,10 +27,10 @@
     "@stencil/core": "next"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.35",
+    "@babel/core": "7.0.0-beta.36",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
-    "@types/jest": "21.1.9",
+    "@types/jest": "21.1.10",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "22.0.4",
     "babel-preset-es2015": "6.24.1",
@@ -38,7 +38,7 @@
     "coveralls": "3.0.0",
     "jest": "22.0.4",
     "tslint": "5.8.0",
-    "tslint-react": "3.2.0"
+    "tslint-react": "3.3.3"
   },
   "repository": {
     "type": "git",
