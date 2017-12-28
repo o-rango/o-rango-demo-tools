@@ -86,8 +86,8 @@ export class DemoBarComponent {
           <o-demo-bar-buttons slot="right" />
           <o-demo-resizer slot="base"/>
         </o-demo-bar-toolbar>
-        <div id="frame-wrap">
-          <div id="iframeContainer" class={bgClasses}/>
+        <div id="frame-wrap" class={bgClasses} >
+          <div id="iframeContainer"/>
         </div>
       </div>
     );
