@@ -40,6 +40,7 @@ export class DemoToolbarComponent {
             <slot name="right"/>
             </section>
           </div>
+          <slot name="base"/>
         </header>
       </div>
     );
