@@ -75,6 +75,7 @@ export class DemoBarComponent {
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right" />
+          <o-demo-resizer slot="base"/>
         </o-demo-bar-toolbar>
         <div id="frame-wrap" class={bgClasses}>
           <div id="iframeContainer" />
