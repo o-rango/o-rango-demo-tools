@@ -31,17 +31,21 @@ export class DemoToolbarComponent {
           <div class="mdc-toolbar__row">
             <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
               <h3 class="mdc-typography--subheading2">{this.name}</h3>
-              <slot name="left"/>
+              <slot name="left" />
             </section>
             <section class="mdc-toolbar__section">
-            <slot name="center"/>
+              <slot name="center" />
             </section>
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-            <slot name="right"/>
+            <section
+              class="mdc-toolbar__section mdc-toolbar__section--align-end"
+              role="toolbar"
+            >
+              <slot name="right" />
             </section>
           </div>
-          <slot name="base"/>
+          <slot name="base" />
         </header>
+        <main class="mdc-toolbar-fixed-adjust"/>
       </div>
     );
   }

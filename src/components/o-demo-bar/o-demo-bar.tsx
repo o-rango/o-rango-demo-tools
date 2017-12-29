@@ -1,4 +1,11 @@
-import { Component, Prop, Element, Listen, CssClassMap } from '@stencil/core';
+import {
+  Component,
+  Prop,
+  Element,
+  Listen,
+  CssClassMap,
+  State
+} from '@stencil/core';
 
 @Component({
   tag: 'o-demo-bar',
@@ -7,15 +14,19 @@ import { Component, Prop, Element, Listen, CssClassMap } from '@stencil/core';
 })
 export class DemoBarComponent {
   private demoCases: any;
-  private frameWSize: string = '1024';
   private casesOptions: any;
   private caseOptionSelected: number = 0;
+
   @Element() el: HTMLElement;
+
   @Prop() name: string;
-  @Prop() pattern: boolean = true;
   @Prop() events: string[];
+  @Prop({ mutable: true }) pattern: boolean = true;
+  @Prop({ mutable: true }) device: string = 'desktop';
+  @Prop({ mutable: true }) deviceSize: string = '1024';
 
   componentWillLoad() {
+    document.body.style.margin = '0';
     this.demoCases = this.el.querySelectorAll('o-demo-case');
     this.casesOptions = this._setSelect();
   }
@@ -26,8 +37,16 @@ export class DemoBarComponent {
 
   @Listen('toolbarButtonClicked')
   toolbarButtonClickedHandler(event: CustomEvent) {
-    console.log('Click button : ', event.detail);
-    //TODO Handle click on toolbar buttons event.detail
+    switch (event.detail) {
+      case 'grid-pattern':
+        this.pattern = !this.pattern;
+        break;
+      default:
+        this.device = event.detail;
+        this.deviceSize = event.detail === 'mobile' ? '412' : '1024';
+        this._setIframe();
+        break;
+    }
   }
 
   @Listen('selectedCaseChanged')
@@ -38,8 +57,8 @@ export class DemoBarComponent {
 
   @Listen('resizeButtonClicked')
   resizeButtonClickedHandler(event: CustomEvent) {
-    this.frameWSize = event.detail;
-    this.el.shadowRoot.querySelector('iframe').width = this.frameWSize;
+    this.deviceSize =  event.detail;
+    this.el.shadowRoot.querySelector('iframe').width = this.deviceSize;
   }
 
   _setSelect() {
@@ -62,13 +81,13 @@ export class DemoBarComponent {
     );
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
-    const frameW = this.frameWSize;
+    const frameW = this.deviceSize;
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
     // Optional Script Includes tags
     html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`
       .replace(/<!--includes/g, '')
       .replace(/includes-->/g, '');
-    iframe.height = `${(frameH - 150).toString()}px`;
+    iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
     iframeContainer.appendChild(iframe);
     iframe.contentWindow.document.open();
@@ -78,7 +97,8 @@ export class DemoBarComponent {
 
   render() {
     const bgClasses: CssClassMap = {
-      pattern: this.pattern
+      pattern: this.pattern,
+      bgcolor: !this.pattern
     };
     return (
       <div id="demo-bar">
@@ -86,10 +106,14 @@ export class DemoBarComponent {
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right" />
-          <o-demo-resizer size={this.frameWSize} slot="base" />
+          <o-demo-resizer
+            size={this.deviceSize}
+            viewport={this.device}
+            slot="base"
+          />
         </o-demo-bar-toolbar>
-        <div id="frame-wrap" class={bgClasses}>
-          <div id="iframeContainer" />
+        <div id="frame-wrap">
+          <div id="iframeContainer" class={bgClasses} />
         </div>
       </div>
     );

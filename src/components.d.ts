@@ -6,32 +6,31 @@
 
 
 import {
-  DemoBarComponent as ODemoBar
-} from './components/o-demo-bar/o-demo-bar';
+  DemoResizerComponent as ODemoResizer
+} from './components/o-demo-resizer/o-demo-resizer';
 
 declare global {
-  interface HTMLODemoBarElement extends ODemoBar, HTMLElement {
+  interface HTMLODemoResizerElement extends ODemoResizer, HTMLElement {
   }
-  var HTMLODemoBarElement: {
-    prototype: HTMLODemoBarElement;
-    new (): HTMLODemoBarElement;
+  var HTMLODemoResizerElement: {
+    prototype: HTMLODemoResizerElement;
+    new (): HTMLODemoResizerElement;
   };
   interface HTMLElementTagNameMap {
-    "o-demo-bar": HTMLODemoBarElement;
+    "o-demo-resizer": HTMLODemoResizerElement;
   }
   interface ElementTagNameMap {
-    "o-demo-bar": HTMLODemoBarElement;
+    "o-demo-resizer": HTMLODemoResizerElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-demo-bar": JSXElements.ODemoBarAttributes;
+      "o-demo-resizer": JSXElements.ODemoResizerAttributes;
     }
   }
   namespace JSXElements {
-    export interface ODemoBarAttributes extends HTMLAttributes {
-      events?: string[];
-      name?: string;
-      pattern?: boolean;
+    export interface ODemoResizerAttributes extends HTMLAttributes {
+      size?: string;
+      viewport?: string;
     }
   }
 }

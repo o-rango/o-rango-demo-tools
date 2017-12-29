@@ -24,7 +24,7 @@ export class DemoDevicesComponent {
           <div class="shadow shadow--bl" />
         </div>
         <div class="inner-shadow" />
-        <div class="screen">Contents</div>
+        <div class="screen"><slot/></div>
       </div>
     );
   }

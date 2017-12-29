@@ -13,11 +13,7 @@ import {
   shadow: true
 })
 export class DemoResizerComponent {
-  @Event() resizeButtonClicked: EventEmitter;
-  @Element() el: HTMLElement;
-  @Prop() size: string = '1024';
-
-  private viewports: any[] = [
+  private desktop: any[] = [
     { size: '1600', name: 'Window xlarge' },
     { size: '1440', name: 'Window xlarge' },
     { size: '1280', name: 'Window large' },
@@ -28,20 +24,42 @@ export class DemoResizerComponent {
     { size: '480', name: 'Window xsmall' }
   ];
 
-  handleClick(event: any) {
-    let evt = event.currentTarget.getAttribute('data-size');
-    this.setResizeValue(evt);
-  }
+  private mobile: any[] = [
+    { size: '1024', name: 'Tablet' },
+    { size: '720', name: 'Phablet' },
+    { size: '600', name: 'Mobile Landscape' },
+    { size: '412', name: 'Mobile Portrait medium' },
+    { size: '360', name: 'Mobile Portrait' },
+    { size: '280', name: 'Mobile Portrait xsmall' },
+  ];
+
+  @Event() resizeButtonClicked: EventEmitter;
+  @Element() el: HTMLElement;
+
+  // Component Props
+  @Prop({mutable : true}) size: string;
+  @Prop({mutable : true}) viewport: string;
 
   @PropWillChange('size')
   sizeChangeHandler(newSize: string) {
-    this.setResizeValue(newSize);
+    this._setResizeValue(newSize);
+  }
+
+  @PropWillChange('viewport')
+  deviceChangeHandler(newDevice: string) {
+    this._setResizeValue();
   }
 
   componentDidLoad() {
-    this.setResizeValue();
+    this._setResizeValue();
   }
-  setResizeValue(size?: string) {
+
+  handleClick(event: any) {
+    let evt = event.currentTarget.getAttribute('data-size');
+    this._setResizeValue(evt);
+  }
+
+  _setResizeValue(size?: string) {
     const frameW = size || this.size;
     const sizeList = Array.from(
       this.el.shadowRoot.querySelectorAll('.item-resize-toolbar')
@@ -57,16 +75,16 @@ export class DemoResizerComponent {
         e.classList.add('active');
       }
     });
-
     // Send event when triggered from outside
     size ? this.resizeButtonClicked.emit(frameW) : '';
   }
 
   render() {
+    const viewports = this.viewport === 'desktop' ? this.desktop : this.mobile;
     return (
       <div class="resize-toolbar-container">
         <div class="resize-toolbar">
-          {this.viewports.map(option => {
+          {viewports.map(option => {
             var cssSize = { width: `${option.size}px` };
             return (
               <div
