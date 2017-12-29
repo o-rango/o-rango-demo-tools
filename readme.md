@@ -5,7 +5,7 @@
 
 # o-rango: o-demo-bar  (WIP)
 
-o-demo-bar is a simple and flexible  demo bar component for development and showcase your components , heavily  inspired in [storybook.js.org](https://storybook.js.org) having the main goal  to work directly with all JS  frameworks , being based in web component standards and built with stenciljs.
+o-demo-bar is a simple and flexible  demo bar component for developers and showcase your components, heavily  inspired in [storybook.js.org](https://storybook.js.org) having the main goal  to work directly with all JS  frameworks, being based in web component standards and built with stencilsjs.
 
 ### Initial working version
 ![](./o-demo-bar.gif)
@@ -41,9 +41,9 @@ after include o-demo-tools in your index.html you can start building your demos 
          <o-demo-case>
 
         <o-demo-case name="Buttons Alert">
-           <button onClick="showMe(event)">click me </button>
+           <button onClick="showMe2(event)">click me </button>
               <script> 
-                  function showMe(evt){
+                  function showMe2(evt){
                       alert(evt);
                   }
               </script>
@@ -75,7 +75,7 @@ If you want to have extra dependencies inside each demo you should include each 
 
 ###  Listen events from your components
 
-If you want o-demo-bar to listen certain events from your components just add the your events in events attribute and a toast will show the payload of event when is triggered
+If you want o-demo-bar to listen certain events from your components just add the your events with events attribute and a toast will show the payload of the event when triggered
 
 ```html
     <o-demo-bar name="Material Demo" events="myEvents,myAnotherEvent">
