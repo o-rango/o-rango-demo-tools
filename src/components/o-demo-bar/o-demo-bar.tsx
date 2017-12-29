@@ -7,6 +7,7 @@ import { Component, Prop, Element, Listen, CssClassMap } from '@stencil/core';
 })
 export class DemoBarComponent {
   private demoCases: any;
+  private frameWSize: string = '1024';
   private casesOptions: any;
   private caseOptionSelected: number = 0;
   @Element() el: HTMLElement;
@@ -37,10 +38,9 @@ export class DemoBarComponent {
 
   @Listen('resizeButtonClicked')
   resizeButtonClickedHandler(event: CustomEvent) {
-    console.log(event.detail);
-    this.el.shadowRoot.querySelector('iframe').width=event.detail
+    this.frameWSize = event.detail;
+    this.el.shadowRoot.querySelector('iframe').width = this.frameWSize;
   }
-
 
   _setSelect() {
     return Array.from(this.demoCases).map(function(item: any) {
@@ -62,12 +62,14 @@ export class DemoBarComponent {
     );
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
-    const frameW = Math.max(document.documentElement.clientWidth);
+    const frameW = this.frameWSize;
     let html = this.demoCases[this.caseOptionSelected].innerHTML;
     // Optional Script Includes tags
-    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`.replace(/<!--includes/g, '').replace(/includes-->/g, '');
-    iframe.height = `${(frameH - 150).toString()}px`
-    iframe.width = `${(frameW).toString()}px`
+    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`
+      .replace(/<!--includes/g, '')
+      .replace(/includes-->/g, '');
+    iframe.height = `${(frameH - 150).toString()}px`;
+    iframe.width = `${frameW.toString()}px`;
     iframeContainer.appendChild(iframe);
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(html);
@@ -84,10 +86,10 @@ export class DemoBarComponent {
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right" />
-          <o-demo-resizer slot="base"/>
+          <o-demo-resizer size={this.frameWSize} slot="base" />
         </o-demo-bar-toolbar>
-        <div id="frame-wrap" class={bgClasses} >
-          <div id="iframeContainer"/>
+        <div id="frame-wrap" class={bgClasses}>
+          <div id="iframeContainer" />
         </div>
       </div>
     );
