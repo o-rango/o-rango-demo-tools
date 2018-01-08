@@ -24,7 +24,7 @@
     "@material/select": "^0.28.0",
     "@material/snackbar": "^0.28.0",
     "@material/toolbar": "^0.28.0",
-    "@material/typography": "^0.3.0",
+    "@material/typography": "^0.28.0",
     "@stencil/core": "next"
   },
   "devDependencies": {
