@@ -36,7 +36,7 @@
     "babel-jest": "22.0.4",
     "babel-preset-es2015": "6.24.1",
     "coveralls": "3.0.0",
-    "jest": "22.0.4",
+    "jest": "22.0.5",
     "tslint": "5.8.0",
     "tslint-react": "3.3.3",
     "makeshift": "1.1.0",
