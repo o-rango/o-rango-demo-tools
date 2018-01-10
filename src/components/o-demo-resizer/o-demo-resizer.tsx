@@ -14,7 +14,7 @@ import {
 })
 export class DemoResizerComponent {
   private desktop: any[] = [
-    { size: '1600', name: 'Window xlarge' },
+    { size: '1600', name: 'Window xxlarge' },
     { size: '1440', name: 'Window xlarge' },
     { size: '1280', name: 'Window large' },
     { size: '1024', name: 'Window large' },
@@ -47,7 +47,13 @@ export class DemoResizerComponent {
 
   @PropWillChange('viewport')
   deviceChangeHandler(newDevice: string) {
-    this._setResizeValue();
+    // TODO REVIEW FIX
+    if(newDevice === 'mobile'){
+      this._setResizeValue(this.mobile[4].size);
+    }else{
+      this._setResizeValue(this.desktop[3].size);
+    }
+
   }
 
   componentDidLoad() {
@@ -66,13 +72,17 @@ export class DemoResizerComponent {
     );
     // Remove Active Class
     sizeList.forEach(e => {
-      e.classList.remove('active');
+      if(e.classList.contains('active')){
+        e.classList.remove('active');
+      }
     });
-
+    this.render();
     // Add Active Class
-    sizeList.filter(e => {
-      if (e.getAttribute('data-size') === frameW) {
+    sizeList.forEach(e => {
+      if (e.getAttribute('data-size') === frameW && !e.classList.contains('active')) {
         e.classList.add('active');
+      }else{
+        e.classList.remove('active');
       }
     });
     // Send event when triggered from outside
