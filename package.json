@@ -30,7 +30,7 @@
     "@stencil/core": "next"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.39",
+    "@babel/core": "7.0.0-beta.40",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "22.1.1",
