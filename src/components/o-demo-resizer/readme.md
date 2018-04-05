@@ -5,12 +5,36 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+#### size
+
+string
+
+
+#### viewport
+
+string
+
+
+## Attributes
+
+#### size
+
+string
+
+
+#### viewport
+
+string
+
+
 ## Events
 
-#### toolbarButtonClicked
+#### resizeButtonClicked
 
 
 
 ----------------------------------------------
 
-*Built by [StencilJS](https://stenciljs.com/)*
+*Built with [StencilJS](https://stenciljs.com/)*

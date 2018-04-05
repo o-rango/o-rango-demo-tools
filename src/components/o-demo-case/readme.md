@@ -7,24 +7,24 @@
 
 ## Properties
 
-#### first
+#### name
 
 string
 
 
-#### last
+#### scripts
 
 string
 
 
 ## Attributes
 
-#### first
+#### name
 
 string
 
 
-#### last
+#### scripts
 
 string
 
@@ -32,4 +32,4 @@ string
 
 ----------------------------------------------
 
-*Built by [StencilJS](https://stenciljs.com/)*
+*Built with [StencilJS](https://stenciljs.com/)*

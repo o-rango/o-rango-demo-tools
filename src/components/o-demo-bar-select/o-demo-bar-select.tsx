@@ -26,24 +26,19 @@ export class DemoSelectComponent {
 
   render() {
     return (
-      <div>
-        <div class="mdc-select" role="listbox">
-          <div class="mdc-select__surface" tabindex="0">
-            <div class="mdc-select__label  mdc-select__label--float-above">Demo case</div>
-            <div class="mdc-select__selected-text" />
-            <div class="mdc-select__bottom-line" />
-          </div>
-          <div class="mdc-simple-menu mdc-select__menu">
-            <ul class="mdc-list mdc-simple-menu__items">
-            {this.options.map((option , index) => (
-                <li class="mdc-list-item" id={index} role="option" tabindex="0">
+<div class="mdc-select">
+  <select class="mdc-select__native-control">
+      {this.options.map((option , index) => (
+                <option class="mdc-list-item" id={index} role="option" tabindex="0">
                   {option}
-                </li>
+                </option>
               ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+  </select>
+  <div class="mdc-select__label mdc-select__label--float-above">Pick a Food Group</div>
+  <div class="mdc-select__bottom-line"></div>
+</div>
     );
   }
 }
+
+

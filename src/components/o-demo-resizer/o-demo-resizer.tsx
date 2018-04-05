@@ -4,7 +4,7 @@ import {
   EventEmitter,
   Element,
   Prop,
-  PropWillChange
+  Method
 } from '@stencil/core';
 
 @Component({
@@ -37,57 +37,36 @@ export class DemoResizerComponent {
   @Element() el: HTMLElement;
 
   // Component Props
-  @Prop({mutable : true}) size: string;
-  @Prop({mutable : true}) viewport: string;
-
-  @PropWillChange('size')
-  sizeChangeHandler(newSize: string) {
-    this._setResizeValue(newSize);
-  }
-
-  @PropWillChange('viewport')
-  deviceChangeHandler(newDevice: string) {
-    // TODO REVIEW FIX
-    if(newDevice === 'mobile'){
-      this._setResizeValue(this.mobile[4].size);
-    }else{
-      this._setResizeValue(this.desktop[3].size);
-    }
-
-  }
-
-  componentDidLoad() {
-    this._setResizeValue();
-  }
+  @Prop() size: string;
+  @Prop() viewport: string;
 
   handleClick(event: any) {
     let evt = event.currentTarget.getAttribute('data-size');
-    this._setResizeValue(evt);
+    this.resizeButtonClicked.emit(evt);
+    this.setActiveViewPort(evt);
   }
 
-  _setResizeValue(size?: string) {
-    const frameW = size || this.size;
+  @Method()
+  setActiveViewPort(size?: string) {
     const sizeList = Array.from(
       this.el.shadowRoot.querySelectorAll('.item-resize-toolbar')
     );
-    // Remove Active Class
-    sizeList.forEach(e => {
-      if(e.classList.contains('active')){
-        e.classList.remove('active');
-      }
+
+    sizeList.forEach((el:any) => {
+        el.classList.remove('active');
     });
-    this.render();
-    // Add Active Class
-    sizeList.forEach(e => {
-      if (e.getAttribute('data-size') === frameW && !e.classList.contains('active')) {
-        e.classList.add('active');
-      }else{
-        e.classList.remove('active');
-      }
+
+    const activeEl: any = sizeList.filter((el:any)=>{
+      console.log(el.dataset.size);
+      return el.dataset.size === size;
     });
-    // Send event when triggered from outside
-    size ? this.resizeButtonClicked.emit(frameW) : '';
+
+    if(activeEl.length){
+      console.log(activeEl);
+      activeEl[0].classList.add('active');
+    }
   }
+
 
   render() {
     const viewports = this.viewport === 'desktop' ? this.desktop : this.mobile;

@@ -2,21 +2,21 @@ import {
   Component,
   Prop,
   Element,
-  Listen,
-  CssClassMap,
-  State
+  Listen
 } from '@stencil/core';
+import {CssClassMap} from '../utils/CssClassMap'
 
 @Component({
   tag: 'o-demo-bar',
   styleUrl: 'o-demo-bar.scss',
   shadow: true
 })
+
 export class DemoBarComponent {
   private demoCases: any;
   private casesOptions: any;
   private caseOptionSelected: number = 0;
-
+  private resizeComponent:any;
   @Element() el: HTMLElement;
 
   @Prop() name: string;
@@ -25,6 +25,9 @@ export class DemoBarComponent {
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
 
+
+
+
   componentWillLoad() {
     document.body.style.margin = '0';
     this.demoCases = this.el.querySelectorAll('o-demo-case');
@@ -32,7 +35,9 @@ export class DemoBarComponent {
   }
 
   componentDidLoad() {
+    this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
     this._setIframe();
+    this.resizeComponent.setActiveViewPort(this.deviceSize);
   }
 
   @Listen('toolbarButtonClicked')
@@ -41,12 +46,19 @@ export class DemoBarComponent {
       case 'grid-pattern':
         this.pattern = !this.pattern;
         break;
-      default:
-        this.device = event.detail;
-        this.deviceSize = event.detail === 'mobile' ? '412' : '1024';
-        this._setIframe();
+      case 'mobile':
+      this.device = event.detail;
+      this.deviceSize = '412';
+        break;
+      case 'desktop':
+      this.device = event.detail;
+      this.deviceSize = '1024';
         break;
     }
+    this._setIframe();
+    setTimeout(()=>{
+      this.resizeComponent.setActiveViewPort(this.deviceSize);
+    } , 0);
   }
 
   @Listen('selectedCaseChanged')
@@ -57,8 +69,8 @@ export class DemoBarComponent {
 
   @Listen('resizeButtonClicked')
   resizeButtonClickedHandler(event: CustomEvent) {
+    this.el.shadowRoot.querySelector('iframe').width = event.detail;
     this.deviceSize =  event.detail;
-    this.el.shadowRoot.querySelector('iframe').width = this.deviceSize;
   }
 
   _setSelect() {

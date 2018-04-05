@@ -1,4 +1,4 @@
-import { Component, Listen } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'o-demo-devices',

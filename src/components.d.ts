@@ -4,34 +4,256 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-
-import {
-  DemoResizerComponent as ODemoResizer
-} from './components/o-demo-resizer/o-demo-resizer';
+import '@stencil/core';
 
 declare global {
-  interface HTMLODemoResizerElement extends ODemoResizer, HTMLElement {
+  namespace JSX {
+    interface Element {}
+    export interface IntrinsicElements {}
+  }
+  namespace JSXElements {}
+
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
+  }
+
+  interface HTMLAttributes {}
+}
+
+
+declare global {
+  interface HTMLODemoBarButtonsElement extends HTMLStencilElement {
+
+  }
+  var HTMLODemoBarButtonsElement: {
+    prototype: HTMLODemoBarButtonsElement;
+    new (): HTMLODemoBarButtonsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-bar-buttons': HTMLODemoBarButtonsElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-bar-buttons': HTMLODemoBarButtonsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-bar-buttons': JSXElements.ODemoBarButtonsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoBarButtonsAttributes extends HTMLAttributes {
+      'onToolbarButtonClicked'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoBarSelectElement extends HTMLStencilElement {
+    'options': any;
+  }
+  var HTMLODemoBarSelectElement: {
+    prototype: HTMLODemoBarSelectElement;
+    new (): HTMLODemoBarSelectElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-bar-select': HTMLODemoBarSelectElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-bar-select': HTMLODemoBarSelectElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-bar-select': JSXElements.ODemoBarSelectAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoBarSelectAttributes extends HTMLAttributes {
+      'onSelectedCaseChanged'?: (event: CustomEvent) => void;
+      'options'?: any;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoBarToolbarElement extends HTMLStencilElement {
+    'name': string;
+    'options': any;
+  }
+  var HTMLODemoBarToolbarElement: {
+    prototype: HTMLODemoBarToolbarElement;
+    new (): HTMLODemoBarToolbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-bar-toolbar': JSXElements.ODemoBarToolbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoBarToolbarAttributes extends HTMLAttributes {
+      'name'?: string;
+      'options'?: any;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoBarElement extends HTMLStencilElement {
+    'device': string;
+    'deviceSize': string;
+    'events': string[];
+    'name': string;
+    'pattern': boolean;
+  }
+  var HTMLODemoBarElement: {
+    prototype: HTMLODemoBarElement;
+    new (): HTMLODemoBarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-bar': HTMLODemoBarElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-bar': HTMLODemoBarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-bar': JSXElements.ODemoBarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoBarAttributes extends HTMLAttributes {
+      'device'?: string;
+      'deviceSize'?: string;
+      'events'?: string[];
+      'name'?: string;
+      'pattern'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoCaseElement extends HTMLStencilElement {
+    'name': string;
+    'scripts': string;
+  }
+  var HTMLODemoCaseElement: {
+    prototype: HTMLODemoCaseElement;
+    new (): HTMLODemoCaseElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-case': HTMLODemoCaseElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-case': HTMLODemoCaseElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-case': JSXElements.ODemoCaseAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoCaseAttributes extends HTMLAttributes {
+      'name'?: string;
+      'scripts'?: string;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoDevicesElement extends HTMLStencilElement {
+
+  }
+  var HTMLODemoDevicesElement: {
+    prototype: HTMLODemoDevicesElement;
+    new (): HTMLODemoDevicesElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-devices': HTMLODemoDevicesElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-devices': HTMLODemoDevicesElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-devices': JSXElements.ODemoDevicesAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoDevicesAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoResizerElement extends HTMLStencilElement {
+    'setActiveViewPort': (size?: string) => void;
+    'size': string;
+    'viewport': string;
   }
   var HTMLODemoResizerElement: {
     prototype: HTMLODemoResizerElement;
     new (): HTMLODemoResizerElement;
   };
   interface HTMLElementTagNameMap {
-    "o-demo-resizer": HTMLODemoResizerElement;
+    'o-demo-resizer': HTMLODemoResizerElement;
   }
   interface ElementTagNameMap {
-    "o-demo-resizer": HTMLODemoResizerElement;
+    'o-demo-resizer': HTMLODemoResizerElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "o-demo-resizer": JSXElements.ODemoResizerAttributes;
+      'o-demo-resizer': JSXElements.ODemoResizerAttributes;
     }
   }
   namespace JSXElements {
     export interface ODemoResizerAttributes extends HTMLAttributes {
-      size?: string;
-      viewport?: string;
+      'onResizeButtonClicked'?: (event: CustomEvent) => void;
+      'size'?: string;
+      'viewport'?: string;
     }
   }
 }
 
+
+declare global {
+  interface HTMLODemoSnackbarElement extends HTMLStencilElement {
+    'events': any;
+  }
+  var HTMLODemoSnackbarElement: {
+    prototype: HTMLODemoSnackbarElement;
+    new (): HTMLODemoSnackbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-snackbar': HTMLODemoSnackbarElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-snackbar': HTMLODemoSnackbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-snackbar': JSXElements.ODemoSnackbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoSnackbarAttributes extends HTMLAttributes {
+      'events'?: any;
+    }
+  }
+}
+
+declare global { namespace JSX { interface StencilJSX {} } }

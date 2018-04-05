@@ -1,4 +1,4 @@
-import { Component, Listen, Prop, Element } from '@stencil/core';
+import { Component,Prop, Element } from '@stencil/core';
 import { MDCSnackbar } from '@material/snackbar';
 
 @Component({

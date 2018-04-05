@@ -5,12 +5,21 @@
 <!-- Auto Generated Below -->
 
 
-## Events
+## Properties
 
-#### toolbarButtonClicked
+#### events
+
+any
+
+
+## Attributes
+
+#### events
+
+any
 
 
 
 ----------------------------------------------
 
-*Built by [StencilJS](https://stenciljs.com/)*
+*Built with [StencilJS](https://stenciljs.com/)*
