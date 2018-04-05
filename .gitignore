@@ -9,7 +9,7 @@ dist/
 log.txt
 *.sublime-project
 *.sublime-workspace
-
+www/
 .idea/
 .vscode/
 .sass-cache/
@@ -22,3 +22,4 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 .env
 coverage/
+package-lock.json
