@@ -1,28 +1,46 @@
+// Plugins
+const sass = require('@stencil/sass');
+const postcss = require('@stencil/postcss');
+const autoprefixer = require('autoprefixer');
+
 exports.config = {
   namespace: 'orango-demo-tools',
-  generateDistribution: true,
-  generateWWW: true,
-  bundles: [
+  outputTargets: [
     {
-      components: [
-        'o-demo-bar',
-        'o-demo-bar-toolbar',
-        'o-demo-bar-select',
-        'o-demo-bar-buttons',
-        'o-demo-snackbar',
-        'o-demo-devices',
-        'o-demo-resizer'
-      ]
+      type: 'dist',
+      serviceWorker: false
     },
-    { components: ['o-demo-case'] }
+    {
+      type: 'www',
+      serviceWorker: false
+    }
   ],
-  collections: [],
-  sassConfig: {
-    includePaths: ['node_modules']
-  }
+  plugins: [
+    sass({
+      includePaths: [ 'node_modules/' ],
+      injectGlobalPaths: [
+        'src/components/styles/global.scss'
+      ]
+    }),
+    postcss({
+      plugins: [
+        autoprefixer({
+          browsers: [
+            'last 2 versions',
+            'iOS >= 8',
+            'Android >= 4.4',
+            'Explorer >= 11',
+            'ExplorerMobile >= 11'
+          ],
+          cascade: false
+        })
+      ]
+    })
+  ],
+  preamble: 'O-RANGO - MIT License',
 };
 
 exports.devServer = {
   root: 'www',
-  watchGlob: '**/**'
+  watchGlob: [ '**/**', 'src/**/*.html' ]
 };
