@@ -13,6 +13,10 @@ exports.config = {
     {
       type: 'www',
       serviceWorker: false
+    },
+    {
+      type: 'docs',
+      serviceWorker: false
     }
   ],
   plugins: [

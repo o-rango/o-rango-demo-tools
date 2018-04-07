@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-
-  <head>
+<!DOCTYPE html><html dir="ltr" lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <title>Stencil Component Starter</title>
@@ -11,7 +8,7 @@
 
   <body>
 
-    <o-demo-bar name="Basic Demo Components" >
+    <o-demo-bar name="Basic Demo Components">
         <o-demo-case name="Placeholders Square Avatar">
             <template>
             <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
@@ -72,31 +69,31 @@
     <o-demo-case name="Material Buttons">
         <template>
         <script src="https://unpkg.com/@o-rango/orango-material-design@0.0.2-beta/dist/orango-material.js"></script>
-        <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
+        <o-mdc-button onclick="alert(JSON.stringify(event))" raised="">
             Raised
           </o-mdc-button>
 
-          <o-mdc-button raised disabled>
+          <o-mdc-button raised="" disabled="">
             Raised Disabled
           </o-mdc-button>
 
-          <o-mdc-button unelevated>
+          <o-mdc-button unelevated="">
             Unelevated
           </o-mdc-button>
 
-          <o-mdc-button stroked>
+          <o-mdc-button stroked="">
             Stroked
           </o-mdc-button>
 
-          <o-mdc-button raised dense>
+          <o-mdc-button raised="" dense="">
             Dense
           </o-mdc-button>
 
-          <o-mdc-button raised compact>
+          <o-mdc-button raised="" compact="">
             Compact
           </o-mdc-button>
 
-          <o-mdc-button raised>
+          <o-mdc-button raised="">
             <i class="material-icons mdc-button__icon">favorite</i>
             Button
           </o-mdc-button>
@@ -105,6 +102,19 @@
 
     </o-demo-bar>
 
-  </body>
+  
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      // auto-unregister service worker during dev mode
+      navigator.serviceWorker.getRegistration().then(function(registration) {
+        if (registration) {
+          registration.unregister().then(function() { location.reload(true) });
+        }
+      });
+    }
+  </script>
 
-</html>
+
+
+
+</body></html>

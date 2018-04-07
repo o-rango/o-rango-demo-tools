@@ -32,42 +32,52 @@ after include o-demo-tools in your index.html you can start building your demos 
 ```html
     <o-demo-bar name="Material Demo">
          <o-demo-case name="Buttons Click">
-           <button onClick="showMe(event)">click me </button>
+           <template>
+          <button onClick="showMe(event)">click me </button>
               <script> 
                   function showMe(evt){
                       alert(evt);
                   }
               </script>
+               <template>
          <o-demo-case>
 
         <o-demo-case name="Buttons Alert">
+           <template>
            <button onClick="showMe2(event)">click me </button>
               <script> 
                   function showMe2(evt){
                       alert(evt);
                   }
               </script>
+               <template>
          <o-demo-case>
     </o-demo-bar>
 ```
-###  Using custom script imports 
 
-If you want to have extra dependencies inside each demo you should include each dependency using : ```<!--includes (your scripts) includes--> ```
 
 ```html
     <o-demo-bar name="Material Demo">
-         <o-demo-case name="Buttons Click">
-          <!--includes 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/preact/8.2.7/preact.min.js"></script> 
-          <script src=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design.css"></script> 
-          includes-->
-           <button onClick="showMe(event)">click me </button>
-              <script> 
-                  function showMe(evt){
-                      alert(evt);
-                  }
-              </script>
-         <o-demo-case>
+      <o-demo-case name="Placeholders Rounded Avatar">
+          <template>
+          <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
+
+          <style>
+              // Place Your Styles
+              .container {
+                background-color: white;
+                width: 90%;
+                margin: auto auto;
+                padding: 20px 25px 25px 20px;
+                margin-bottom: 20px;
+              }
+            </style>
+             <div class="container">
+                <o-content-placeholder-img size="55" animate="true" format="circle"></o-content-placeholder-img>
+                <o-content-placeholder-block line-height="10" random-size="true" animate="true" lines="5"></o-content-placeholder-block>
+            </div>
+          </template>
+    </o-demo-case>
           ... all your demo cases 
     </o-demo-bar>
 ```
