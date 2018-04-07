@@ -16,8 +16,8 @@ export class DemoSelectComponent {
     this.select = new MDCSelect(rootEl);
     this.select.selectedIndex = 0;
 
-    this.select.listen('MDCSelect:change', evt => {
-      this.selectedCaseChanged.emit(evt.detail.value);
+    this.select.listen('change', ()=> {
+      this.selectedCaseChanged.emit(this.select.selectedIndex);
      });
   }
   componentDidUnload() {
@@ -34,7 +34,7 @@ export class DemoSelectComponent {
                 </option>
               ))}
   </select>
-  <div class="mdc-select__label mdc-select__label--float-above">Pick a Food Group</div>
+  <div class="mdc-select__label mdc-select__label--float-above">Choose your demo</div>
   <div class="mdc-select__bottom-line"></div>
 </div>
     );

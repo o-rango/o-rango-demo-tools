@@ -92,13 +92,14 @@ export class DemoBarComponent {
       '#iframeContainer'
     );
     const iframe = document.createElement('iframe');
+    iframe.frameBorder = "0"
     const frameH = Math.max(document.documentElement.clientHeight);
     const frameW = this.deviceSize;
-    let html = this.demoCases[this.caseOptionSelected].innerHTML;
-    // Optional Script Includes tags
-    html = `<html><head></head><body ontouchstart id="frameBody">${html}</body></html>`
+    const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
+    const html = `<html><head></head><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`
       .replace(/<!--includes/g, '')
       .replace(/includes-->/g, '');
+
     iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
     iframeContainer.appendChild(iframe);

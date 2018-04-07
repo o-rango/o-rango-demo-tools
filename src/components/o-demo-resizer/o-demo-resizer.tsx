@@ -57,12 +57,11 @@ export class DemoResizerComponent {
     });
 
     const activeEl: any = sizeList.filter((el:any)=>{
-      console.log(el.dataset.size);
-      return el.dataset.size === size;
+      return el.getAttribute('data-size') === size;
     });
 
     if(activeEl.length){
-      console.log(activeEl);
+      console.log('EL' , activeEl)
       activeEl[0].classList.add('active');
     }
   }

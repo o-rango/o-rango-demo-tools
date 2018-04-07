@@ -9,10 +9,4 @@ export class DemoCaseComponent {
 
   @Prop() name: string;
   @Prop() scripts: string;
-
-  render() {
-    return (
-      <slot/>
-    );
-  }
 }

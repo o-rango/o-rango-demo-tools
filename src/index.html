@@ -11,51 +11,27 @@
 
   <body>
 
-    <o-demo-bar name="Basic Demo">
-      <o-demo-case name="Caso Base Botao">
-        <!--includes
-
-
-        includes-->
-          <br><br><br><br><br><br><br><br>
-          <input/ name="teste">
+    <o-demo-bar name="Basic Demo" >
+      <o-demo-case name="Caso Base 1">
+        <template>
         <button onclick="cara()">Demo Clik</button><br>
         <button onclick="cara()">Demo Clik</button><br>
         <button onclick="cara()">Demo Clik</button><br>
         <button onclick="cara()">Demo Clik</button><br>
         <button onclick="cara()">Demo Clik</button><br>
         <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br>
-        <button onclick="cara()">Demo Clik</button><br><br><br><br><br><br>
-        <button onclick="cara()">Demo Clik</button><br><br><br><br><br><br>
-          <script>
-          const data = {
-            "productKey": "SSSHTQ_8.1.0",
-            "isDisqusEnabled": true
-          }
-
-          const showOb = {
-            message: JSON.stringify(data),
-            actionText: 'Fechar',
-            actionHandler: (event) => console.log(event),
-            multiline: false,
-            actionOnBottom: true
-
-          }
-
-          function cara(){
-            alert('cara');
-          }
-
-        </script>
+      </template>
       </o-demo-case>
 
-      <o-demo-case name="Caso Base Botao Esquerdo">
-          <button>Classe UM </button>
+      <o-demo-case name="Caso Base Botao 2">
+        <template>
+          <button onclick="cara()">Demo Clik1</button><br>
+          <button onclick="cara()">Demo Clikº</button><br>
+          <button onclick="cara()">Demo Clikº</button><br>
+          <button onclick="cara()">Demo Clik1º2å</button><br>
+          <button onclick="cara()">Demo Clik</button><br>
+          <button onclick="cara()">Demo Clik</button><br>
+        </template>
       </o-demo-case>
 
     </o-demo-bar>
