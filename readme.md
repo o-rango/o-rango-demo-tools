@@ -3,7 +3,13 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1deb8aa719ba4df0be9a650626dc7340)](https://www.codacy.com/app/romulocintra/orango-demo-tools?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=o-rango/orango-demo-tools&amp;utm_campaign=Badge_Grade)
 
 
-# o-rango: o-demo-bar  (WIP)
+
+
+
+# o-rango: o-demo-bar  (WIP) - [Demo](https://o-rango.github.io/orango-demo-tools/index.html)
+
+ Simple and customizable showcase for your components built with Stenciljs :metal:
+## Getting Started
 
 o-demo-bar is a simple and flexible  demo bar component for developers and showcase your components, heavily  inspired in [storybook.js.org](https://storybook.js.org) having the main goal  to work directly with all JS  frameworks, being based in web component standards and built with stencilsjs.
 
