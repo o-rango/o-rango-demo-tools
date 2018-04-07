@@ -21,15 +21,24 @@
     "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@material/list": "^0.34.0",
     "@material/menu": "^0.34.0",
     "@material/select": "^0.34.0",
     "@material/snackbar": "^0.34.0",
     "@material/toolbar": "^0.34.0",
+=======
+    "@material/select": "^0.34.0",
+    "@material/snackbar": "^0.34.0",
+    "@material/toolbar": "^0.34.0",
+    "@material/menu": "^0.34.0",
+    "@material/list": "^0.34.0",
+>>>>>>> 4546b96f718fd3cae2e15d8b787d68ca796f76f3
     "@material/typography": "^0.34.0",
     "@stencil/core": "next"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^8.2.0",
     "@stencil/postcss": "0.0.4",
     "@stencil/sass": "latest",
@@ -44,6 +53,19 @@
     "jest": "22.4.3",
     "tslint": "5.9.1",
     "tslint-react": "3.5.1",
+=======
+    "@babel/core": "7.0.0-beta.40",
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/jest": "22.1.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "22.2.0",
+    "babel-preset-es2015": "6.24.1",
+    "coveralls": "3.0.0",
+    "jest": "22.2.1",
+    "tslint": "5.9.1",
+    "tslint-react": "3.5.0",
+>>>>>>> 4546b96f718fd3cae2e15d8b787d68ca796f76f3
     "makeshift": "1.1.0",
     "standard-version": "4.3.0"
   },
