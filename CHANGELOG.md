@@ -1,3 +1,33 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/o-rango/orango-demo-tools/compare/v0.1.11...v0.2.0) (2018-04-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency [@material](https://github.com/material)/list to ^0.29.0 ([9357485](https://github.com/o-rango/orango-demo-tools/commit/9357485))
+* **deps:** update dependency [@material](https://github.com/material)/menu to ^0.29.0 ([eaec8be](https://github.com/o-rango/orango-demo-tools/commit/eaec8be))
+* **deps:** update dependency [@material](https://github.com/material)/menu to ^0.30.0 ([7d46d95](https://github.com/o-rango/orango-demo-tools/commit/7d46d95))
+* **deps:** update dependency [@material](https://github.com/material)/select to ^0.28.0 ([c5514cc](https://github.com/o-rango/orango-demo-tools/commit/c5514cc))
+* **deps:** update dependency [@material](https://github.com/material)/select to ^0.29.0 ([7ba5932](https://github.com/o-rango/orango-demo-tools/commit/7ba5932))
+* **deps:** update dependency [@material](https://github.com/material)/select to ^0.30.0 ([4addc1e](https://github.com/o-rango/orango-demo-tools/commit/4addc1e))
+* **deps:** update dependency [@material](https://github.com/material)/select to ^0.31.0 ([395e811](https://github.com/o-rango/orango-demo-tools/commit/395e811))
+* **deps:** update dependency [@material](https://github.com/material)/snackbar to ^0.28.0 ([d85df23](https://github.com/o-rango/orango-demo-tools/commit/d85df23))
+* **deps:** update dependency [@material](https://github.com/material)/typography to ^0.28.0 ([beefda7](https://github.com/o-rango/orango-demo-tools/commit/beefda7))
+* **deps:** update material monorepo packages ([33c7b38](https://github.com/o-rango/orango-demo-tools/commit/33c7b38))
+
+
+### Features
+
+* **o-demo-bar-toolbar:** update toolbar ([c7e6d01](https://github.com/o-rango/orango-demo-tools/commit/c7e6d01))
+* **stencil.config:** update config ([6ee667b](https://github.com/o-rango/orango-demo-tools/commit/6ee667b))
+* depx fix ([2754a2d](https://github.com/o-rango/orango-demo-tools/commit/2754a2d))
+
+
+
 <a name="0.1.11"></a>
 ## <small>0.1.11 (2017-12-29)</small>
 
@@ -157,6 +187,3 @@
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
-
-
-

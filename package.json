@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "Orango dev tools components",
   "main": "dist/orango-demo-tools.js",
   "types": "dist/types/index.d.ts",
