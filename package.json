@@ -11,7 +11,7 @@
   "browser": "dist/orango-demo-tools.js",
   "scripts": {
     "release": "standard-version",
-    "publish": "git push --follow-tags origin master; npm publish --access=public",
+    "publish-npm": "git push --follow-tags origin master; npm publish --access=public",
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
