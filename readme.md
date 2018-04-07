@@ -6,7 +6,7 @@
 
 
 
-# o-rango: o-demo-bar  (WIP) - [Demo](https://o-rango.github.io/orango-demo-tools/index.html)
+# o-rango: o-demo-bar  (WIP) 
 
  Simple and customizable showcase for your components built with Stenciljs :metal:
 ## Getting Started
