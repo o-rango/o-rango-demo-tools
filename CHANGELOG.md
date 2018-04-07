@@ -1,30 +1,48 @@
-# Change Log
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 <a name="0.2.0"></a>
-# [0.2.0](https://github.com/o-rango/orango-demo-tools/compare/v0.1.11...v0.2.0) (2018-04-07)
+## 0.2.0 (2018-04-07)
 
-
-### Bug Fixes
-
-* **deps:** update dependency [@material](https://github.com/material)/list to ^0.29.0 ([9357485](https://github.com/o-rango/orango-demo-tools/commit/9357485))
-* **deps:** update dependency [@material](https://github.com/material)/menu to ^0.29.0 ([eaec8be](https://github.com/o-rango/orango-demo-tools/commit/eaec8be))
-* **deps:** update dependency [@material](https://github.com/material)/menu to ^0.30.0 ([7d46d95](https://github.com/o-rango/orango-demo-tools/commit/7d46d95))
-* **deps:** update dependency [@material](https://github.com/material)/select to ^0.28.0 ([c5514cc](https://github.com/o-rango/orango-demo-tools/commit/c5514cc))
-* **deps:** update dependency [@material](https://github.com/material)/select to ^0.29.0 ([7ba5932](https://github.com/o-rango/orango-demo-tools/commit/7ba5932))
-* **deps:** update dependency [@material](https://github.com/material)/select to ^0.30.0 ([4addc1e](https://github.com/o-rango/orango-demo-tools/commit/4addc1e))
-* **deps:** update dependency [@material](https://github.com/material)/select to ^0.31.0 ([395e811](https://github.com/o-rango/orango-demo-tools/commit/395e811))
-* **deps:** update dependency [@material](https://github.com/material)/snackbar to ^0.28.0 ([d85df23](https://github.com/o-rango/orango-demo-tools/commit/d85df23))
-* **deps:** update dependency [@material](https://github.com/material)/typography to ^0.28.0 ([beefda7](https://github.com/o-rango/orango-demo-tools/commit/beefda7))
-* **deps:** update material monorepo packages ([33c7b38](https://github.com/o-rango/orango-demo-tools/commit/33c7b38))
-
-
-### Features
-
-* **o-demo-bar-toolbar:** update toolbar ([c7e6d01](https://github.com/o-rango/orango-demo-tools/commit/c7e6d01))
-* **stencil.config:** update config ([6ee667b](https://github.com/o-rango/orango-demo-tools/commit/6ee667b))
-* depx fix ([2754a2d](https://github.com/o-rango/orango-demo-tools/commit/2754a2d))
+* chore(deps): update dependencies ([0061ca9](https://github.com/o-rango/orango-demo-tools/commit/0061ca9))
+* chore(deps): update dependency @babel/core to v7.0.0-beta.37 ([d041779](https://github.com/o-rango/orango-demo-tools/commit/d041779))
+* chore(deps): update dependency @babel/core to v7.0.0-beta.38 ([5682b83](https://github.com/o-rango/orango-demo-tools/commit/5682b83))
+* chore(deps): update dependency @babel/core to v7.0.0-beta.39 ([d7f7fd3](https://github.com/o-rango/orango-demo-tools/commit/d7f7fd3))
+* chore(deps): update dependency @babel/core to v7.0.0-beta.40 ([250afe5](https://github.com/o-rango/orango-demo-tools/commit/250afe5))
+* chore(deps): update dependency @types/jest to v22.0.1 ([d479f4f](https://github.com/o-rango/orango-demo-tools/commit/d479f4f))
+* chore(deps): update dependency @types/jest to v22.1.0 ([68b0b07](https://github.com/o-rango/orango-demo-tools/commit/68b0b07))
+* chore(deps): update dependency @types/jest to v22.1.1 ([e5e1381](https://github.com/o-rango/orango-demo-tools/commit/e5e1381))
+* chore(deps): update dependency jest to v22.0.5 ([6a93e55](https://github.com/o-rango/orango-demo-tools/commit/6a93e55))
+* chore(deps): update dependency jest to v22.1.2 ([a0004c9](https://github.com/o-rango/orango-demo-tools/commit/a0004c9))
+* chore(deps): update dependency jest to v22.1.3 ([4cf660e](https://github.com/o-rango/orango-demo-tools/commit/4cf660e))
+* chore(deps): update dependency jest to v22.1.4 ([f70dc13](https://github.com/o-rango/orango-demo-tools/commit/f70dc13))
+* chore(deps): update dependency standard-version to v4.3.0 ([33d124f](https://github.com/o-rango/orango-demo-tools/commit/33d124f))
+* chore(deps): update dependency tslint to v5.9.0 ([8bc67ee](https://github.com/o-rango/orango-demo-tools/commit/8bc67ee))
+* chore(deps): update dependency tslint to v5.9.1 ([0045069](https://github.com/o-rango/orango-demo-tools/commit/0045069))
+* chore(deps): update dependency tslint-react to v3.4.0 ([af99f57](https://github.com/o-rango/orango-demo-tools/commit/af99f57))
+* chore(deps): update dependency tslint-react to v3.5.0 ([4c95a0b](https://github.com/o-rango/orango-demo-tools/commit/4c95a0b))
+* chore(deps): update jest monorepo packages ([7c6589c](https://github.com/o-rango/orango-demo-tools/commit/7c6589c))
+* chore(deps): update jest monorepo packages ([d2c213b](https://github.com/o-rango/orango-demo-tools/commit/d2c213b))
+* chore(deps): update jest monorepo packages ([8e9e32b](https://github.com/o-rango/orango-demo-tools/commit/8e9e32b))
+* chore(release): 0.2.0 ([246a8bf](https://github.com/o-rango/orango-demo-tools/commit/246a8bf))
+* changelog ([08ebc6b](https://github.com/o-rango/orango-demo-tools/commit/08ebc6b))
+* chore(deps) update deps ([6906643](https://github.com/o-rango/orango-demo-tools/commit/6906643))
+* feat : refactor and fix resizer events ([c68f8aa](https://github.com/o-rango/orango-demo-tools/commit/c68f8aa))
+* feat : update gif ([b7f655d](https://github.com/o-rango/orango-demo-tools/commit/b7f655d))
+* feat() : export CssClassMap ([f187a3c](https://github.com/o-rango/orango-demo-tools/commit/f187a3c))
+* feat() : refactor and fix resizers ([b596213](https://github.com/o-rango/orango-demo-tools/commit/b596213))
+* feat() : update gitignore ([8803448](https://github.com/o-rango/orango-demo-tools/commit/8803448))
+* Fix(js resizer) fix pre selected value ([588bf58](https://github.com/o-rango/orango-demo-tools/commit/588bf58))
+* feat: depx fix ([2754a2d](https://github.com/o-rango/orango-demo-tools/commit/2754a2d))
+* feat(o-demo-bar-toolbar): update toolbar ([c7e6d01](https://github.com/o-rango/orango-demo-tools/commit/c7e6d01))
+* feat(stencil.config): update config ([6ee667b](https://github.com/o-rango/orango-demo-tools/commit/6ee667b))
+* fix(deps): update dependency @material/list to ^0.29.0 ([9357485](https://github.com/o-rango/orango-demo-tools/commit/9357485))
+* fix(deps): update dependency @material/menu to ^0.29.0 ([eaec8be](https://github.com/o-rango/orango-demo-tools/commit/eaec8be))
+* fix(deps): update dependency @material/menu to ^0.30.0 ([7d46d95](https://github.com/o-rango/orango-demo-tools/commit/7d46d95))
+* fix(deps): update dependency @material/select to ^0.28.0 ([c5514cc](https://github.com/o-rango/orango-demo-tools/commit/c5514cc))
+* fix(deps): update dependency @material/select to ^0.29.0 ([7ba5932](https://github.com/o-rango/orango-demo-tools/commit/7ba5932))
+* fix(deps): update dependency @material/select to ^0.30.0 ([4addc1e](https://github.com/o-rango/orango-demo-tools/commit/4addc1e))
+* fix(deps): update dependency @material/select to ^0.31.0 ([395e811](https://github.com/o-rango/orango-demo-tools/commit/395e811))
+* fix(deps): update dependency @material/snackbar to ^0.28.0 ([d85df23](https://github.com/o-rango/orango-demo-tools/commit/d85df23))
+* fix(deps): update dependency @material/typography to ^0.28.0 ([beefda7](https://github.com/o-rango/orango-demo-tools/commit/beefda7))
+* fix(deps): update material monorepo packages ([33c7b38](https://github.com/o-rango/orango-demo-tools/commit/33c7b38))
 
 
 
@@ -187,3 +205,6 @@ All notable changes to this project will be documented in this file. See [standa
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
+
+
+
