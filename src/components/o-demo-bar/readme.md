@@ -7,6 +7,21 @@
 
 ## Properties
 
+#### device
+
+string
+
+
+#### deviceSize
+
+string
+
+
+#### events
+
+
+
+
 #### name
 
 string
@@ -18,6 +33,21 @@ boolean
 
 
 ## Attributes
+
+#### device
+
+string
+
+
+#### device-size
+
+string
+
+
+#### events
+
+
+
 
 #### name
 
@@ -32,4 +62,4 @@ boolean
 
 ----------------------------------------------
 
-*Built by [StencilJS](https://stenciljs.com/)*
+*Built with [StencilJS](https://stenciljs.com/)*

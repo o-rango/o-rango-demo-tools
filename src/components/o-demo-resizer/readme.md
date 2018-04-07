@@ -34,6 +34,11 @@ string
 #### resizeButtonClicked
 
 
+## Methods
+
+#### setActiveViewPort()
+
+
 
 ----------------------------------------------
 

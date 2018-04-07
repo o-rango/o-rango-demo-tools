@@ -15,7 +15,8 @@ exports.config = {
       serviceWorker: false
     },
     {
-      type: 'docs',
+      type: 'www',
+      dir : 'docs',
       serviceWorker: false
     }
   ],
