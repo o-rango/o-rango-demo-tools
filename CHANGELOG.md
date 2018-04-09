@@ -1,3 +1,24 @@
+<a name="0.3.0"></a>
+## 0.3.0 (2018-04-09)
+
+* chore: version 0.2.0 ([238272e](https://github.com/o-rango/orango-demo-tools/commit/238272e))
+* chore(deps): update dependency autoprefixer to v8.2.0 ([5595d1b](https://github.com/o-rango/orango-demo-tools/commit/5595d1b))
+* chore(release): 0.3.0 ([a1ffc29](https://github.com/o-rango/orango-demo-tools/commit/a1ffc29))
+* demo  update ([b72215b](https://github.com/o-rango/orango-demo-tools/commit/b72215b))
+* docs ([0947673](https://github.com/o-rango/orango-demo-tools/commit/0947673))
+* docs ([646161d](https://github.com/o-rango/orango-demo-tools/commit/646161d))
+* docs : update docs ([87b8c55](https://github.com/o-rango/orango-demo-tools/commit/87b8c55))
+* update builds ([81daa7d](https://github.com/o-rango/orango-demo-tools/commit/81daa7d))
+* update docs ([7fef534](https://github.com/o-rango/orango-demo-tools/commit/7fef534))
+* update docs ([e0776a2](https://github.com/o-rango/orango-demo-tools/commit/e0776a2))
+* update docs ([3f5dd38](https://github.com/o-rango/orango-demo-tools/commit/3f5dd38))
+* feat: downgrade material select ([70ca9bc](https://github.com/o-rango/orango-demo-tools/commit/70ca9bc))
+* docs(): added docs ([6b205bb](https://github.com/o-rango/orango-demo-tools/commit/6b205bb))
+* docs(): auto demo generation ([a28ec74](https://github.com/o-rango/orango-demo-tools/commit/a28ec74))
+* docs(): update docs and added demo ([8b42d06](https://github.com/o-rango/orango-demo-tools/commit/8b42d06))
+
+
+
 <a name="0.2.0"></a>
 ## 0.2.0 (2018-04-07)
 
