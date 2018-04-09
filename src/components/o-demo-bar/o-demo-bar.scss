@@ -8,6 +8,14 @@
     z-index: 0;
   }
 
+  o-demo-devices {
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #iframeContainer {
     margin: auto;
     position: relative;

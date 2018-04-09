@@ -111,6 +111,7 @@ declare global {
 declare global {
   interface HTMLODemoBarElement extends HTMLStencilElement {
     'device': string;
+    'deviceEmulate': boolean;
     'deviceSize': string;
     'events': string[];
     'name': string;
@@ -134,6 +135,7 @@ declare global {
   namespace JSXElements {
     export interface ODemoBarAttributes extends HTMLAttributes {
       'device'?: string;
+      'deviceEmulate'?: boolean;
       'deviceSize'?: string;
       'events'?: string[];
       'name'?: string;
@@ -174,7 +176,8 @@ declare global {
 
 declare global {
   interface HTMLODemoDevicesElement extends HTMLStencilElement {
-
+    'device': string;
+    'orientation': string;
   }
   var HTMLODemoDevicesElement: {
     prototype: HTMLODemoDevicesElement;
@@ -193,7 +196,8 @@ declare global {
   }
   namespace JSXElements {
     export interface ODemoDevicesAttributes extends HTMLAttributes {
-
+      'device'?: string;
+      'orientation'?: string;
     }
   }
 }

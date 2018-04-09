@@ -1,14 +1,28 @@
-import { Component } from '@stencil/core';
-
+import { Component , Prop} from '@stencil/core';
+import {CssClassMap} from '../utils/CssClassMap'
 @Component({
   tag: 'o-demo-devices',
   styleUrl: 'o-demo-devices.scss',
-  shadow: false
+  shadow: true
 })
+
+
 export class DemoDevicesComponent {
+  @Prop() orientation : string;
+  @Prop() device : string;
   render() {
+
+    const phoneModel: CssClassMap = {
+      'marvel-device lumia920':true,
+      'iphone-x': this.device === 'iphone-x',
+      'iphone8': this.device === 'iphone8',
+      'nexus5': this.device === 'iphone-x',
+      'lumia920': this.device === 'iphone-x',
+      'landscape' : this.orientation === 'landscape'
+    };
+
     return (
-      <div class="marvel-device iphone-x">
+      <div class={phoneModel}>
         <div class="notch">
           <div class="camera" />
           <div class="speaker" />

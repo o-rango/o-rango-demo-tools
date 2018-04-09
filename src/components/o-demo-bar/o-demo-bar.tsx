@@ -24,6 +24,7 @@ export class DemoBarComponent {
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
+  @Prop({ mutable: true }) deviceEmulate: boolean = false;
 
 
 
@@ -126,7 +127,10 @@ export class DemoBarComponent {
           />
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
-          <div id="iframeContainer" class={bgClasses} />
+        {
+        !this.deviceEmulate ? <div id="iframeContainer" class={bgClasses} />
+                           : <o-demo-devices><div id="iframeContainer" class={bgClasses} /></o-demo-devices>
+        }
         </div>
       </div>
     );
