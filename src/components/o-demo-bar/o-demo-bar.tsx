@@ -46,20 +46,32 @@ export class DemoBarComponent {
     switch (event.detail) {
       case 'grid-pattern':
         this.pattern = !this.pattern;
+        this.deviceEmulate = false;
         break;
       case 'mobile':
       this.device = event.detail;
       this.deviceSize = '412';
+      this.deviceEmulate = false;
         break;
       case 'desktop':
       this.device = event.detail;
       this.deviceSize = '1024';
+      this.deviceEmulate = false;
         break;
+      case 'other-devices':
+      this.device = event.detail;
+      debugger;
+      this.deviceEmulate = !this.deviceEmulate;
+      break;
     }
     this._setIframe();
-    setTimeout(()=>{
-      this.resizeComponent.setActiveViewPort(this.deviceSize);
-    } , 10);
+
+    if(event.detail !== 'other-devices'){
+      setTimeout(()=>{
+        this.resizeComponent.setActiveViewPort(this.deviceSize);
+      } , 10);
+    }
+
   }
 
   @Listen('selectedCaseChanged')
@@ -92,14 +104,13 @@ export class DemoBarComponent {
     const iframeContainer = this.el.shadowRoot.querySelector(
       '#iframeContainer'
     );
+
     const iframe = document.createElement('iframe');
     iframe.frameBorder = "0"
     const frameH = Math.max(document.documentElement.clientHeight);
     const frameW = this.deviceSize;
     const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-    const html = `<html><head></head><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`
-      .replace(/<!--includes/g, '')
-      .replace(/includes-->/g, '');
+    const html = `<html><head></head><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
 
     iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
@@ -116,20 +127,15 @@ export class DemoBarComponent {
     };
     return (
       <div id="demo-bar">
-        {this.events ? <o-demo-snackbar events={this.events} /> : ''}
+        { this.events ? <o-demo-snackbar events={this.events} /> : '' }
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
-          <o-demo-bar-buttons slot="right" />
-          <o-demo-resizer
-            size={this.deviceSize}
-            viewport={this.device}
-            slot="base"
-          />
+          <o-demo-bar-buttons slot="right"/>
+        { !this.deviceEmulate ? <o-demo-resizer size={this.deviceSize} viewport={this.device} slot="base"/> : ''}
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
-        {
-        !this.deviceEmulate ? <div id="iframeContainer" class={bgClasses} />
-                           : <o-demo-devices><div id="iframeContainer" class={bgClasses} /></o-demo-devices>
+        { !this.deviceEmulate ? <div id="iframeContainer" class={bgClasses} />
+                             : <o-demo-devices><div id="iframeContainer" class={bgClasses} /></o-demo-devices>
         }
         </div>
       </div>

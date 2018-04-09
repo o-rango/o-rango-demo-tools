@@ -15,5 +15,12 @@ describe('o-demo-resizer', () => {
         html: '<o-demo-resizer></o-demo-resizer>'
       });
     });
+
+  it('init test for mobiles', async () => {
+    element.size = "1024";
+    element.viewport ="desktop";
+    await flush(element);
+    expect( element.viewport ).toEqual('desktop');
+  });
   });
 });

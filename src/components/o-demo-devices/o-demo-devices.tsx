@@ -3,7 +3,7 @@ import {CssClassMap} from '../utils/CssClassMap'
 @Component({
   tag: 'o-demo-devices',
   styleUrl: 'o-demo-devices.scss',
-  shadow: true
+  shadow: false
 })
 
 
@@ -13,7 +13,7 @@ export class DemoDevicesComponent {
   render() {
 
     const phoneModel: CssClassMap = {
-      'marvel-device lumia920':true,
+      'marvel-device iphone-x':true,
       'iphone-x': this.device === 'iphone-x',
       'iphone8': this.device === 'iphone8',
       'nexus5': this.device === 'iphone-x',

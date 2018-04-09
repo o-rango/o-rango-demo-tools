@@ -148,7 +148,6 @@ declare global {
 declare global {
   interface HTMLODemoCaseElement extends HTMLStencilElement {
     'name': string;
-    'scripts': string;
   }
   var HTMLODemoCaseElement: {
     prototype: HTMLODemoCaseElement;
@@ -168,7 +167,6 @@ declare global {
   namespace JSXElements {
     export interface ODemoCaseAttributes extends HTMLAttributes {
       'name'?: string;
-      'scripts'?: string;
     }
   }
 }

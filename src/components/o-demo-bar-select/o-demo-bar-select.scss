@@ -19,6 +19,12 @@
   }
 
   @media only screen and (max-width: 780px) {
+
+    .mdc-list {
+      min-width: 20em;
+      width: 80%;
+    }
+
     .mdc-select {
       min-width: 20em;
       width: 80%;

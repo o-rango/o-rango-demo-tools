@@ -6,7 +6,5 @@ import { Component, Prop } from '@stencil/core';
   shadow: true
 })
 export class DemoCaseComponent {
-
   @Prop() name: string;
-  @Prop() scripts: string;
 }
