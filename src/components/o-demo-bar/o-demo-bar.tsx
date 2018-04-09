@@ -58,7 +58,7 @@ export class DemoBarComponent {
     this._setIframe();
     setTimeout(()=>{
       this.resizeComponent.setActiveViewPort(this.deviceSize);
-    } , 0);
+    } , 10);
   }
 
   @Listen('selectedCaseChanged')

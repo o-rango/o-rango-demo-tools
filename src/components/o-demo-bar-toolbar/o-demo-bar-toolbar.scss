@@ -5,8 +5,10 @@
     margin: 0 1.5em 0 1.2em;
     .mdc-typography--subheading2 {
       color: var(--mdc-theme-text-primary-on-primary, black);
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      text-overflow: ellipsis;
     }
+
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;

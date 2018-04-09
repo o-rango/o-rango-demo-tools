@@ -3,6 +3,13 @@
 @import "@material/select/mdc-select";
 
 :host {
+  .mdc-menu__items {
+    background: var(--mdc-theme-primary , #efefef)
+  }
+  .mdc-list {
+    min-width: 30em;
+  }
+
    .mdc-select {
     min-width: 30em;
   }

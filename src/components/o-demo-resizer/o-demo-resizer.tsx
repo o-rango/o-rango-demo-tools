@@ -61,7 +61,6 @@ export class DemoResizerComponent {
     });
 
     if(activeEl.length){
-      console.log('EL' , activeEl)
       activeEl[0].classList.add('active');
     }
   }
