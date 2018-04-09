@@ -4,6 +4,7 @@ const postcss = require('@stencil/postcss');
 const autoprefixer = require('autoprefixer');
 
 exports.config = {
+  enableCache: false,
   namespace: 'orango-demo-tools',
   outputTargets: [
     {
@@ -12,11 +13,6 @@ exports.config = {
     },
     {
       type: 'www',
-      serviceWorker: false
-    },
-    {
-      type: 'www',
-      dir : 'docs',
       serviceWorker: false
     }
   ],
