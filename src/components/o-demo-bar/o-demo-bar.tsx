@@ -106,12 +106,11 @@ export class DemoBarComponent {
     );
 
     const iframe = document.createElement('iframe');
-    iframe.frameBorder = "0"
+
     const frameH = Math.max(document.documentElement.clientHeight);
     const frameW = this.deviceSize;
     const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-    const html = `<html><head></head><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
-
+    const html = `<html><head></head><style>body{ margin:0 } </style></style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
     iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
     iframeContainer.appendChild(iframe);
