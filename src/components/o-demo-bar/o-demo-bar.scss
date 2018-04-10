@@ -9,7 +9,6 @@
   }
 
   o-demo-devices {
-    padding-top : 2em;
     margin: auto;
     position: relative;
     display: flex;
@@ -24,6 +23,7 @@
     align-items: center;
     justify-content: center;
     iframe {
+      margin: 0;
       border: 0;
       position: relative;
       background-color:transparent;

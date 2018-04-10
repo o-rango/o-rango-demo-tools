@@ -1,32 +1,35 @@
 import {Component, Prop, Element, Event, EventEmitter} from '@stencil/core';
 import {MDCSelect} from '@material/select';
-@Component({tag: 'o-demo-bar-select', styleUrl: 'o-demo-bar-select.scss', shadow: true})
+@Component({
+    tag: 'o-demo-bar-select',
+    styleUrl: 'o-demo-bar-select.scss',
+    shadow: true
+  })
+
 export class DemoSelectComponent {
   private select : any;
   @Element()el : HTMLElement;
   @Event()selectedCaseChanged : EventEmitter;
   @Prop()options : any;
 
+
+
   componentDidLoad() {
-    const rootEl = this
-      .el
-      .shadowRoot
-      .querySelector('.mdc-select');
+    const rootEl = this.el.shadowRoot.querySelector('.mdc-select');
     this.select = new MDCSelect(rootEl);
     this.select.selectedIndex = 0;
-
-    this
-      .select
-      .listen('MDCSelect:change', () => {
-        this
-          .selectedCaseChanged
-          .emit(this.select.selectedIndex);
-      });
+    this.emitChange();
+    this.select.listen('MDCSelect:change', () => {
+        this.emitChange();
+    });
   }
+
+  emitChange(){
+    this.selectedCaseChanged.emit(this.select.selectedIndex);
+  }
+
   componentDidUnload() {
-    this
-      .select
-      .destroy();
+    this.select.destroy();
   }
 
   render() {

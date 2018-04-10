@@ -3,7 +3,7 @@ import {CssClassMap} from '../utils/CssClassMap'
 @Component({
   tag: 'o-demo-devices',
   styleUrl: 'o-demo-devices.scss',
-  shadow: false
+  shadow: true
 })
 
 
