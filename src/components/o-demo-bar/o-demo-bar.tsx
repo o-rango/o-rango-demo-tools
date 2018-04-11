@@ -2,9 +2,10 @@ import {
   Component,
   Prop,
   Element,
-  Listen
+  Listen,
+  Watch
 } from '@stencil/core';
-import {CssClassMap} from '../utils/CssClassMap'
+
 
 @Component({
   tag: 'o-demo-bar',
@@ -15,20 +16,18 @@ import {CssClassMap} from '../utils/CssClassMap'
 export class DemoBarComponent {
   private demoCases: any;
   private casesOptions: any;
-  private caseOptionSelected: number = 0;
   private resizeComponent:any;
   @Element() el: HTMLElement;
 
   @Prop() name: string;
   @Prop() events: string[];
+  @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
   @Prop({ mutable: true }) deviceEmulate: boolean = false;
 
-
-
-
+  // LifeCycle Hooks
   componentWillLoad() {
     document.body.style.margin = '0';
     this.demoCases = this.el.querySelectorAll('o-demo-case');
@@ -38,7 +37,23 @@ export class DemoBarComponent {
   componentDidLoad() {
     this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
     this._setIframe();
-    this.resizeComponent.setActiveViewPort(this.deviceSize);
+    this.setViewPort();
+  }
+
+  // Utils
+  setViewPort():void{
+    window.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
+  }
+
+  // Select Changes handlers
+  @Watch('caseOptionSelected')
+  caseOptionSelectedHandler():void{
+      this._setIframe();
+  }
+
+  @Listen('selectedCaseChanged')
+  selectedCaseChangedHandler(event: CustomEvent) {
+    this.caseOptionSelected = event.detail;
   }
 
   @Listen('toolbarButtonClicked')
@@ -59,26 +74,19 @@ export class DemoBarComponent {
       this.deviceEmulate = false;
         break;
       case 'other-devices':
-      this.device = event.detail;
-      debugger;
-      this.deviceEmulate = !this.deviceEmulate;
+      this.device = null;
+      this.deviceSize = '458';
+      this.deviceEmulate = true;
       break;
     }
     this._setIframe();
-
     if(event.detail !== 'other-devices'){
       setTimeout(()=>{
-        this.resizeComponent.setActiveViewPort(this.deviceSize);
-      } , 10);
+        this.setViewPort();
+      } , 5);
     }
+}
 
-  }
-
-  @Listen('selectedCaseChanged')
-  selectedCaseChangedHandler(event: CustomEvent) {
-    this.caseOptionSelected = event.detail;
-    this._setIframe();
-  }
 
   @Listen('resizeButtonClicked')
   resizeButtonClickedHandler(event: CustomEvent) {
@@ -101,29 +109,26 @@ export class DemoBarComponent {
 
   _setIframe() {
     this._cleanIframe();
-    const iframeContainer = this.el.shadowRoot.querySelector(
-      '#iframeContainer'
-    );
+    const  htmlReplacer =  this.el.shadowRoot.querySelector('#frame-wrap');
 
+    !this.deviceEmulate ? htmlReplacer.innerHTML = `<div id="iframeContainer" class="pattern" />`
+                        : htmlReplacer.innerHTML = '<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"></div></o-demo-devices>'
+
+    const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
     const iframe = document.createElement('iframe');
-
     const frameH = Math.max(document.documentElement.clientHeight);
     const frameW = this.deviceSize;
     const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-    const html = `<html><head></head><style>body{ margin:0 } </style></style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+    const html = `<html><head></head><style>body{ margin:0} </style></style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
     iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
-    iframeContainer.appendChild(iframe);
+    iframeContainer.appendChild(iframe)
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(html);
     iframe.contentWindow.document.close();
   }
 
   render() {
-    const bgClasses: CssClassMap = {
-      pattern: this.pattern,
-      bgcolor: !this.pattern
-    };
     return (
       <div id="demo-bar">
         { this.events ? <o-demo-snackbar events={this.events} /> : '' }
@@ -133,9 +138,6 @@ export class DemoBarComponent {
         { !this.deviceEmulate ? <o-demo-resizer size={this.deviceSize} viewport={this.device} slot="base"/> : ''}
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
-        { !this.deviceEmulate ? <div id="iframeContainer" class={bgClasses} />
-                             : <o-demo-devices><div id="iframeContainer" class={bgClasses} /></o-demo-devices>
-        }
         </div>
       </div>
     );

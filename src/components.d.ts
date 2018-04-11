@@ -110,6 +110,7 @@ declare global {
 
 declare global {
   interface HTMLODemoBarElement extends HTMLStencilElement {
+    'caseOptionSelected': number;
     'device': string;
     'deviceEmulate': boolean;
     'deviceSize': string;
@@ -134,6 +135,7 @@ declare global {
   }
   namespace JSXElements {
     export interface ODemoBarAttributes extends HTMLAttributes {
+      'caseOptionSelected'?: number;
       'device'?: string;
       'deviceEmulate'?: boolean;
       'deviceSize'?: string;
