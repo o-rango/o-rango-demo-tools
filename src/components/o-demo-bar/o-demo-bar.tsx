@@ -36,8 +36,8 @@ export class DemoBarComponent {
 
   componentDidLoad() {
     this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
-    //this._setIframe();
-    //this.setViewPort();
+    this._setIframe();
+    this.setViewPort();
   }
 
   // Utils
