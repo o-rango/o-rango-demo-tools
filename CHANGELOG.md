@@ -1,17 +1,39 @@
-<a name="0.3.0"></a>
-## 0.3.0 (2018-04-09)
+# Change Log
 
-* chore: version 0.2.0 ([238272e](https://github.com/o-rango/orango-demo-tools/commit/238272e))
-* chore(deps): update dependency autoprefixer to v8.2.0 ([5595d1b](https://github.com/o-rango/orango-demo-tools/commit/5595d1b))
-* chore(release): 0.3.0 ([a1ffc29](https://github.com/o-rango/orango-demo-tools/commit/a1ffc29))
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/o-rango/orango-demo-tools/compare/v0.2.0...v0.4.0) (2018-04-11)
+
+
+### Features
+
+* downgrade material select ([70ca9bc](https://github.com/o-rango/orango-demo-tools/commit/70ca9bc))
+
+
+
+<a name="0.3.0"></a>
+## 0.3.0 (2018-04-11)
+
+* add mobile features ([263c721](https://github.com/o-rango/orango-demo-tools/commit/263c721))
 * demo  update ([b72215b](https://github.com/o-rango/orango-demo-tools/commit/b72215b))
-* docs ([0947673](https://github.com/o-rango/orango-demo-tools/commit/0947673))
 * docs ([646161d](https://github.com/o-rango/orango-demo-tools/commit/646161d))
+* docs ([0947673](https://github.com/o-rango/orango-demo-tools/commit/0947673))
 * docs : update docs ([87b8c55](https://github.com/o-rango/orango-demo-tools/commit/87b8c55))
+* feat(deviceEmulator) : prepare device emulator ([aaa76bd](https://github.com/o-rango/orango-demo-tools/commit/aaa76bd))
+* fix margins on iframe ([ac4fc8d](https://github.com/o-rango/orango-demo-tools/commit/ac4fc8d))
+* prepare for active buttons ([4233c51](https://github.com/o-rango/orango-demo-tools/commit/4233c51))
 * update builds ([81daa7d](https://github.com/o-rango/orango-demo-tools/commit/81daa7d))
 * update docs ([7fef534](https://github.com/o-rango/orango-demo-tools/commit/7fef534))
 * update docs ([e0776a2](https://github.com/o-rango/orango-demo-tools/commit/e0776a2))
 * update docs ([3f5dd38](https://github.com/o-rango/orango-demo-tools/commit/3f5dd38))
+* update mobile view ([8023e88](https://github.com/o-rango/orango-demo-tools/commit/8023e88))
+* update viewports ([7d7afbd](https://github.com/o-rango/orango-demo-tools/commit/7d7afbd))
+* WIP refactor ([bef9d46](https://github.com/o-rango/orango-demo-tools/commit/bef9d46))
+* test(): init tests ([1601b6e](https://github.com/o-rango/orango-demo-tools/commit/1601b6e))
+* chore: version 0.2.0 ([238272e](https://github.com/o-rango/orango-demo-tools/commit/238272e))
+* chore(deps): update dependency autoprefixer to v8.2.0 ([5595d1b](https://github.com/o-rango/orango-demo-tools/commit/5595d1b))
+* chore(release): 0.3.0 ([a63f27a](https://github.com/o-rango/orango-demo-tools/commit/a63f27a))
 * feat: downgrade material select ([70ca9bc](https://github.com/o-rango/orango-demo-tools/commit/70ca9bc))
 * docs(): added docs ([6b205bb](https://github.com/o-rango/orango-demo-tools/commit/6b205bb))
 * docs(): auto demo generation ([a28ec74](https://github.com/o-rango/orango-demo-tools/commit/a28ec74))
@@ -226,6 +248,3 @@
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
-
-
-
