@@ -7,6 +7,7 @@ import {
   Method
 } from '@stencil/core';
 
+
 @Component({
   tag: 'o-demo-resizer',
   styleUrl: 'o-demo-resizer.scss',
@@ -40,14 +41,20 @@ export class DemoResizerComponent {
   @Prop() size: string;
   @Prop() viewport: string;
 
+
   handleClick(event: any) {
     let evt = event.currentTarget.getAttribute('data-size');
     this.resizeButtonClicked.emit(evt);
     this.setActiveViewPort(evt);
   }
 
+  componentWillUpdate() {
+    console.log('The component will update');
+  }
+
   @Method()
   setActiveViewPort(size?: string) {
+    console.log(size);
     const sizeList = Array.from(
       this.el.shadowRoot.querySelectorAll('.item-resize-toolbar')
     );
@@ -57,6 +64,7 @@ export class DemoResizerComponent {
     });
 
     const activeEl: any = sizeList.filter((el:any)=>{
+      console.log(el.getAttribute('data-size') === size);
       return el.getAttribute('data-size') === size;
     });
 

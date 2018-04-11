@@ -5,7 +5,7 @@ import {
   Listen,
   Watch
 } from '@stencil/core';
-
+import {CssClassMap} from '../utils/CssClassMap'
 
 @Component({
   tag: 'o-demo-bar',
@@ -36,8 +36,8 @@ export class DemoBarComponent {
 
   componentDidLoad() {
     this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
-    this._setIframe();
-    this.setViewPort();
+    //this._setIframe();
+    //this.setViewPort();
   }
 
   // Utils
@@ -74,16 +74,17 @@ export class DemoBarComponent {
       this.deviceEmulate = false;
         break;
       case 'other-devices':
-      this.device = null;
+      this.device = event.detail;
       this.deviceSize = '458';
       this.deviceEmulate = true;
       break;
     }
     this._setIframe();
+
     if(event.detail !== 'other-devices'){
       setTimeout(()=>{
         this.setViewPort();
-      } , 5);
+      } , 20);
     }
 }
 
@@ -129,13 +130,18 @@ export class DemoBarComponent {
   }
 
   render() {
+
+    const bgClasses: CssClassMap = {
+      hide: this.deviceEmulate,
+    };
+
     return (
       <div id="demo-bar">
-        { this.events ? <o-demo-snackbar events={this.events} /> : '' }
+        { this.events ? <o-demo-snackbar events={this.events} /> : null }
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right"/>
-        { !this.deviceEmulate ? <o-demo-resizer size={this.deviceSize} viewport={this.device} slot="base"/> : ''}
+        <o-demo-resizer class={bgClasses} size={this.deviceSize} viewport={this.device} slot="base"/> }
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
         </div>
