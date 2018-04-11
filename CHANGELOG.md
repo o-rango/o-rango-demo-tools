@@ -1,9 +1,7 @@
-# Change Log
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 <a name="0.4.1"></a>
-## [0.4.1](https://github.com/o-rango/orango-demo-tools/compare/v0.4.0...v0.4.1) (2018-04-11)
+## <small>0.4.1 (2018-04-11)</small>
+
+* chore(release): 0.4.1 ([61dbc57](https://github.com/o-rango/orango-demo-tools/commit/61dbc57))
 
 
 
@@ -244,3 +242,6 @@ All notable changes to this project will be documented in this file. See [standa
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
+
+
+
