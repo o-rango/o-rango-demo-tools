@@ -176,7 +176,6 @@ declare global {
 
 declare global {
   interface HTMLODemoDevicesElement extends HTMLStencilElement {
-    'device': string;
     'orientation': string;
   }
   var HTMLODemoDevicesElement: {
@@ -196,8 +195,35 @@ declare global {
   }
   namespace JSXElements {
     export interface ODemoDevicesAttributes extends HTMLAttributes {
-      'device'?: string;
       'orientation'?: string;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLODemoFabElement extends HTMLStencilElement {
+
+  }
+  var HTMLODemoFabElement: {
+    prototype: HTMLODemoFabElement;
+    new (): HTMLODemoFabElement;
+  };
+  interface HTMLElementTagNameMap {
+    'o-demo-fab': HTMLODemoFabElement;
+  }
+  interface ElementTagNameMap {
+    'o-demo-fab': HTMLODemoFabElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'o-demo-fab': JSXElements.ODemoFabAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ODemoFabAttributes extends HTMLAttributes {
+      'onChange-device'?: (event: CustomEvent) => void;
+      'onRotate-device'?: (event: CustomEvent) => void;
     }
   }
 }

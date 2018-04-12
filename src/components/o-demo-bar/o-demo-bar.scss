@@ -5,15 +5,19 @@
     flex: 1;
     display: flex;
     position: relative;
+    vertical-align:  middle;
     z-index: 0;
   }
 
   .hide{
     display: none;
   }
+  o-demo-bar {
+    z-index : 999;
+  }
 
   o-demo-devices {
-    margin: auto;
+    margin-top: auto;
     position: relative;
     display: flex;
     align-items: center;

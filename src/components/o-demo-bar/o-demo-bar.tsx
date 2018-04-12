@@ -23,9 +23,9 @@ export class DemoBarComponent {
   @Prop() events: string[];
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
-  @Prop({ mutable: true }) device: string = 'desktop';
+  @Prop({ mutable: true }) device: string = 'other-devices';
   @Prop({ mutable: true }) deviceSize: string = '1024';
-  @Prop({ mutable: true }) deviceEmulate: boolean = false;
+  @Prop({ mutable: true }) deviceEmulate: boolean = true;
 
   // LifeCycle Hooks
   componentWillLoad() {
@@ -113,7 +113,7 @@ export class DemoBarComponent {
     const  htmlReplacer =  this.el.shadowRoot.querySelector('#frame-wrap');
 
     !this.deviceEmulate ? htmlReplacer.innerHTML = `<div id="iframeContainer" class="pattern" />`
-                        : htmlReplacer.innerHTML = '<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"></div></o-demo-devices>'
+                        : htmlReplacer.innerHTML = '<o-demo-fab></o-demo-fab><br><o-demo-devices device="iphone-x"><div id="iframeContainer" class="pattern" slot="screen"></div></o-demo-devices>'
 
     const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
     const iframe = document.createElement('iframe');
@@ -123,6 +123,7 @@ export class DemoBarComponent {
     const html = `<html><head></head><style>body{ margin:0} </style></style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
     iframe.height = `${(frameH - 85).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
+    iframe.style.border = 'none';
     iframeContainer.appendChild(iframe)
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(html);
