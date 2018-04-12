@@ -21,6 +21,7 @@
     "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
+    "@material/fab": "^0.34.1",
     "@material/list": "^0.34.0",
     "@material/menu": "^0.34.0",
     "@material/select": "^0.32.0",

@@ -1,0 +1,47 @@
+@import "@material/fab/mdc-fab";
+
+
+:host{
+  .fab-menu--absolute {
+    display : none;
+  }
+
+  .app-fab--absolute {
+    display : none;
+  }
+
+  @media(min-width: 1024px) {
+    .fab-menu--absolute {
+      display : block;
+      position: fixed;
+      bottom: 1.1rem;
+      right: 5rem;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      will-change: transform;
+      transition: visibility 0s, opacity 0.5s linear;
+      button {
+        background-color: var( --mdc-theme-text-primary-on-primary);
+        margin : 4px;
+      }
+
+    }
+    .fab-menu--absolute--show {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+
+
+
+    .app-fab--absolute {
+      display: block;
+      background-color: var( --mdc-theme-text-primary-on-primary);
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 999;
+    }
+  }
+}
