@@ -1,5 +1,5 @@
-import { Component , Prop} from '@stencil/core';
-import {CssClassMap} from '../utils/CssClassMap'
+import { Component , Prop , Element , State} from '@stencil/core';
+import {Devices} from './devices';
 @Component({
   tag: 'o-demo-devices',
   styleUrl: 'o-demo-devices.scss',
@@ -8,38 +8,41 @@ import {CssClassMap} from '../utils/CssClassMap'
 
 
 export class DemoDevicesComponent {
+  private evtListenerRotate : any;
+  private evtListenerDeviceChange : any;
+  @Element() el: HTMLElement;
   @Prop() orientation : string;
-  @Prop() device : string;
+  @State() selectedDevice = 0;
+
+  deviceArray = [ Devices.iphoneX ,Devices.iphone8 , Devices.note8 , Devices.nexus5 , Devices.lumia920]
+
+  componentDidLoad() {
+    this.evtListenerRotate = document.addEventListener('rotate-device' ,this.rotateDevice.bind(this));
+    this.evtListenerDeviceChange = document.addEventListener('change-device' , this.changeDevice.bind(this));
+  }
+
+  componentDidUnload(){
+    document.removeEventListener('rotate-device' , this.evtListenerRotate );
+    document.removeEventListener('rotate-device' , this.evtListenerDeviceChange );
+  }
+
+  changeDevice(evt : any){
+
+      if(evt.detail === 'navigate-next'){
+        this.selectedDevice++
+        if(this.selectedDevice === 4) this.selectedDevice = 0;
+      }
+
+      if(evt.detail === 'navigate-before'){
+        this.selectedDevice--
+        if(this.selectedDevice<0) this.selectedDevice = 4;
+      }
+  }
+
+  rotateDevice(){
+    this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
+  }
   render() {
-
-    const phoneModel: CssClassMap = {
-      'marvel-device iphone-x':true,
-      'iphone-x': this.device === 'iphone-x',
-      'iphone8': this.device === 'iphone8',
-      'nexus5': this.device === 'iphone-x',
-      'lumia920': this.device === 'iphone-x',
-      'landscape' : this.orientation === 'landscape'
-    };
-
-    return (
-      <div class={phoneModel}>
-        <div class="notch">
-          <div class="camera" />
-          <div class="speaker" />
-        </div>
-        <div class="top-bar" />
-        <div class="sleep" />
-        <div class="bottom-bar" />
-        <div class="volume" />
-        <div class="overflow">
-          <div class="shadow shadow--tr" />
-          <div class="shadow shadow--tl" />
-          <div class="shadow shadow--br" />
-          <div class="shadow shadow--bl" />
-        </div>
-        <div class="inner-shadow" />
-        <div class="screen"><slot name="screen"/></div>
-      </div>
-    );
+    return this.deviceArray[this.selectedDevice];
   }
 }
