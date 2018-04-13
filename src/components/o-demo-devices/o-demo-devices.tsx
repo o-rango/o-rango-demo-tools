@@ -29,13 +29,10 @@ export class DemoDevicesComponent {
   changeDevice(evt : any){
 
       if(evt.detail === 'navigate-next'){
-        this.selectedDevice++
-        if(this.selectedDevice === 4) this.selectedDevice = 0;
+        this.selectedDevice < 4 ? this.selectedDevice++ : this.selectedDevice = 0;
       }
-
-      if(evt.detail === 'navigate-before'){
-        this.selectedDevice--
-        if(this.selectedDevice<0) this.selectedDevice = 4;
+      else if(evt.detail === 'navigate-before'){
+        this.selectedDevice > 0 ?  this.selectedDevice-- : this.selectedDevice = 4;
       }
   }
 
