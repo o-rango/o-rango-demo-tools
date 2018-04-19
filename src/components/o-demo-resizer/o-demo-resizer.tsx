@@ -48,9 +48,6 @@ export class DemoResizerComponent {
     this.setActiveViewPort(evt);
   }
 
-  componentWillUpdate() {
-    console.log('The component will update');
-  }
 
   @Method()
   setActiveViewPort(size?: string) {

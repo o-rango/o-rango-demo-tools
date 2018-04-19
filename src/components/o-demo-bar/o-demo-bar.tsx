@@ -23,9 +23,9 @@ export class DemoBarComponent {
   @Prop() events: string[];
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
-  @Prop({ mutable: true }) device: string = 'other-devices';
+  @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
-  @Prop({ mutable: true }) deviceEmulate: boolean = true;
+  @Prop({ mutable: true }) deviceEmulate: boolean = false;
 
   // LifeCycle Hooks
   componentWillLoad() {
@@ -40,6 +40,11 @@ export class DemoBarComponent {
     this.setViewPort();
   }
 
+  componentDidUpdate() {
+    this._setIframe();
+    this.setViewPort();
+  }
+
   // Utils
   setViewPort():void{
     window.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
@@ -48,7 +53,9 @@ export class DemoBarComponent {
   // Select Changes handlers
   @Watch('caseOptionSelected')
   caseOptionSelectedHandler():void{
-      this._setIframe();
+      setTimeout(()=>{
+        this._setIframe();
+      },200)
   }
 
   @Listen('selectedCaseChanged')
@@ -110,18 +117,13 @@ export class DemoBarComponent {
 
   _setIframe() {
     this._cleanIframe();
-    const  htmlReplacer =  this.el.shadowRoot.querySelector('#frame-wrap');
-
-    !this.deviceEmulate ? htmlReplacer.innerHTML = `<div id="iframeContainer" class="pattern" />`
-                        : htmlReplacer.innerHTML = '<o-demo-fab></o-demo-fab><br><o-demo-devices device="iphone-x"><div id="iframeContainer" class="pattern" slot="screen"></div></o-demo-devices>'
-
     const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
     const iframe = document.createElement('iframe');
     const frameH = Math.max(document.documentElement.clientHeight);
     const frameW = this.deviceSize;
     const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-    const html = `<html><head></head><style>body{ margin:0} </style></style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
-    iframe.height = `${(frameH - 85).toString()}px`;
+    const html = `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+    iframe.height = `${(frameH).toString()}px`;
     iframe.width = `${frameW.toString()}px`;
     iframe.style.border = 'none';
     iframeContainer.appendChild(iframe)
@@ -132,9 +134,15 @@ export class DemoBarComponent {
 
   render() {
 
-    const bgClasses: CssClassMap = {
-      hide: this.deviceEmulate,
-    };
+  const defaultView = [<div id="iframeContainer" class="pattern"/>];
+  const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
+   const getView = ()=>{
+      return  this.deviceEmulate ? mobileView : defaultView;
+   }
+
+   const bgClasses: CssClassMap = {
+    hide: this.deviceEmulate,
+   }
 
     return (
       <div id="demo-bar">
@@ -145,6 +153,7 @@ export class DemoBarComponent {
         <o-demo-resizer class={bgClasses} size={this.deviceSize} viewport={this.device} slot="base"/> }
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
+           { getView()}
         </div>
       </div>
     );

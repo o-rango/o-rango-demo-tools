@@ -6,7 +6,6 @@ import {Devices} from './devices';
   shadow: true
 })
 
-
 export class DemoDevicesComponent {
   private evtListenerRotate : any;
   private evtListenerDeviceChange : any;
@@ -25,7 +24,6 @@ export class DemoDevicesComponent {
     document.removeEventListener('rotate-device' , this.evtListenerRotate );
     document.removeEventListener('rotate-device' , this.evtListenerDeviceChange );
   }
-
   changeDevice(evt : any){
 
       if(evt.detail === 'navigate-next'){
@@ -37,7 +35,9 @@ export class DemoDevicesComponent {
   }
 
   rotateDevice(){
-    this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
+    //const slo : any= this.el.shadowRoot.querySelector('slot');
+    //slo.assignedElements()[0].querySelector('iframe').style.top = this.el.getBoundingClientRect().top + 100  + 'px';
+    //this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
   render() {
     return this.deviceArray[this.selectedDevice];

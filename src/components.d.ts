@@ -25,9 +25,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoBarButtonsElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface ODemoBarButtons {
+
+    }
   }
+
+  interface HTMLODemoBarButtonsElement extends StencilComponents.ODemoBarButtons, HTMLStencilElement {}
+
   var HTMLODemoBarButtonsElement: {
     prototype: HTMLODemoBarButtonsElement;
     new (): HTMLODemoBarButtonsElement;
@@ -52,9 +58,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoBarSelectElement extends HTMLStencilElement {
-    'options': any;
+
+  namespace StencilComponents {
+    interface ODemoBarSelect {
+      'options': any;
+    }
   }
+
+  interface HTMLODemoBarSelectElement extends StencilComponents.ODemoBarSelect, HTMLStencilElement {}
+
   var HTMLODemoBarSelectElement: {
     prototype: HTMLODemoBarSelectElement;
     new (): HTMLODemoBarSelectElement;
@@ -80,10 +92,16 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoBarToolbarElement extends HTMLStencilElement {
-    'name': string;
-    'options': any;
+
+  namespace StencilComponents {
+    interface ODemoBarToolbar {
+      'name': string;
+      'options': any;
+    }
   }
+
+  interface HTMLODemoBarToolbarElement extends StencilComponents.ODemoBarToolbar, HTMLStencilElement {}
+
   var HTMLODemoBarToolbarElement: {
     prototype: HTMLODemoBarToolbarElement;
     new (): HTMLODemoBarToolbarElement;
@@ -109,15 +127,21 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoBarElement extends HTMLStencilElement {
-    'caseOptionSelected': number;
-    'device': string;
-    'deviceEmulate': boolean;
-    'deviceSize': string;
-    'events': string[];
-    'name': string;
-    'pattern': boolean;
+
+  namespace StencilComponents {
+    interface ODemoBar {
+      'caseOptionSelected': number;
+      'device': string;
+      'deviceEmulate': boolean;
+      'deviceSize': string;
+      'events': string[];
+      'name': string;
+      'pattern': boolean;
+    }
   }
+
+  interface HTMLODemoBarElement extends StencilComponents.ODemoBar, HTMLStencilElement {}
+
   var HTMLODemoBarElement: {
     prototype: HTMLODemoBarElement;
     new (): HTMLODemoBarElement;
@@ -148,9 +172,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoCaseElement extends HTMLStencilElement {
-    'name': string;
+
+  namespace StencilComponents {
+    interface ODemoCase {
+      'name': string;
+    }
   }
+
+  interface HTMLODemoCaseElement extends StencilComponents.ODemoCase, HTMLStencilElement {}
+
   var HTMLODemoCaseElement: {
     prototype: HTMLODemoCaseElement;
     new (): HTMLODemoCaseElement;
@@ -175,9 +205,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoDevicesElement extends HTMLStencilElement {
-    'orientation': string;
+
+  namespace StencilComponents {
+    interface ODemoDevices {
+      'orientation': string;
+    }
   }
+
+  interface HTMLODemoDevicesElement extends StencilComponents.ODemoDevices, HTMLStencilElement {}
+
   var HTMLODemoDevicesElement: {
     prototype: HTMLODemoDevicesElement;
     new (): HTMLODemoDevicesElement;
@@ -202,9 +238,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoFabElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface ODemoFab {
+
+    }
   }
+
+  interface HTMLODemoFabElement extends StencilComponents.ODemoFab, HTMLStencilElement {}
+
   var HTMLODemoFabElement: {
     prototype: HTMLODemoFabElement;
     new (): HTMLODemoFabElement;
@@ -230,11 +272,17 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoResizerElement extends HTMLStencilElement {
-    'setActiveViewPort': (size?: string) => void;
-    'size': string;
-    'viewport': string;
+
+  namespace StencilComponents {
+    interface ODemoResizer {
+      'setActiveViewPort': (size?: string) => void;
+      'size': string;
+      'viewport': string;
+    }
   }
+
+  interface HTMLODemoResizerElement extends StencilComponents.ODemoResizer, HTMLStencilElement {}
+
   var HTMLODemoResizerElement: {
     prototype: HTMLODemoResizerElement;
     new (): HTMLODemoResizerElement;
@@ -261,9 +309,15 @@ declare global {
 
 
 declare global {
-  interface HTMLODemoSnackbarElement extends HTMLStencilElement {
-    'events': any;
+
+  namespace StencilComponents {
+    interface ODemoSnackbar {
+      'events': any;
+    }
   }
+
+  interface HTMLODemoSnackbarElement extends StencilComponents.ODemoSnackbar, HTMLStencilElement {}
+
   var HTMLODemoSnackbarElement: {
     prototype: HTMLODemoSnackbarElement;
     new (): HTMLODemoSnackbarElement;
