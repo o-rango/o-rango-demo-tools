@@ -1,3 +1,22 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/o-rango/orango-demo-tools/compare/v0.4.1...v0.5.0) (2018-04-20)
+
+
+### Bug Fixes
+
+* **o-demo-devices:** fix devices selector ([53ca2e8](https://github.com/o-rango/orango-demo-tools/commit/53ca2e8))
+
+
+### Features
+
+* **o-demo-fab:** added fab to select devices and rotate ([f3b7b40](https://github.com/o-rango/orango-demo-tools/commit/f3b7b40))
+
+
+
 <a name="0.4.1"></a>
 ## <small>0.4.1 (2018-04-11)</small>
 
@@ -242,6 +261,3 @@
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
-
-
-
