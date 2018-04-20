@@ -35,9 +35,7 @@ export class DemoDevicesComponent {
   }
 
   rotateDevice(){
-    //const slo : any= this.el.shadowRoot.querySelector('slot');
-    //slo.assignedElements()[0].querySelector('iframe').style.top = this.el.getBoundingClientRect().top + 100  + 'px';
-    //this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
+    this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
   render() {
     return this.deviceArray[this.selectedDevice];
