@@ -51,7 +51,6 @@ export class DemoResizerComponent {
 
   @Method()
   setActiveViewPort(size?: string) {
-    console.log(size);
     const sizeList = Array.from(
       this.el.shadowRoot.querySelectorAll('.item-resize-toolbar')
     );
@@ -61,7 +60,6 @@ export class DemoResizerComponent {
     });
 
     const activeEl: any = sizeList.filter((el:any)=>{
-      console.log(el.getAttribute('data-size') === size);
       return el.getAttribute('data-size') === size;
     });
 

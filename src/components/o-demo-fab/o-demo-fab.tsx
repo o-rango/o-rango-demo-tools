@@ -26,7 +26,6 @@ export class DemoFabComponent {
 
   handleClick(evt:any):void{
     const target  = evt.currentTarget.getAttribute('data-btn');
-    console.log(target);
     target === 'rotate-screen' ? this.fabBtnRotate.emit(target)
                                : this.fabBtnChangeDevice.emit(target);
   }
