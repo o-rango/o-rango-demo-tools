@@ -2,8 +2,7 @@ import {
   Component,
   Prop,
   Element,
-  Listen,
-  Watch
+  Listen
 } from '@stencil/core';
 import {CssClassMap} from '../utils/CssClassMap'
 
@@ -50,13 +49,7 @@ export class DemoBarComponent {
     window.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
   }
 
-  // Select Changes handlers
-  @Watch('caseOptionSelected')
-  caseOptionSelectedHandler():void{
-      setTimeout(()=>{
-        this._setIframe();
-      },200)
-  }
+
 
   @Listen('selectedCaseChanged')
   selectedCaseChangedHandler(event: CustomEvent) {
@@ -116,24 +109,25 @@ export class DemoBarComponent {
   }
 
   _setIframe() {
-    this._cleanIframe();
-    const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
-    const iframe = document.createElement('iframe');
-    const frameH = Math.max(document.documentElement.clientHeight);
-    const frameW = this.deviceSize;
-    const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-    const html = `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
-    iframe.height = `${(frameH).toString()}px`;
-    iframe.width = `${frameW.toString()}px`;
-    iframe.style.border = 'none';
-    iframeContainer.appendChild(iframe)
-    iframe.contentWindow.document.open();
-    iframe.contentWindow.document.write(html);
-    iframe.contentWindow.document.close();
+    window.requestAnimationFrame(()=>{
+      this._cleanIframe();
+      const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
+      const iframe = document.createElement('iframe');
+      const frameH = Math.max(document.documentElement.clientHeight);
+      const frameW = this.deviceSize;
+      const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
+      const html = `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+      iframe.height = `${(frameH - 85).toString()}px`;
+      iframe.width = `${frameW.toString()}px`;
+      iframe.style.border = 'none';
+      iframeContainer.appendChild(iframe)
+      iframe.contentWindow.document.open();
+      iframe.contentWindow.document.write(html);
+      iframe.contentWindow.document.close();
+    });
   }
 
   render() {
-
   const defaultView = [<div id="iframeContainer" class="pattern"/>];
   const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
    const getView = ()=>{
