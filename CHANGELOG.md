@@ -1,34 +1,43 @@
-# Change Log
+<a name="0.6.0"></a>
+## 0.6.0 (2018-04-24)
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore(release): 0.6.0 ([4e736de](https://github.com/o-rango/orango-demo-tools/commit/4e736de))
+
+
 
 <a name="0.5.3"></a>
-## [0.5.3](https://github.com/o-rango/orango-demo-tools/compare/v0.5.2...v0.5.3) (2018-04-24)
+## <small>0.5.3 (2018-04-24)</small>
+
+* chore(release): 0.5.3 ([678f6f3](https://github.com/o-rango/orango-demo-tools/commit/678f6f3))
 
 
 
 <a name="0.5.2"></a>
-## [0.5.2](https://github.com/o-rango/orango-demo-tools/compare/v0.5.1...v0.5.2) (2018-04-24)
+## <small>0.5.2 (2018-04-24)</small>
+
+* chore(release): 0.5.2 ([8ebcb34](https://github.com/o-rango/orango-demo-tools/commit/8ebcb34))
 
 
 
 <a name="0.5.1"></a>
-## [0.5.1](https://github.com/o-rango/orango-demo-tools/compare/v0.5.0...v0.5.1) (2018-04-20)
+## <small>0.5.1 (2018-04-20)</small>
+
+* chore(release): 0.5.1 ([dbab7a8](https://github.com/o-rango/orango-demo-tools/commit/dbab7a8))
+* fix : rotate device ([716dde9](https://github.com/o-rango/orango-demo-tools/commit/716dde9))
 
 
 
 <a name="0.5.0"></a>
-# [0.5.0](https://github.com/o-rango/orango-demo-tools/compare/v0.4.1...v0.5.0) (2018-04-20)
+## 0.5.0 (2018-04-20)
 
-
-### Bug Fixes
-
-* **o-demo-devices:** fix devices selector ([53ca2e8](https://github.com/o-rango/orango-demo-tools/commit/53ca2e8))
-
-
-### Features
-
-* **o-demo-fab:** added fab to select devices and rotate ([f3b7b40](https://github.com/o-rango/orango-demo-tools/commit/f3b7b40))
+* chore(release): 0.5.0 ([97d9727](https://github.com/o-rango/orango-demo-tools/commit/97d9727))
+* prod build ([a6ccdad](https://github.com/o-rango/orango-demo-tools/commit/a6ccdad))
+* refactor(o-demo-bar) small refactoring on chrome ([bf08e10](https://github.com/o-rango/orango-demo-tools/commit/bf08e10))
+* style : console logs ([0b77378](https://github.com/o-rango/orango-demo-tools/commit/0b77378))
+* refactor: change devices and cross browser ([88acf14](https://github.com/o-rango/orango-demo-tools/commit/88acf14))
+* refactor(o-demo-devices): added events and isolate device templates ([be25577](https://github.com/o-rango/orango-demo-tools/commit/be25577))
+* fix(o-demo-devices): fix devices selector ([53ca2e8](https://github.com/o-rango/orango-demo-tools/commit/53ca2e8))
+* feat(o-demo-fab): added fab to select devices and rotate ([f3b7b40](https://github.com/o-rango/orango-demo-tools/commit/f3b7b40))
 
 
 
@@ -276,3 +285,6 @@ All notable changes to this project will be documented in this file. See [standa
 * test: fix tests ([7f28e7d](https://github.com/o-rango/orango-demo-tools/commit/7f28e7d))
 * docs: update docs badges ([c42cd07](https://github.com/o-rango/orango-demo-tools/commit/c42cd07))
 * feat: update o-demo-bar-toolbar ([ff67962](https://github.com/o-rango/orango-demo-tools/commit/ff67962))
+
+
+
