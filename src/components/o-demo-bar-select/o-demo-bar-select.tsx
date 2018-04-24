@@ -19,7 +19,7 @@ export class DemoSelectComponent {
     this.select = new MDCSelect(rootEl);
     this.select.selectedIndex = 0;
     this.emitChange();
-    this.select.listen('MDCSelect:change', () => {
+    this.select.listen('change', () => {
         this.emitChange();
     });
   }
@@ -34,23 +34,17 @@ export class DemoSelectComponent {
 
   render() {
     return (
-      <div class="mdc-select" role="listbox">
-        <div class="mdc-select__surface" tabindex="0">
-          <div class="mdc-select__label">Select demo :
-          </div>
-          <div class="mdc-select__selected-text"></div>
-          <div class="mdc-select__bottom-line"></div>
-        </div>
-        <div class="mdc-menu mdc-select__menu">
-          <ul class="mdc-list mdc-menu__items">
-            {this.options.map((option, index) => (
-                <li class="mdc-list-item" id={index} role="option" tabindex="0">
-                  {option}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
+      <div class="mdc-select">
+      <select class="mdc-select__native-control">
+      {this.options.map((option, index) => (
+                    <option value={index} id={index} role="option" tabindex="0">
+                      {option}
+                    </option>
+                  ))}
+      </select>
+      <label class="mdc-floating-label">Select Demo:</label>
+      <div class="mdc-line-ripple"></div>
+    </div>
     );
   }
 }
