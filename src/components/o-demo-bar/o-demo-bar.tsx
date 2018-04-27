@@ -144,7 +144,7 @@ export class DemoBarComponent {
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right"/>
-        <o-demo-resizer class={bgClasses} size={this.deviceSize} viewport={this.device} slot="base"/> }
+        <o-demo-resizer class={bgClasses} size={this.deviceSize} viewport={this.device} slot="base"/>
         </o-demo-bar-toolbar>
         <div id="frame-wrap">
            { getView()}
