@@ -128,15 +128,13 @@ export class DemoBarComponent {
   }
 
   render() {
-  const defaultView = [<div id="iframeContainer" class="pattern"/>];
-  const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
-   const getView = ()=>{
-      return  this.deviceEmulate ? mobileView : defaultView;
-   }
 
-   const bgClasses: CssClassMap = {
-    hide: this.deviceEmulate,
-   }
+    const bgClasses: CssClassMap = { pattern : this.pattern && !this.deviceEmulate}
+    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
+
+    // Templates for default view or Mobile View
+    const defaultView = [<div id="iframeContainer"/>];
+    const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
 
     return (
       <div id="demo-bar">
@@ -144,10 +142,10 @@ export class DemoBarComponent {
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right"/>
-        <o-demo-resizer class={bgClasses} size={this.deviceSize} viewport={this.device} slot="base"/>
+        <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base"/>
         </o-demo-bar-toolbar>
-        <div id="frame-wrap">
-           { getView()}
+        <div id="frame-wrap" class={bgClasses}>
+           { this.deviceEmulate ? mobileView : defaultView}
         </div>
       </div>
     );
