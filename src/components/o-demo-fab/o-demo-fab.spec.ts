@@ -1,19 +1,21 @@
-import { flush, render } from '@stencil/core/testing';
-import { DemoDevicesComponent } from './o-demo-devices';
+import { TestWindow } from '@stencil/core/testing';
+import { DemoFabComponent } from './o-demo-fab';
 
-describe('o-demo-bar-buttons', () => {
-  it('should build', () => {
-    expect(new DemoDevicesComponent()).toBeTruthy();
+
+
+describe('app-home', () => {
+
+  it('should update', async () => {
+    await window.flush();
   });
 
 
-  describe('rendering', () => {
-    let element;
-    beforeEach(async () => {
-      element = await render({
-        components: [DemoDevicesComponent],
-        html: '<o-demo-devices></o-demo-devices>'
-      });
+  let window: TestWindow;
+  beforeEach(async () => {
+    window = new TestWindow();
+    let element = await window.load({
+      components: [DemoFabComponent],
+      html: '<o-demo-fab></o-demo-fab>'
     });
   });
 });
