@@ -44,7 +44,7 @@
     "coveralls": "3.0.0",
     "jest": "22.4.3",
     "tslint": "5.9.1",
-    "tslint-react": "3.5.1",
+    "tslint-react": "3.6.0",
     "makeshift": "1.1.0",
     "standard-version": "4.3.0"
   },
