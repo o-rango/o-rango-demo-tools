@@ -34,7 +34,7 @@
     "autoprefixer": "8.3.0",
     "@stencil/postcss": "0.0.4",
     "@stencil/sass": "latest",
-    "@babel/core": "7.0.0-beta.46",
+    "@babel/core": "7.0.0-beta.49",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "22.2.3",
