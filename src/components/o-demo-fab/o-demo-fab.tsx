@@ -1,5 +1,5 @@
 import { Component, Element, Event, EventEmitter} from '@stencil/core';
-import { MDCRipple } from '@material/ripple';
+import { MDCRipple } from '@material/ripple/';
 @Component({
   tag: 'o-demo-fab',
   styleUrl: 'o-demo-fab.scss',

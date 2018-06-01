@@ -2,32 +2,36 @@
   "namespace": "OrangoDemoTools",
   "fsNamespace": "orango-demo-tools",
   "loader": "../orango-demo-tools.js",
-  "core": "orango-demo-tools.xqx0jdrl.js",
-  "corePolyfilled": "orango-demo-tools.qf2xh6v2.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "global": "orango-demo-tools.global.js",
+  "core": "orango-demo-tools.core.js",
   "components": {
     "o-demo-bar": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     },
     "o-demo-bar-buttons": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     },
     "o-demo-bar-select": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     },
     "o-demo-bar-toolbar": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     },
     "o-demo-case": {
-      "$": "ovmkfnp3"
+      "$": "o-demo-case"
     },
     "o-demo-devices": {
-      "$": "ab5czldo"
+      "$": "o-demo-bar"
+    },
+    "o-demo-fab": {
+      "$": "o-demo-bar"
     },
     "o-demo-resizer": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     },
     "o-demo-snackbar": {
-      "$": "2m9veqwp"
+      "$": "o-demo-bar"
     }
   }
 }
