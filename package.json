@@ -1,9 +1,9 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Orango dev tools components",
   "main": "dist/index.js",
-  "module":"dist/esm/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
