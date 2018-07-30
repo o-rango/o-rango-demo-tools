@@ -21,13 +21,13 @@
     "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
-    "@material/fab": "^0.36.1",
-    "@material/list": "^0.36.0",
-    "@material/menu": "^0.36.1",
-    "@material/select": "0.36.0",
-    "@material/snackbar": "^0.36.0",
-    "@material/toolbar": "^0.36.1",
-    "@material/typography": "^0.35.0",
+    "@material/fab": "^0.38.0",
+    "@material/list": "^0.38.0",
+    "@material/menu": "^0.38.0",
+    "@material/select": "0.38.0",
+    "@material/snackbar": "^0.38.0",
+    "@material/toolbar": "^0.38.0",
+    "@material/typography": "^0.38.0",
     "@stencil/core": "next"
   },
   "devDependencies": {
