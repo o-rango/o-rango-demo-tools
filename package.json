@@ -31,7 +31,7 @@
     "@stencil/core": "next"
   },
   "devDependencies": {
-    "autoprefixer": "8.6.4",
+    "autoprefixer": "9.1.0",
     "@stencil/postcss": "0.0.4",
     "@stencil/sass": "latest",
     "@babel/core": "7.0.0-beta.51",
