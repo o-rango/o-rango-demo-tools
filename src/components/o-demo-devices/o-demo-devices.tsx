@@ -9,11 +9,15 @@ import {Devices} from './devices';
 export class DemoDevicesComponent {
   private evtListenerRotate : any;
   private evtListenerDeviceChange : any;
-  @Element() el: HTMLElement;
+  @Element() el: any;
   @Prop() orientation : string;
   @State() selectedDevice = 0;
 
   deviceArray = [ Devices.iphoneX ,Devices.iphone8 , Devices.note8 , Devices.nexus5 , Devices.lumia920]
+
+  componentWillUpdate(){
+    window.requestAnimationFrame(()=> this._sizeFrame());
+  }
 
   componentDidLoad() {
     this.evtListenerRotate = document.addEventListener('rotate-device' ,this.rotateDevice.bind(this));
@@ -24,8 +28,21 @@ export class DemoDevicesComponent {
     document.removeEventListener('rotate-device' , this.evtListenerRotate );
     document.removeEventListener('rotate-device' , this.evtListenerDeviceChange );
   }
-  changeDevice(evt : any){
 
+  _sizeFrame(){
+    const slotEl= this.el.querySelector('[slot=screen]');
+    const iFrameEl = this.el.querySelector('iframe');
+
+    iFrameEl.width = `${slotEl.clientWidth}px`;
+    iFrameEl.height = `${slotEl.clientHeight}px`;
+
+    console.log('SlotW' , slotEl.clientWidth)
+    console.log('framW' ,   iFrameEl.width)
+    console.log('SlotH' , slotEl.clientHeight)
+    console.log('framH' ,   iFrameEl.height)
+  }
+
+  changeDevice(evt : any){
       if(evt.detail === 'navigate-next'){
         this.selectedDevice < 4 ? this.selectedDevice++ : this.selectedDevice = 0;
       }
@@ -35,6 +52,7 @@ export class DemoDevicesComponent {
   }
 
   rotateDevice(){
+    this.el.forceUpdate();
     this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
   render() {

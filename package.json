@@ -1,7 +1,7 @@
 {
   "name": "@o-rango/orango-demo-tools",
   "version": "0.6.6",
-  "description": "Orango dev tools components",
+  "description": "O-RANGO development environoment for web components",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",

@@ -39,6 +39,10 @@
     }
   }
 
+  #iframeContainer iframe {
+    display:inline
+  }
+
   .bgcolor {
     background-color :rgba(0, 0, 0, 0.04)
   }
