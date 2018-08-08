@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/o-rango/orango-demo-tools/compare/v0.6.7...v0.7.0) (2018-08-08)
+
+
+### Bug Fixes
+
+* resize and forceupdate ([73a7135](https://github.com/o-rango/orango-demo-tools/commit/73a7135))
+
+
+
 <a name="0.6.7"></a>
 ## [0.6.7](https://github.com/o-rango/orango-demo-tools/compare/v0.6.6...v0.6.7) (2018-08-08)
 
