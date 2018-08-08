@@ -59,6 +59,7 @@ class DemoBarComponent {
         this._setIframe();
         if (event.detail !== 'other-devices') {
             setTimeout(() => {
+                this.el.forceUpdate();
                 this.setViewPort();
             }, 20);
         }
@@ -2796,10 +2797,7 @@ class DemoDevicesComponent {
         const iFrameEl = this.el.querySelector('iframe');
         iFrameEl.width = `${slotEl.clientWidth}px`;
         iFrameEl.height = `${slotEl.clientHeight}px`;
-        console.log('SlotW', slotEl.clientWidth);
-        console.log('framW', iFrameEl.width);
-        console.log('SlotH', slotEl.clientHeight);
-        console.log('framH', iFrameEl.height);
+        this.el.forceUpdate();
     }
     changeDevice(evt) {
         if (evt.detail === 'navigate-next') {
@@ -2810,7 +2808,7 @@ class DemoDevicesComponent {
         }
     }
     rotateDevice() {
-        this.el.forceUpdate();
+        this._sizeFrame();
         this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
     }
     render() {

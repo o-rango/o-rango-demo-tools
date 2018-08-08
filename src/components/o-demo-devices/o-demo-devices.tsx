@@ -32,14 +32,9 @@ export class DemoDevicesComponent {
   _sizeFrame(){
     const slotEl= this.el.querySelector('[slot=screen]');
     const iFrameEl = this.el.querySelector('iframe');
-
     iFrameEl.width = `${slotEl.clientWidth}px`;
     iFrameEl.height = `${slotEl.clientHeight}px`;
-
-    console.log('SlotW' , slotEl.clientWidth)
-    console.log('framW' ,   iFrameEl.width)
-    console.log('SlotH' , slotEl.clientHeight)
-    console.log('framH' ,   iFrameEl.height)
+    this.el.forceUpdate();
   }
 
   changeDevice(evt : any){
@@ -52,7 +47,7 @@ export class DemoDevicesComponent {
   }
 
   rotateDevice(){
-    this.el.forceUpdate();
+    this._sizeFrame();
     this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
   render() {

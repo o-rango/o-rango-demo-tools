@@ -16,7 +16,7 @@ export class DemoBarComponent {
   private demoCases: any;
   private casesOptions: any;
   private resizeComponent:any;
-  @Element() el: HTMLElement;
+  @Element() el: any;
 
   @Prop() name: string;
   @Prop() events: string[];
@@ -83,6 +83,7 @@ export class DemoBarComponent {
 
     if(event.detail !== 'other-devices'){
       setTimeout(()=>{
+        this.el.forceUpdate();
         this.setViewPort();
       } , 20);
     }
