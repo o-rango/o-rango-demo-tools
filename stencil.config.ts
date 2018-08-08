@@ -1,9 +1,9 @@
-// Plugins
-const sass = require('@stencil/sass');
-const postcss = require('@stencil/postcss');
-const autoprefixer = require('autoprefixer');
+import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
+import { postcss } from '@stencil/postcss';
+import * as autoprefixer from 'autoprefixer';
 
-exports.config = {
+export const config: Config = {
   enableCache: true,
   namespace: 'orango-demo-tools',
   outputTargets: [
@@ -40,9 +40,4 @@ exports.config = {
     })
   ],
   preamble: 'O-RANGO - MIT License',
-};
-
-exports.devServer = {
-  root: 'docs',
-  watchGlob: [ '**/**', 'src/**/*.html' ]
 };
