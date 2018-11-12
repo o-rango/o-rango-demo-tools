@@ -1,28 +1,14 @@
+import { postcss } from '@stencil/postcss';
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-import { postcss } from '@stencil/postcss';
-import * as autoprefixer from 'autoprefixer';
+const autoprefixer =  require('autoprefixer');
 
 export const config: Config = {
-  enableCache: true,
   namespace: 'orango-demo-tools',
-  outputTargets: [
-    {
-      type: 'dist',
-      serviceWorker: false
-    },
-    {
-      type: 'www',
-      dir :'docs',
-      serviceWorker: false
-    }
-  ],
   plugins: [
     sass({
-      includePaths: [ 'node_modules/' ],
-      injectGlobalPaths: [
-        'src/components/styles/global.scss'
-      ]
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/']
     }),
     postcss({
       plugins: [
@@ -40,4 +26,9 @@ export const config: Config = {
     })
   ],
   preamble: 'O-RANGO - MIT License',
+  globalStyle: 'src/components/styles/global.scss',
+  outputTargets: [
+    { type: 'www'},
+    { type: 'dist' }
+  ]
 };

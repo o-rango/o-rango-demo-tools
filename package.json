@@ -16,9 +16,11 @@
     "dev": "stencil build --dev --watch --serve",
     "serve": "stencil build --dev --watch --serve",
     "start": "npm run dev",
+    "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0",
     "test": "NODE_ENV=test jest --no-cache --coverage",
     "test.watch": "NODE_ENV=test jest --watch --no-cache",
-    "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0"
+    "test:e2e": "stencil test --spec --e2e",
+    "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "@material/fab": "^0.38.0",
@@ -27,25 +29,27 @@
     "@material/select": "0.38.0",
     "@material/snackbar": "^0.38.0",
     "@material/toolbar": "^0.38.0",
-    "@material/typography": "^0.38.0",
-    "@stencil/core": "0.11.2"
+    "@material/typography": "^0.38.0"
   },
   "devDependencies": {
-    "autoprefixer": "9.1.0",
+    "fs-extra": "^7.0.1",
+    "@babel/core": "7.0.0-beta.56",
+    "@stencil/core": "0.16.0-0",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
-    "@babel/core": "7.0.0-beta.56",
     "@stencil/utils": "latest",
     "@types/jest": "23.3.1",
+    "autoprefixer": "^9.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.4.2",
     "babel-preset-es2015": "6.24.1",
     "coveralls": "3.0.2",
     "jest": "23.4.2",
+    "makeshift": "1.1.0",
+    "standard-version": "4.4.0",
     "tslint": "5.11.0",
     "tslint-react": "3.6.0",
-    "makeshift": "1.1.0",
-    "standard-version": "4.4.0"
+    "workbox-build": "3.4.1"
   },
   "repository": {
     "type": "git",
