@@ -34,7 +34,7 @@
   "devDependencies": {
     "fs-extra": "^7.0.1",
     "@babel/core": "7.0.0-beta.56",
-    "@stencil/core": "0.16.0-0",
+    "@stencil/core": "0.16.1",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",
