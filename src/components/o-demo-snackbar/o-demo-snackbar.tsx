@@ -1,5 +1,5 @@
 import { Component,Prop, Element } from '@stencil/core';
-import { MDCSnackbar } from '@material/snackbar';
+import { MDCSnackbar } from '@material/snackbar/index';
 
 @Component({
   tag: 'o-demo-snackbar',

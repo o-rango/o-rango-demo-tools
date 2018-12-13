@@ -1,36 +1,15 @@
-@import "@material/menu/mdc-menu";
-@import "@material/list/mdc-list";
 @import "@material/select/mdc-select";
 
 :host {
   z-index: 9999;
-  .mdc-menu__items {
-    background: var(--mdc-theme-primary , #efefef)
+  .mdc-floating-label{
+    color : grey;
   }
-  .mdc-list {
-    min-width: 30em;
-  }
-
    .mdc-select {
-    min-width: 30em;
+    min-width: 25em;
   }
-
-  .mdc-simple-menu {
-    min-width: 30em;
-  }
-
   @media only screen and (max-width: 780px) {
-
-    .mdc-list {
-      min-width: 20em;
-      width: 80%;
-    }
-
     .mdc-select {
-      min-width: 20em;
-      width: 80%;
-    }
-    .mdc-simple-menu {
       min-width: 20em;
       width: 80%;
     }
