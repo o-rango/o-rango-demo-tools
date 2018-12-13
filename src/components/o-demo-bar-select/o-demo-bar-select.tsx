@@ -12,8 +12,6 @@ export class DemoSelectComponent {
   @Event()selectedCaseChanged : EventEmitter;
   @Prop()options : any;
 
-
-
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-select');
     this.select = new MDCSelect(rootEl);
@@ -25,6 +23,7 @@ export class DemoSelectComponent {
   }
 
   emitChange(){
+    document.title = this.options[this.select.selectedIndex];
     this.selectedCaseChanged.emit(this.select.selectedIndex);
   }
 

@@ -19,7 +19,7 @@ export class DemoBarComponent {
   @Element() el: any;
 
   @Prop() name: string;
-  @Prop() events: string[];
+  @Prop() events: string;
   @Prop() backgroundColor: string;
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
@@ -136,7 +136,7 @@ export class DemoBarComponent {
 
     return (
       <div id="demo-bar">
-        { this.events ? <o-demo-snackbar events={this.events} /> : null }
+        {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
           <o-demo-bar-buttons slot="right"/>
