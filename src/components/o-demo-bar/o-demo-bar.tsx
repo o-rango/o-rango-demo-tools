@@ -20,6 +20,7 @@ export class DemoBarComponent {
 
   @Prop() name: string;
   @Prop() events: string[];
+  @Prop() backgroundColor: string;
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
@@ -59,10 +60,6 @@ export class DemoBarComponent {
   @Listen('toolbarButtonClicked')
   toolbarButtonClickedHandler(event: CustomEvent) {
     switch (event.detail) {
-      case 'grid-pattern':
-        this.pattern = !this.pattern;
-        this.deviceEmulate = false;
-        break;
       case 'mobile':
       this.device = event.detail;
       this.deviceSize = '412';
@@ -134,7 +131,7 @@ export class DemoBarComponent {
     const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
 
     // Templates for default view or Mobile View
-    const defaultView = [<div id="iframeContainer"/>];
+    const defaultView = [<div id="iframeContainer"  class="defaultView"/>];
     const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
 
     return (

@@ -31,17 +31,21 @@
     align-items: center;
     justify-content: center;
     iframe {
+
       margin: 0;
       border: 0;
       position: relative;
       background-color:transparent;
       z-index: 1;
     }
+    &.defaultView{
+      iframe {
+        height: 100vh;
+        //height: calc(var(--vh, 1vh) * 100);
+      }
+    }
   }
 
-  #iframeContainer iframe {
-    display:inline
-  }
 
   .bgcolor {
     background-color :rgba(0, 0, 0, 0.04)
