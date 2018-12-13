@@ -19,7 +19,7 @@ export class DemoBarComponent {
   @Element() el: any;
 
   @Prop() name: string;
-  @Prop() events: string;
+  @Prop() events: string = '';
   @Prop() backgroundColor: string;
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
