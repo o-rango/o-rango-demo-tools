@@ -1,4 +1,10 @@
 :host {
+  @-moz-document url-prefix() {
+    .toolbar-icons {
+      margin-top : 1em;
+    }
+  }
+
   .toolbar-button:focus {
     outline: none;
   }
