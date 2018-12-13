@@ -28,7 +28,7 @@ export const config: Config = {
   preamble: 'O-RANGO - MIT License',
   globalStyle: 'src/components/styles/global.scss',
   outputTargets: [
-    { type: 'www'},
-    { type: 'dist' }
+    { type: 'www' , serviceWorker: null},
+    { type: 'dist'}
   ]
 };

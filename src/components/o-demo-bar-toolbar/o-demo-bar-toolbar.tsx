@@ -1,5 +1,5 @@
 import { Component, Prop, Element } from '@stencil/core';
-import { MDCToolbar } from '@material/toolbar';
+import { MDCToolbar } from '@material/toolbar/index';
 
 @Component({
   tag: 'o-demo-bar-toolbar',
@@ -17,9 +17,6 @@ export class DemoToolbarComponent {
   componentDidLoad() {
     this.rootEl = this.el.shadowRoot.querySelector('.mdc-toolbar');
     this.toolbar = new MDCToolbar(this.rootEl);
-    this.toolbar.fixedAdjustElement = this.el.shadowRoot.querySelector(
-      '.mdc-toolbar-fixed-adjust'
-    );
   }
 
   componentDidUnload() {
@@ -48,7 +45,6 @@ export class DemoToolbarComponent {
           </div>
           <slot name="base" />
         </header>
-        <main class="mdc-toolbar-fixed-adjust"/>
       </div>
     );
   }

@@ -15,13 +15,16 @@
   o-demo-bar {
     z-index : 999;
   }
-
   o-demo-devices {
     margin-top: auto;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  #frame-wrap{
+    margin-top: 97px;
   }
 
   #iframeContainer {
