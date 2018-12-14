@@ -2,66 +2,66 @@
   "namespace": "OrangoDemoTools",
   "fsNamespace": "orango-demo-tools",
   "loader": "../orango-demo-tools.js",
-  "corePolyfilled": "es5-build-disabled.js",
-  "core": "orango-demo-tools.core.js",
+  "core": "orango-demo-tools.sscihmpu.js",
+  "corePolyfilled": "orango-demo-tools.zjzijb5t.js",
   "components": {
     "o-demo-bar": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-buttons": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-select": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-toolbar": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-case": {
       "bundleIds": {
-        "$": "o-demo-case"
+        "$": "gwhkzfcf"
       },
       "encapsulation": "shadow"
     },
     "o-demo-devices": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-fab": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-modal": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-resizer": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     },
     "o-demo-snackbar": {
       "bundleIds": {
-        "$": "o-demo-bar"
+        "$": "eweepmnb"
       },
       "encapsulation": "shadow"
     }
