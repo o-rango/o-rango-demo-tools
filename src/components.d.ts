@@ -35,20 +35,22 @@ export namespace Components {
   }
 
   interface ODemoBar {
+    'backgroundColor': string;
     'caseOptionSelected': number;
     'device': string;
     'deviceEmulate': boolean;
     'deviceSize': string;
-    'events': string[];
+    'events': string;
     'name': string;
     'pattern': boolean;
   }
   interface ODemoBarAttributes extends StencilHTMLAttributes {
+    'backgroundColor'?: string;
     'caseOptionSelected'?: number;
     'device'?: string;
     'deviceEmulate'?: boolean;
     'deviceSize'?: string;
-    'events'?: string[];
+    'events'?: string;
     'name'?: string;
     'pattern'?: boolean;
   }
@@ -71,6 +73,15 @@ export namespace Components {
   interface ODemoFabAttributes extends StencilHTMLAttributes {
     'onChange-device'?: (event: CustomEvent) => void;
     'onRotate-device'?: (event: CustomEvent) => void;
+  }
+
+  interface ODemoModal {
+    'code': any;
+    'open': boolean;
+  }
+  interface ODemoModalAttributes extends StencilHTMLAttributes {
+    'code'?: any;
+    'open'?: boolean;
   }
 
   interface ODemoResizer {
@@ -101,6 +112,7 @@ declare global {
     'ODemoCase': Components.ODemoCase;
     'ODemoDevices': Components.ODemoDevices;
     'ODemoFab': Components.ODemoFab;
+    'ODemoModal': Components.ODemoModal;
     'ODemoResizer': Components.ODemoResizer;
     'ODemoSnackbar': Components.ODemoSnackbar;
   }
@@ -113,6 +125,7 @@ declare global {
     'o-demo-case': Components.ODemoCaseAttributes;
     'o-demo-devices': Components.ODemoDevicesAttributes;
     'o-demo-fab': Components.ODemoFabAttributes;
+    'o-demo-modal': Components.ODemoModalAttributes;
     'o-demo-resizer': Components.ODemoResizerAttributes;
     'o-demo-snackbar': Components.ODemoSnackbarAttributes;
   }
@@ -160,6 +173,12 @@ declare global {
     new (): HTMLODemoFabElement;
   };
 
+  interface HTMLODemoModalElement extends Components.ODemoModal, HTMLStencilElement {}
+  var HTMLODemoModalElement: {
+    prototype: HTMLODemoModalElement;
+    new (): HTMLODemoModalElement;
+  };
+
   interface HTMLODemoResizerElement extends Components.ODemoResizer, HTMLStencilElement {}
   var HTMLODemoResizerElement: {
     prototype: HTMLODemoResizerElement;
@@ -180,6 +199,7 @@ declare global {
     'o-demo-case': HTMLODemoCaseElement
     'o-demo-devices': HTMLODemoDevicesElement
     'o-demo-fab': HTMLODemoFabElement
+    'o-demo-modal': HTMLODemoModalElement
     'o-demo-resizer': HTMLODemoResizerElement
     'o-demo-snackbar': HTMLODemoSnackbarElement
   }
@@ -192,6 +212,7 @@ declare global {
     'o-demo-case': HTMLODemoCaseElement;
     'o-demo-devices': HTMLODemoDevicesElement;
     'o-demo-fab': HTMLODemoFabElement;
+    'o-demo-modal': HTMLODemoModalElement;
     'o-demo-resizer': HTMLODemoResizerElement;
     'o-demo-snackbar': HTMLODemoSnackbarElement;
   }

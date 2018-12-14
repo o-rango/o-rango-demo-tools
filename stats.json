@@ -1,0 +1,39 @@
+{
+  "diagnostics": [
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'monaco'.",
+      "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
+      "lines": [
+        {
+          "lineIndex": 18,
+          "lineNumber": 19,
+          "text": "      newValue ? this.modalEl.open() : this.modalEl.close();",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 19,
+          "lineNumber": 20,
+          "text": "      monaco.editor.create(codeRoot), {",
+          "errorCharStart": 6,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 20,
+          "lineNumber": 21,
+          "text": "        value: [",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 20,
+      "columnNumber": 6
+    }
+  ]
+}

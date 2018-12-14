@@ -16,6 +16,8 @@ export class DemoBarComponent {
   private demoCases: any;
   private casesOptions: any;
   private resizeComponent:any;
+  private modalOpen: boolean = false;
+  private  codeEditor : any = '';
   @Element() el: any;
 
   @Prop() name: string;
@@ -60,6 +62,10 @@ export class DemoBarComponent {
   @Listen('toolbarButtonClicked')
   toolbarButtonClickedHandler(event: CustomEvent) {
     switch (event.detail) {
+      case 'code-editor':
+
+        this.modalOpen = true;
+        break;
       case 'mobile':
       this.device = event.detail;
       this.deviceSize = '412';
@@ -122,11 +128,12 @@ export class DemoBarComponent {
       iframe.contentWindow.document.open();
       iframe.contentWindow.document.write(html);
       iframe.contentWindow.document.close();
+      this.codeEditor = html;
+
     });
   }
 
   render() {
-
     const bgClasses: CssClassMap = { pattern : this.pattern && !this.deviceEmulate}
     const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
 
@@ -136,6 +143,7 @@ export class DemoBarComponent {
 
     return (
       <div id="demo-bar">
+      <o-demo-modal open={this.modalOpen} code={this.codeEditor}/>
         {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
