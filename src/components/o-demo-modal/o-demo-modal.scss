@@ -1,0 +1,8 @@
+@import "@material/dialog/mdc-dialog";
+
+:host{
+  .mdc-dialog .mdc-dialog__surface {
+    min-width: 1024px;
+    //min-height: 800px;
+}
+}

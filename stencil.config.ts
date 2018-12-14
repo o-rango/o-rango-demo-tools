@@ -27,9 +27,12 @@ export const config: Config = {
   ],
   preamble: 'O-RANGO - MIT License',
   globalStyle: 'src/components/styles/global.scss',
+  copy: [
+    { src: 'ace' }
+  ],
   outputTargets: [
     { type: 'www' , baseUrl : '/o-rango-demo-tools', dir: 'docs' , serviceWorker : null},
-    { type: 'dist',  },
+    { type: 'dist', },
     { type: 'stats',  file: 'stats.json'}
   ]
 };
