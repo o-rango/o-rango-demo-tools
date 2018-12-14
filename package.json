@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "O-RANGO development environoment for web components",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@material/fab": "^0.42.0",
-
     "@material/select": "0.38.0",
     "@material/snackbar": "^0.42.0",
     "@material/toolbar": "^0.38.0",
