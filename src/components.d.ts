@@ -35,20 +35,22 @@ export namespace Components {
   }
 
   interface ODemoBar {
+    'backgroundColor': string;
     'caseOptionSelected': number;
     'device': string;
     'deviceEmulate': boolean;
     'deviceSize': string;
-    'events': string[];
+    'events': string;
     'name': string;
     'pattern': boolean;
   }
   interface ODemoBarAttributes extends StencilHTMLAttributes {
+    'backgroundColor'?: string;
     'caseOptionSelected'?: number;
     'device'?: string;
     'deviceEmulate'?: boolean;
     'deviceSize'?: string;
-    'events'?: string[];
+    'events'?: string;
     'name'?: string;
     'pattern'?: boolean;
   }
