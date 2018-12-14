@@ -15,7 +15,7 @@ export class DemoSelectComponent {
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-select');
     this.select = new MDCSelect(rootEl);
-    this.select.selectedIndex = sessionStorage.getItem('o-demo-key') <= this.options.length ? sessionStorage.getItem('o-demo-key') :0;
+    this.select.selectedIndex = 0;
     this.emitChange();
     this.select.listen('change', () => {
         this.emitChange();
@@ -24,7 +24,6 @@ export class DemoSelectComponent {
 
   emitChange(){
     document.title = this.options[this.select.selectedIndex];
-    sessionStorage.setItem('o-demo-key' , this.select.selectedIndex);
     this.selectedCaseChanged.emit(this.select.selectedIndex);
   }
 

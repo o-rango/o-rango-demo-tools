@@ -146,12 +146,14 @@ const setAccessor = (plt, elm, memberName, oldValue, newValue, isSvg, isHostElem
     // - all svgs get values as attributes not props
     // - check if elm contains name or if the value is array, object, or function
     const cmpMeta = plt.getComponentMeta(elm);
-    cmpMeta && cmpMeta.membersMeta && cmpMeta.membersMeta[memberName] ? 
+    cmpMeta && cmpMeta.membersMeta && cmpMeta.membersMeta[memberName] ? (
     // we know for a fact that this element is a known component
     // and this component has this member name as a property,
     // let's set the known @Prop on this element
     // set it directly as property on the element
-    setProperty(elm, memberName, newValue) : 'ref' !== memberName && (
+    setProperty(elm, memberName, newValue), isHostElement && cmpMeta.membersMeta[memberName].reflectToAttrib && 
+    // we also want to set this data to the attribute
+    updateAttribute(elm, cmpMeta.membersMeta[memberName].attribName, newValue, 4 /* Boolean */ === cmpMeta.membersMeta[memberName].propType)) : 'ref' !== memberName && (
     // this member name is a property on this element, but it's not a component
     // this is a native property like "value" or something
     // also we can ignore the "ref" member name at this point
@@ -823,6 +825,13 @@ const parsePropertyValue = (propType, propValue) => {
     return propValue;
 };
 
+const reflectInstanceValuesToHostAttributes = (properties, instance, reflectHostAttr) => {
+  return properties && Object.keys(properties).forEach(memberName => {
+    properties[memberName].reflectToAttr && (reflectHostAttr = reflectHostAttr || {}, 
+    reflectHostAttr[memberName] = instance[memberName]);
+  }), reflectHostAttr;
+};
+
 const queueUpdate = (plt, elm, perf) => {
   // we're actively processing this component
   plt.processingCmp.add(elm), 
@@ -897,7 +906,7 @@ const update = async (plt, elm, perf, isInitialLoad, instance, ancestorHostEleme
                 const useNativeShadowDom = 'shadow' === encapsulation && plt.domApi.$supportsShadowDom;
         let reflectHostAttr;
         let rootElm = hostElm;
-        if (
+        if (reflectHostAttr = reflectInstanceValuesToHostAttributes(cmpMeta.componentConstructor.properties, instance), 
         // this component SHOULD use native slot/shadow dom
         // this browser DOES support native shadow dom
         // and this is the first render
@@ -919,6 +928,7 @@ const update = async (plt, elm, perf, isInitialLoad, instance, ancestorHostEleme
           plt.activeRender = true;
           const vnodeChildren = instance.render && instance.render();
           let vnodeHostData;
+          reflectHostAttr && (vnodeHostData = vnodeHostData ? Object.assign(vnodeHostData, reflectHostAttr) : reflectHostAttr), 
           // tell the platform we're done rendering
           // now any changes will again queue
           plt.activeRender = false;
@@ -929,6 +939,8 @@ const update = async (plt, elm, perf, isInitialLoad, instance, ancestorHostEleme
           // if this is a re-render, then give the renderer the last vnode we already created
                     const oldVNode = plt.vnodeMap.get(hostElm) || {};
           oldVNode.elm = rootElm, 
+          // only care if we're reflecting values to the host element
+          hostVNode.ishost = true, 
           // each patch always gets a new vnode
           // the host element itself isn't patched because it already exists
           // kick off the actual render and any DOM updates
@@ -1714,4 +1726,4 @@ const initHostElement = (plt, cmpMeta, HostElementConstructor, hydratedCssClass,
   // but note that the components have not fully loaded yet
   App.initialized = true;
 })(n, x, w, d, r, h, c);
-})(window,document,{},"OrangoDemoTools","hydrated",[["o-demo-bar","o-demo-bar",1,[["backgroundColor",1,0,"background-color",2],["caseOptionSelected",2,0,"case-option-selected",8],["device",2,0,1,2],["deviceEmulate",2,0,"device-emulate",4],["deviceSize",2,0,"device-size",2],["el",64],["events",1,0,1,2],["name",1,0,1,2],["pattern",2,0,1,4]],1,[["selectedCaseChanged","selectedCaseChangedHandler"],["toolbarButtonClicked","toolbarButtonClickedHandler"],["resizeButtonClicked","resizeButtonClickedHandler"]]],["o-demo-bar-buttons","o-demo-bar",1,0,1],["o-demo-bar-select","o-demo-bar",1,[["el",64],["options",1,0,1,1]],1],["o-demo-bar-toolbar","o-demo-bar",1,[["el",64],["name",1,0,1,2],["options",1,0,1,1]],1],["o-demo-case","o-demo-case",0,[["name",1,0,1,2]],1],["o-demo-devices","o-demo-bar",1,[["el",64],["orientation",1,0,1,2],["selectedDevice",16]],1],["o-demo-fab","o-demo-bar",1,[["el",64]],1],["o-demo-resizer","o-demo-bar",1,[["el",64],["setActiveViewPort",32],["size",1,0,1,2],["viewport",1,0,1,2]],1],["o-demo-snackbar","o-demo-bar",1,[["el",64],["events",1,0,1,1]],1]]);
+})(window,document,{},"OrangoDemoTools","hydrated",[["o-demo-bar","o-demo-bar",1,[["backgroundColor",1,0,"background-color",2],["caseOptionSelected",2,0,"case-option-selected",8],["device",2,0,1,2],["deviceEmulate",2,0,"device-emulate",4],["deviceSize",2,0,"device-size",2],["el",64],["events",1,0,1,2],["name",1,0,1,2],["pattern",2,0,1,4]],1,[["selectedCaseChanged","selectedCaseChangedHandler"],["toolbarButtonClicked","toolbarButtonClickedHandler"],["resizeButtonClicked","resizeButtonClickedHandler"]]],["o-demo-bar-buttons","o-demo-bar",1,0,1],["o-demo-bar-select","o-demo-bar",1,[["el",64],["options",1,0,1,1]],1],["o-demo-bar-toolbar","o-demo-bar",1,[["el",64],["name",1,0,1,2],["options",1,0,1,1]],1],["o-demo-case","o-demo-case",0,[["name",1,0,1,2]],1],["o-demo-devices","o-demo-bar",1,[["el",64],["orientation",1,0,1,2],["selectedDevice",16]],1],["o-demo-fab","o-demo-bar",1,[["el",64]],1],["o-demo-modal","o-demo-bar",1,[["closeDialog",32],["code",1,0,1,1],["el",64],["open",2,1,1,4],["openDialog",32]],1],["o-demo-resizer","o-demo-bar",1,[["el",64],["setActiveViewPort",32],["size",1,0,1,2],["viewport",1,0,1,2]],1],["o-demo-snackbar","o-demo-bar",1,[["el",64],["events",1,0,1,1]],1]]);

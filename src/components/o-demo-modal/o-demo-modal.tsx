@@ -1,5 +1,9 @@
-import { Component,Prop, Element , Watch } from '@stencil/core';
+import { Component, Prop, Element, Method } from '@stencil/core';
 import {MDCDialog} from '@material/dialog/index';
+
+import '@granite-elements/ace-widget/ace-widget.js';
+//import 'ace-builds/src-noconflict/theme-chrome'
+//import 'ace-builds/src-noconflict/mode-html';
 @Component({
   tag: 'o-demo-modal',
   styleUrl: 'o-demo-modal.scss',
@@ -9,42 +13,64 @@ export class DemoModalComponent {
   public modalEl: any;
 
   @Element() el: HTMLElement;
-  @Prop() open: boolean = false;
+  @Prop({ mutable: true, reflectToAttr: true }) open: boolean = false;
   @Prop() code: any = '';
-  @Watch('open')
-  watchHandler(newValue: boolean, oldValue: boolean) {
-    console.log('Open:', newValue);
-    if(newValue !== oldValue){
-      const codeRoot:any = this.el.shadowRoot.querySelector('#my-dialog-content');
-      newValue ? this.modalEl.open() : this.modalEl.close();
-      monaco.editor.create(codeRoot), {
-        value: [
-          'function x() {',
-          '\tconsole.log("Hello world!");',
-          '}'
-        ].join('\n'),
-        language: 'javascript'
-      };
+
+  @Method()
+  openDialog(): void {
+    if (!this.open) {
+      this.modalEl.open();
+      this.open = true;
     }
   }
+
+  @Method()
+  closeDialog(): void {
+    if (this.open) {
+      this.modalEl.close();
+      this.open = false;
+    }
+  }
+
   componentDidLoad() {
     const rootEl = this.el.shadowRoot.querySelector('.mdc-dialog');
+
     this.modalEl = new MDCDialog(rootEl);
+
+    this.modalEl.listen('MDCDialog:opened', ()=>{
+      this.open = true;
+    });
+
+    this.modalEl.listen('MDCDialog:closing', ()=> {
+      this.open = false;
+    });
+  }
+
+  componentDidUnload() {
+    this.modalEl.destroy();
   }
 
   render() {
     return (
-      <div class="mdc-dialog">
-   <div class="mdc-dialog__container">
-     <div class="mdc-dialog__surface">
-       <h2 class="mdc-dialog__title" id="my-dialog-title">
-      Dialog Title
-    </h2>
-       <div class="mdc-dialog__content" id="my-dialog-content"/>
-     </div>
-   </div>
-   <div class="mdc-dialog__scrim"/>
- </div>
+      <div
+        class="mdc-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content"
+      >
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            <h4 class="mdc-dialog__title" id="my-dialog-title">
+              Code Editor
+            </h4>
+            <div class="mdc-dialog__content" id="my-dialog-content">
+            <ace-widget baseUrl="/o-rango-demo-tools/ace/"  mode="ace/mode/html" theme="ace/theme/chrome" value={this.code} initial-focus={true}/>
+          </div>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim" />
+      </div>
     );
   }
 }

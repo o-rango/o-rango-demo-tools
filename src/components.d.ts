@@ -76,8 +76,10 @@ export namespace Components {
   }
 
   interface ODemoModal {
+    'closeDialog': () => void;
     'code': any;
     'open': boolean;
+    'openDialog': () => void;
   }
   interface ODemoModalAttributes extends StencilHTMLAttributes {
     'code'?: any;

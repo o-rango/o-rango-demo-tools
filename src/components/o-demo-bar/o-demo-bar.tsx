@@ -16,7 +16,6 @@ export class DemoBarComponent {
   private demoCases: any;
   private casesOptions: any;
   private resizeComponent:any;
-  private modalOpen: boolean = false;
   private  codeEditor : any = '';
   @Element() el: any;
 
@@ -63,8 +62,7 @@ export class DemoBarComponent {
   toolbarButtonClickedHandler(event: CustomEvent) {
     switch (event.detail) {
       case 'code-editor':
-
-        this.modalOpen = true;
+        this.el.shadowRoot.querySelector('#modal-id').openDialog();
         break;
       case 'mobile':
       this.device = event.detail;
@@ -143,7 +141,7 @@ export class DemoBarComponent {
 
     return (
       <div id="demo-bar">
-      <o-demo-modal open={this.modalOpen} code={this.codeEditor}/>
+      <o-demo-modal id="modal-id" code={this.codeEditor}/>
         {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />

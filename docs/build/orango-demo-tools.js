@@ -1,6 +1,6 @@
 /*!
  * O-RANGO - MIT License
- * 2018-12-14T12:48:14
+ * 2018-12-14T17:48:45
  */
 (function(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
 
@@ -134,4 +134,4 @@ function createComponentOnReadyPrototype(win, namespace, HTMLElementPrototype) {
 
   init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
 
-  })(window, document, "OrangoDemoTools","orango-demo-tools",0,"orango-demo-tools.core.js","es5-build-disabled.js","hydrated","o-demo-bar,o-demo-bar-buttons,o-demo-bar-select,o-demo-bar-toolbar,o-demo-case,o-demo-devices,o-demo-fab,o-demo-resizer,o-demo-snackbar",HTMLElement.prototype);
+  })(window, document, "OrangoDemoTools","orango-demo-tools",0,"orango-demo-tools.core.js","es5-build-disabled.js","hydrated","o-demo-bar,o-demo-bar-buttons,o-demo-bar-select,o-demo-bar-toolbar,o-demo-case,o-demo-devices,o-demo-fab,o-demo-modal,o-demo-resizer,o-demo-snackbar",HTMLElement.prototype);

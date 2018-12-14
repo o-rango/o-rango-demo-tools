@@ -23,13 +23,15 @@
     "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
+    "@granite-elements/ace-widget": "^2.2.7-b1",
     "@material/dialog": "^0.42.0",
     "@material/fab": "^0.42.0",
     "@material/select": "0.38.0",
     "@material/snackbar": "^0.42.0",
     "@material/toolbar": "^0.38.0",
-    "@material/typography": "^0.42.0",
-    "monaco-editor": "^0.15.6"
+    "@types/ace": "0.0.40",
+    "codemirror": "^5.42.0",
+    "focus-trap": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.56",
