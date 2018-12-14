@@ -1,95 +1,93 @@
-<!DOCTYPE html><html dir="ltr" lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-    <title>Stencil Component Starter</title>
-    <script async="" src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools.js"></script>
-
-  </head>
-
-  <body>
-
-    <o-demo-bar name="Basic Demo Components">
-        <o-demo-case name="Placeholders Square Avatar">
-            <template>
-            <script src="https://unpkg.com/@o-rango/o-content-placeholder/dist/o-content-placeholder.js"></script>
-            <style>
-                .container {
-                  background-color: white;
-                  margin: auto auto;
-                  padding: 20px 25px 25px 20px;
-                  margin-bottom: 20px;
-                }
-              </style>
-               <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-              <div class="container">
-                  <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
-                  <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
-              </div>
-            </template>
-      </o-demo-case>
-
-      <o-demo-case name="Placeholders Rounded Avatar">
-          <template>
-            <script src="https://unpkg.com/@o-rango/o-content-placeholder/dist/o-content-placeholder.js"></script>
+<!DOCTYPE html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>o-demo-bar</title> <script data-resources-url="/build/orango-demo-tools/">/*!
+ * O-RANGO - MIT License
+ * 2018-12-14T12:20:08
+ */
+!function(e,o,t,r,n,s,i,a,c,d,l,u,m,p){for(l=e.OrangoDemoTools=e.OrangoDemoTools||{},(u=o.createElement("style")).innerHTML=c+"{visibility:hidden}.hydrated{visibility:inherit}",u.setAttribute("data-styles",""),m=o.head.querySelector("meta[charset]"),o.head.insertBefore(u,m?m.nextSibling:o.head.firstChild),function(e,o,t){(e["s-apps"]=e["s-apps"]||[]).push("OrangoDemoTools"),t.componentOnReady||(t.componentOnReady=function(){var o=this;function t(t){if(o.nodeName.indexOf("-")>0){for(var r=e["s-apps"],n=0,s=0;s<r.length;s++)if(e[r[s]].componentOnReady){if(e[r[s]].componentOnReady(o,t))return;n++}if(n<r.length)return void(e["s-cr"]=e["s-cr"]||[]).push([o,t])}t(null)}return e.Promise?new e.Promise(t):{then:t}})}(e,0,d),n=n||l.resourcesUrl,u=(m=o.querySelectorAll("script")).length-1;u>=0&&!(p=m[u]).src&&!p.hasAttribute("data-resources-url");u--);m=p.getAttribute("data-resources-url"),!n&&m&&(n=m),!n&&p.src&&(n=(m=p.src.split("/").slice(0,-1)).join("/")+(m.length?"/":"")+"orango-demo-tools/"),u=o.createElement("script"),function(e,o,t,r){return!(o.search.indexOf("core=esm")>0)&&(!(!(o.search.indexOf("core=es5")>0||"file:"===o.protocol)&&e.customElements&&e.customElements.define&&e.fetch&&e.CSS&&e.CSS.supports&&e.CSS.supports("color","var(--c)")&&"noModule"in t)||function(e){try{return new Function('import("")'),!1}catch(e){}return!0}())}(e,e.location,u)?u.src=n+"orango-demo-tools.core.pf.js":(u.src=n+"orango-demo-tools.core.js",u.setAttribute("type","module"),u.setAttribute("crossorigin",!0)),u.setAttribute("data-resources-url",n),u.setAttribute("data-namespace","orango-demo-tools"),o.head.appendChild(u)}(window,document,0,0,0,0,0,0,"o-demo-bar,o-demo-bar-buttons,o-demo-bar-select,o-demo-bar-toolbar,o-demo-case,o-demo-devices,o-demo-fab,o-demo-resizer,o-demo-snackbar",HTMLElement.prototype);</script> </head> <body> <o-demo-bar name="Basic Demo Components"> <o-demo-case name="Ionic Demo"> <template>
           <style>
-              .container {
-                background-color: white;
-                width: 90%;
-                margin: auto auto;
-                padding: 20px 25px 25px 20px;
-                margin-bottom: 20px;
-              }
-            </style>
-             <div class="container">
-                <o-content-placeholder-img size="55" animate="true" format="circle"></o-content-placeholder-img>
-                <o-content-placeholder-block line-height="10" random-size="true" animate="true" lines="5"></o-content-placeholder-block>
-            </div>
-          </template>
-    </o-demo-case>
+            ion-slides {
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: #f2f7ff;
+              height: 800px;
+            }
 
-    <o-demo-case name="Placeholders Image Blocks">
-        <template>
-          <script src="https://unpkg.com/@o-rango/o-content-placeholder/dist/o-content-placeholder.js"></script>
-        <style>
+          </style>
+          <script src="https://unpkg.com/@ionic/core@4.0.0-beta.7/dist/ionic.js"></script>
+          <ion-slides pager="true">
+            <ion-slide>
+              <h1>I'am Ionic Slide!!!</h1>
+            </ion-slide>
+
+            <ion-slide>
+              <h1>Slide 2</h1>
+              <ion-button shape="round" color="primary" fill="outline">Hello World</ion-button>
+              <ion-button size="small">Small Button</ion-button>
+            </ion-slide>
+
+            <ion-slide>
+              <h1>Slide 3</h1>
+              <ion-button shape="round" color="primary" fill="outline">Hello World</ion-button>
+              <ion-button size="small">Small Button</ion-button>
+            </ion-slide>
+          </ion-slides>
+
+        </template> </o-demo-case> <o-demo-case name="Placeholders Square Avatar"> <template>
+          <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
+          <style>
+            .container {
+              background-color: white;
+              margin: auto auto;
+              padding: 20px 25px 25px 20px;
+              margin-bottom: 20px;
+            }
+
+          </style>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+          <div class="container">
+            <o-content-placeholder-img size="55" animate="true" format="square"></o-content-placeholder-img>
+            <o-content-placeholder-block rounded="true" line-height="15" margin="6" animate="true" lines="3"></o-content-placeholder-block>
+          </div>
+        </template> </o-demo-case> <o-demo-case name="Placeholders Rounded Avatar"> <template>
+          <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
+          <style>
             .container {
               background-color: white;
               width: 90%;
@@ -97,18 +95,31 @@
               padding: 20px 25px 25px 20px;
               margin-bottom: 20px;
             }
+
           </style>
           <div class="container">
-              <o-content-placeholder-block line-height="80" random-size="true" animate="true" lines="1"></o-content-placeholder-block>
-              <o-content-placeholder-block line-height="10" random-size="true" animate="true" lines="5"></o-content-placeholder-block>
+            <o-content-placeholder-img size="55" animate="true" format="circle"></o-content-placeholder-img>
+            <o-content-placeholder-block line-height="10" random-size="true" animate="true" lines="5"></o-content-placeholder-block>
           </div>
-        </template>
-    </o-demo-case>
+        </template> </o-demo-case> <o-demo-case name="Placeholders Image Blocks"> <template>
+          <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
+          <style>
+            .container {
+              background-color: white;
+              width: 90%;
+              margin: auto auto;
+              padding: 20px 25px 25px 20px;
+              margin-bottom: 20px;
+            }
 
-    <o-demo-case name="Material Buttons">
-        <template>
-        <script src="https://unpkg.com/@o-rango/orango-material-design@0.0.2-beta/dist/orango-material.js"></script>
-        <o-mdc-button onclick="alert(JSON.stringify(event))" raised="">
+          </style>
+          <div class="container">
+            <o-content-placeholder-block line-height="80" random-size="true" animate="true" lines="1"></o-content-placeholder-block>
+            <o-content-placeholder-block line-height="10" random-size="true" animate="true" lines="5"></o-content-placeholder-block>
+          </div>
+        </template> </o-demo-case> <o-demo-case name="Material Buttons"> <template>
+          <script src="https://unpkg.com/@o-rango/orango-material-design@0.0.2-beta/dist/orango-material.js"></script>
+          <o-mdc-button onclick="alert(JSON.stringify(event))" raised="">
             Raised
           </o-mdc-button>
 
@@ -136,24 +147,4 @@
             <i class="material-icons mdc-button__icon">favorite</i>
             Button
           </o-mdc-button>
-        </template>
-    </o-demo-case>
-
-    </o-demo-bar>
-
-
-  <script>
-    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-      // auto-unregister service worker during dev mode
-      navigator.serviceWorker.getRegistration().then(function(registration) {
-        if (registration) {
-          registration.unregister().then(function() { location.reload(true) });
-        }
-      });
-    }
-  </script>
-
-
-
-
-</body></html>
+        </template> </o-demo-case> </o-demo-bar> </body></html>
