@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "@material/fab": "^0.42.0",
-    "@material/select": "0.38.0",
+    "@material/select": "0.42.0",
     "@material/snackbar": "^0.42.0",
-    "@material/toolbar": "^0.38.0",
+    "@material/toolbar": "^0.42.0",
     "@material/typography": "^0.42.0"
   },
   "devDependencies": {
