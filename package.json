@@ -34,7 +34,7 @@
     "focus-trap": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.56",
+    "@babel/core": "7.2.2",
     "@stencil/core": "0.16.1",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
