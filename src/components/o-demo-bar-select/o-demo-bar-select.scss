@@ -1,9 +1,6 @@
 @import "@material/select/mdc-select";
 
 :host {
-  label.mdc-floating-label.mdc-floating-label--float-above {
-    color : grey !important;
-  }
   z-index: 9999;
   .mdc-floating-label{
     color : grey;

@@ -75,17 +75,6 @@ export namespace Components {
     'onRotate-device'?: (event: CustomEvent) => void;
   }
 
-  interface ODemoModal {
-    'closeDialog': () => void;
-    'code': any;
-    'open': boolean;
-    'openDialog': () => void;
-  }
-  interface ODemoModalAttributes extends StencilHTMLAttributes {
-    'code'?: any;
-    'open'?: boolean;
-  }
-
   interface ODemoResizer {
     'setActiveViewPort': (size?: string) => void;
     'size': string;
@@ -114,7 +103,6 @@ declare global {
     'ODemoCase': Components.ODemoCase;
     'ODemoDevices': Components.ODemoDevices;
     'ODemoFab': Components.ODemoFab;
-    'ODemoModal': Components.ODemoModal;
     'ODemoResizer': Components.ODemoResizer;
     'ODemoSnackbar': Components.ODemoSnackbar;
   }
@@ -127,7 +115,6 @@ declare global {
     'o-demo-case': Components.ODemoCaseAttributes;
     'o-demo-devices': Components.ODemoDevicesAttributes;
     'o-demo-fab': Components.ODemoFabAttributes;
-    'o-demo-modal': Components.ODemoModalAttributes;
     'o-demo-resizer': Components.ODemoResizerAttributes;
     'o-demo-snackbar': Components.ODemoSnackbarAttributes;
   }
@@ -175,12 +162,6 @@ declare global {
     new (): HTMLODemoFabElement;
   };
 
-  interface HTMLODemoModalElement extends Components.ODemoModal, HTMLStencilElement {}
-  var HTMLODemoModalElement: {
-    prototype: HTMLODemoModalElement;
-    new (): HTMLODemoModalElement;
-  };
-
   interface HTMLODemoResizerElement extends Components.ODemoResizer, HTMLStencilElement {}
   var HTMLODemoResizerElement: {
     prototype: HTMLODemoResizerElement;
@@ -201,7 +182,6 @@ declare global {
     'o-demo-case': HTMLODemoCaseElement
     'o-demo-devices': HTMLODemoDevicesElement
     'o-demo-fab': HTMLODemoFabElement
-    'o-demo-modal': HTMLODemoModalElement
     'o-demo-resizer': HTMLODemoResizerElement
     'o-demo-snackbar': HTMLODemoSnackbarElement
   }
@@ -214,7 +194,6 @@ declare global {
     'o-demo-case': HTMLODemoCaseElement;
     'o-demo-devices': HTMLODemoDevicesElement;
     'o-demo-fab': HTMLODemoFabElement;
-    'o-demo-modal': HTMLODemoModalElement;
     'o-demo-resizer': HTMLODemoResizerElement;
     'o-demo-snackbar': HTMLODemoSnackbarElement;
   }
