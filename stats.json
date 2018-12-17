@@ -1,0 +1,39 @@
+{
+  "diagnostics": [
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2307",
+      "messageText": "Cannot find module '@material/dialog/index'.",
+      "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "import { Component, Prop, Element, Method } from '@stencil/core';",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "import {MDCDialog} from '@material/dialog/index';",
+          "errorCharStart": 24,
+          "errorLength": 24
+        },
+        {
+          "lineIndex": 2,
+          "lineNumber": 3,
+          "text": "",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 2,
+      "columnNumber": 24
+    }
+  ]
+}
