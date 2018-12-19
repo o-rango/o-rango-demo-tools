@@ -52,6 +52,12 @@ export class DemoBarComponent {
   }
 
 
+  @Listen('code-editor-changed')
+  codeEditorChangedHandler(event: CustomEvent){
+      console.log( 'code' , event.detail);
+      this._setIframe(event.detail)
+  }
+
 
   @Listen('selectedCaseChanged')
   selectedCaseChangedHandler(event: CustomEvent) {
@@ -63,6 +69,7 @@ export class DemoBarComponent {
     switch (event.detail) {
       case 'code-editor':
         this.el.shadowRoot.querySelector('#modal-id').openDialog();
+        document.addEventListener('on-editor-content' , ()=>{ console.log(this.codeEditor)})
         break;
       case 'mobile':
       this.device = event.detail;
@@ -110,15 +117,17 @@ export class DemoBarComponent {
     }
   }
 
-  _setIframe() {
+  _setIframe(code? : string) {
     window.requestAnimationFrame(()=>{
       this._cleanIframe();
       const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
       const iframe = document.createElement('iframe');
       const frameH = Math.max(document.documentElement.clientHeight);
       const frameW = this.deviceSize;
-      const htmlContent = this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-      const html = `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+
+      const htmlContent = code ? code : this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
+      const html = code ? code : `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+      console.log('New html' , code);
       iframe.height = `${(frameH - 85).toString()}px`;
       iframe.width = `${frameW.toString()}px`;
       iframe.style.border = 'none';
@@ -141,7 +150,6 @@ export class DemoBarComponent {
 
     return (
       <div id="demo-bar">
-      <o-demo-modal id="modal-id" code={this.codeEditor}/>
         {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />

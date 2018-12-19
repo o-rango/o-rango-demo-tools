@@ -83,6 +83,7 @@ export namespace Components {
   }
   interface ODemoModalAttributes extends StencilHTMLAttributes {
     'code'?: any;
+    'onCode-editor-changed'?: (event: CustomEvent) => void;
     'open'?: boolean;
   }
 

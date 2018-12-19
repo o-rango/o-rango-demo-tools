@@ -5,35 +5,35 @@
       "type": "typescript",
       "language": "typescript",
       "header": "TypeScript",
-      "code": "2307",
-      "messageText": "Cannot find module '@material/dialog/index'.",
+      "code": "2304",
+      "messageText": "Cannot find name 'monaco'.",
       "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
       "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
       "lines": [
         {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "import { Component, Prop, Element, Method } from '@stencil/core';",
+          "lineIndex": 70,
+          "lineNumber": 71,
+          "text": "  render() {",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "import {MDCDialog} from '@material/dialog/index';",
-          "errorCharStart": 24,
-          "errorLength": 24
+          "lineIndex": 71,
+          "lineNumber": 72,
+          "text": "    monaco.editor.create(this.el.shadowRoot.querySelector('#id-modal'));",
+          "errorCharStart": 4,
+          "errorLength": 6
         },
         {
-          "lineIndex": 2,
-          "lineNumber": 3,
-          "text": "",
+          "lineIndex": 72,
+          "lineNumber": 73,
+          "text": "    return (",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 2,
-      "columnNumber": 24
+      "lineNumber": 72,
+      "columnNumber": 4
     }
   ]
 }
