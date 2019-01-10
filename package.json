@@ -45,7 +45,7 @@
     "jest": "23.6.0",
     "makeshift": "1.1.0",
     "standard-version": "4.4.0",
-    "tslint": "5.11.0",
+    "tslint": "5.12.1",
     "tslint-react": "3.6.0",
     "workbox-build": "3.6.3"
   },
