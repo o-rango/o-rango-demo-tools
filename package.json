@@ -23,11 +23,11 @@
     "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@material/dialog": "^0.42.0",
-    "@material/fab": "^0.42.0",
-    "@material/select": "0.38.0",
-    "@material/snackbar": "^0.42.0",
-    "@material/toolbar": "^0.38.0"
+    "@material/dialog": "^0.44.0",
+    "@material/fab": "^0.44.0",
+    "@material/select": "0.44.0",
+    "@material/snackbar": "^0.44.0",
+    "@material/toolbar": "^0.44.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
