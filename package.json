@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "O-RANGO development environoment for web components",
   "main": "dist/index.js",
   "unpkg": "dist/orango-demo-tools.js",
@@ -8,14 +8,15 @@
   "es2015": "dist/esm/es2017/index.js",
   "es2017": "dist/esm/es2017/index.js",
   "jsnext:main": "dist/esm/es2017/index.js",
-  "webComponents": "dist/web-components.json",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "webComponents": "dist/web-components.json",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build --prod",
     "dev": "stencil build --dev --watch --serve",
     "docs": "stencil build --docs",
     "docs:data": "stencil build --docs-json ./docs.json",
@@ -54,6 +55,8 @@
     "jest-cli": "23.6.0",
     "makeshift": "1.1.0",
     "puppeteer": "1.11.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "standard-version": "4.4.0",
     "tslint": "5.12.1",
     "tslint-react": "3.6.0",
