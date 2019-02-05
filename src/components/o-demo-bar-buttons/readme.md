@@ -7,8 +7,9 @@
 
 ## Events
 
-#### toolbarButtonClicked
-
+| Event                  | Description | Type                |
+| ---------------------- | ----------- | ------------------- |
+| `toolbarButtonClicked` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------

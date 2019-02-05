@@ -1,5 +1,5 @@
 import { Component, Prop, Element } from '@stencil/core';
-import { MDCToolbar } from '@material/toolbar';
+import { MDCToolbar } from '@material/toolbar/index';
 
 @Component({
   tag: 'o-demo-bar-toolbar',

@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### events
-
-any
-
-
-## Attributes
-
-#### events
-
-any
-
+| Property | Attribute | Description | Type  | Default     |
+| -------- | --------- | ----------- | ----- | ----------- |
+| `events` | `events`  |             | `any` | `undefined` |
 
 
 ----------------------------------------------

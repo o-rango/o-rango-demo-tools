@@ -7,26 +7,39 @@
 
 ## Properties
 
-#### name
-
-string
-
-
-#### scripts
-
-string
+| Property | Attribute | Description | Type      | Default |
+| -------- | --------- | ----------- | --------- | ------- |
+| `code`   | `code`    |             | `any`     | `''`    |
+| `open`   | `open`    |             | `boolean` | `false` |
 
 
-## Attributes
+## Events
 
-#### name
+| Event                 | Description | Type                |
+| --------------------- | ----------- | ------------------- |
+| `code-editor-changed` |             | `CustomEvent<void>` |
 
-string
+
+## Methods
+
+### `closeDialog() => void`
 
 
-#### scripts
 
-string
+#### Returns
+
+Type: `void`
+
+
+
+### `openDialog() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
 
 
 

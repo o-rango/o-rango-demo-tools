@@ -7,27 +7,9 @@
 
 ## Properties
 
-#### name
-
-string
-
-
-#### scripts
-
-string
-
-
-## Attributes
-
-#### name
-
-string
-
-
-#### scripts
-
-string
-
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `name`   | `name`    |             | `string` | `undefined` |
 
 
 ----------------------------------------------

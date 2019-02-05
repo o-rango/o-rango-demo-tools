@@ -1,5 +1,5 @@
 import {Component, Prop, Element, Event, EventEmitter} from '@stencil/core';
-import {MDCSelect} from '@material/select';
+import {MDCSelect} from '@material/select/index';
 @Component({
     tag: 'o-demo-bar-select',
     styleUrl: 'o-demo-bar-select.scss',

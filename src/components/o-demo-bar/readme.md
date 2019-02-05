@@ -1,63 +1,21 @@
 # o-demo-bar
 
-
-
+Component for bar
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-#### device
-
-string
-
-
-#### deviceSize
-
-string
-
-
-#### events
-
-
-
-
-#### name
-
-string
-
-
-#### pattern
-
-boolean
-
-
-## Attributes
-
-#### device
-
-string
-
-
-#### device-size
-
-string
-
-
-#### events
-
-
-
-
-#### name
-
-string
-
-
-#### pattern
-
-boolean
-
+| Property             | Attribute              | Description | Type      | Default     |
+| -------------------- | ---------------------- | ----------- | --------- | ----------- |
+| `backgroundColor`    | `background-color`     |             | `string`  | `undefined` |
+| `caseOptionSelected` | `case-option-selected` |             | `number`  | `0`         |
+| `device`             | `device`               |             | `string`  | `'desktop'` |
+| `deviceEmulate`      | `device-emulate`       |             | `boolean` | `false`     |
+| `deviceSize`         | `device-size`          |             | `string`  | `'1024'`    |
+| `events`             | `events`               |             | `string`  | `''`        |
+| `name`               | `name`                 |             | `string`  | `undefined` |
+| `pattern`            | `pattern`              |             | `boolean` | `true`      |
 
 
 ----------------------------------------------

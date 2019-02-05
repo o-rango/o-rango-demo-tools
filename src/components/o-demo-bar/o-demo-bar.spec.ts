@@ -1,8 +1,7 @@
-import { flush, render } from '@stencil/core/testing';
 import { DemoBarComponent } from './o-demo-bar';
 
-describe('my-component', () => {
-  it('should build', () => {
+describe('DemoBarComponent', () => {
+  it('Should Start', () => {
     expect(new DemoBarComponent()).toBeTruthy();
   });
 });

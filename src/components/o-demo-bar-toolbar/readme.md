@@ -7,27 +7,10 @@
 
 ## Properties
 
-#### name
-
-string
-
-
-#### options
-
-any
-
-
-## Attributes
-
-#### name
-
-string
-
-
-#### options
-
-any
-
+| Property  | Attribute | Description | Type     | Default     |
+| --------- | --------- | ----------- | -------- | ----------- |
+| `name`    | `name`    |             | `string` | `undefined` |
+| `options` | `options` |             | `any`    | `undefined` |
 
 
 ----------------------------------------------

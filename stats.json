@@ -2,38 +2,133 @@
   "diagnostics": [
     {
       "level": "error",
-      "type": "typescript",
-      "language": "typescript",
-      "header": "TypeScript",
-      "code": "2304",
-      "messageText": "Cannot find name 'monaco'.",
-      "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
+      "type": "css",
+      "language": "scss",
+      "header": "sass: src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss, line: 1",
+      "code": "1",
+      "relFilePath": "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
+      "messageText": "File to import not found or unreadable: @material/toolbar/mdc-toolbar.",
       "lines": [
         {
-          "lineIndex": 70,
-          "lineNumber": 71,
-          "text": "  render() {",
-          "errorCharStart": -1,
-          "errorLength": -1
-        },
-        {
-          "lineIndex": 71,
-          "lineNumber": 72,
-          "text": "    monaco.editor.create(this.el.shadowRoot.querySelector('#id-modal'));",
-          "errorCharStart": 4,
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "@import '@material/toolbar/mdc-toolbar';",
+          "errorCharStart": 1,
           "errorLength": 6
         },
         {
-          "lineIndex": 72,
-          "lineNumber": 73,
-          "text": "    return (",
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "\n",
           "errorCharStart": -1,
           "errorLength": -1
         }
-      ],
-      "lineNumber": 72,
-      "columnNumber": 4
+      ]
+    },
+    {
+      "level": "error",
+      "type": "css",
+      "language": "scss",
+      "header": "sass: src/components/o-demo-bar-select/o-demo-bar-select.scss, line: 1",
+      "code": "1",
+      "relFilePath": "src/components/o-demo-bar-select/o-demo-bar-select.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.scss",
+      "messageText": "File to import not found or unreadable: @material/select/mdc-select.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "@import \"@material/select/mdc-select\";",
+          "errorCharStart": 1,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "\n",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ]
+    },
+    {
+      "level": "error",
+      "type": "css",
+      "language": "scss",
+      "header": "sass: src/components/o-demo-fab/o-demo-fab.scss, line: 1",
+      "code": "1",
+      "relFilePath": "src/components/o-demo-fab/o-demo-fab.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-fab/o-demo-fab.scss",
+      "messageText": "File to import not found or unreadable: @material/fab/mdc-fab.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "@import \"@material/fab/mdc-fab\";",
+          "errorCharStart": 1,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "\n",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ]
+    },
+    {
+      "level": "error",
+      "type": "css",
+      "language": "scss",
+      "header": "sass: src/components/o-demo-snackbar/o-demo-snackbar.scss, line: 1",
+      "code": "1",
+      "relFilePath": "src/components/o-demo-snackbar/o-demo-snackbar.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.scss",
+      "messageText": "File to import not found or unreadable: @material/snackbar/mdc-snackbar.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "@import \"@material/snackbar/mdc-snackbar\";",
+          "errorCharStart": 1,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "\n",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ]
+    },
+    {
+      "level": "error",
+      "type": "css",
+      "language": "scss",
+      "header": "sass: src/components/o-demo-modal/o-demo-modal.scss, line: 1",
+      "code": "1",
+      "relFilePath": "src/components/o-demo-modal/o-demo-modal.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.scss",
+      "messageText": "File to import not found or unreadable: @material/dialog/mdc-dialog.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "@import \"@material/dialog/mdc-dialog\";",
+          "errorCharStart": 1,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "\n",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ]
     }
   ]
 }

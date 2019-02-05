@@ -7,22 +7,16 @@
 
 ## Properties
 
-#### options
-
-any
-
-
-## Attributes
-
-#### options
-
-any
+| Property  | Attribute | Description | Type  | Default     |
+| --------- | --------- | ----------- | ----- | ----------- |
+| `options` | `options` |             | `any` | `undefined` |
 
 
 ## Events
 
-#### selectedCaseChanged
-
+| Event                 | Description | Type                |
+| --------------------- | ----------- | ------------------- |
+| `selectedCaseChanged` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------
