@@ -1,6 +1,6 @@
 /*!
  * O-RANGO - MIT License
- * 2019-02-05T09:34:14
+ * 2019-02-05T09:48:34
  */
 (function(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
 
