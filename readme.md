@@ -5,6 +5,12 @@
 
 
 
+> Breaking change UNPKG : 
+ To correctly load library  from UNPKG use 1.0.0 version :
+```html 
+  <script async src="https://unpkg.com/@o-rango/orango-demo-tools@1.0.0/dist/orango-demo-tools.js"></script>
+```
+
 
 # o-rango: o-demo-bar  
 [DEMO](https://o-rango.github.io/o-rango-demo-tools/)
