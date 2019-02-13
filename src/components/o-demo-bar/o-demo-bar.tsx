@@ -51,15 +51,16 @@ export class DemoBarComponent {
 
   // Utils
   setViewPort():void{
-    window.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
+    win.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
   }
 
   stencilDevServer(){
-    if ("WebSocket" in win && window['s-dev-server'] ) {
-      const ws = new WebSocket(`ws://localhost:${window.location.port}/`);
+    if ("WebSocket" in win && win['s-dev-server'] ) {
+      const ws = new WebSocket(`ws://localhost:${win.location.port}/`);
       ws.onopen = ()=> {
-         console.log('reload-content-stencil-server');
+         console.log('reload-content-stencil-server-activated');
          this._setIframe();
+         win.requestAnimationFrame(() =>this.el.forceUpdate());
       };
     };
   }
@@ -129,7 +130,7 @@ export class DemoBarComponent {
   }
 
   _setIframe(code? : string) {
-    window.requestAnimationFrame(()=>{
+    win.requestAnimationFrame(()=>{
       this._cleanIframe();
       const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
       const iframe = document.createElement('iframe');

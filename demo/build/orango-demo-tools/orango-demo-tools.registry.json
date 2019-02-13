@@ -2,30 +2,30 @@
   "namespace": "OrangoDemoTools",
   "fsNamespace": "orango-demo-tools",
   "loader": "../orango-demo-tools.js",
-  "core": "orango-demo-tools.n0mre3jk.js",
-  "corePolyfilled": "orango-demo-tools.w8adkvqk.js",
+  "core": "orango-demo-tools.tonxbf3u.js",
+  "corePolyfilled": "orango-demo-tools.y6dx2eo7.js",
   "components": {
     "o-demo-bar": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-buttons": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-select": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-toolbar": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
@@ -37,13 +37,13 @@
     },
     "o-demo-devices": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
     "o-demo-fab": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
@@ -55,13 +55,13 @@
     },
     "o-demo-resizer": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     },
     "o-demo-snackbar": {
       "bundleIds": {
-        "$": "vwwpauft"
+        "$": "2vriiwbp"
       },
       "encapsulation": "shadow"
     }
