@@ -60,7 +60,9 @@ export class DemoBarComponent {
       ws.onopen = ()=> {
          console.log('reload-content-stencil-server-activated');
          this._setIframe();
-         win.requestAnimationFrame(() =>this.el.forceUpdate());
+         setTimeout(()=>{
+          this.el.forceUpdate();
+         } , 20);
       };
     };
   }

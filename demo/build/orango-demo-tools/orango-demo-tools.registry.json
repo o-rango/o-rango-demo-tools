@@ -2,30 +2,30 @@
   "namespace": "OrangoDemoTools",
   "fsNamespace": "orango-demo-tools",
   "loader": "../orango-demo-tools.js",
-  "core": "orango-demo-tools.tonxbf3u.js",
-  "corePolyfilled": "orango-demo-tools.y6dx2eo7.js",
+  "core": "orango-demo-tools.hii2sw2d.js",
+  "corePolyfilled": "orango-demo-tools.qtkw94sy.js",
   "components": {
     "o-demo-bar": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-buttons": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-select": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
     "o-demo-bar-toolbar": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
@@ -37,13 +37,13 @@
     },
     "o-demo-devices": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
     "o-demo-fab": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
@@ -55,13 +55,13 @@
     },
     "o-demo-resizer": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     },
     "o-demo-snackbar": {
       "bundleIds": {
-        "$": "2vriiwbp"
+        "$": "ovmdgajm"
       },
       "encapsulation": "shadow"
     }
