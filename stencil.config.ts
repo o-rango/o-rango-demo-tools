@@ -1,28 +1,25 @@
 import { postcss } from '@stencil/postcss';
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-const autoprefixer =  require('autoprefixer');
+const cssnano = require('cssnano');
 
 export const config: Config = {
   namespace: 'orango-demo-tools',
   plugins: [
     sass({
-      outputStyle: 'compressed',
       includePaths: ['node_modules/']
     }),
     postcss({
       plugins: [
-        autoprefixer({
-          browsers: [
-            'last 2 versions',
-            'iOS >= 8',
-            'Android >= 4.4',
-            'Explorer >= 11',
-            'ExplorerMobile >= 11'
+        cssnano({
+          preset: [
+            'default',
+            {
+              autoprefixer: { browsers: 'last 2 versions', add: true }
+            },
           ],
-          cascade: false
-        })
-      ]
+        }),
+      ],
     })
   ],
   preamble: 'O-RANGO - MIT License',
@@ -34,5 +31,7 @@ export const config: Config = {
     { type: 'stats',  file: 'stats.json'}
   ]
 };
+
+
 
 

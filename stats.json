@@ -4,16 +4,16 @@
       "level": "error",
       "type": "css",
       "language": "scss",
-      "header": "sass: src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss, line: 1",
+      "header": "sass: src/components/o-demo-bar-select/o-demo-bar-select.scss, line: 1",
       "code": "1",
-      "relFilePath": "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
-      "messageText": "File to import not found or unreadable: @material/toolbar/mdc-toolbar.",
+      "relFilePath": "src/components/o-demo-bar-select/o-demo-bar-select.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.scss",
+      "messageText": "File to import not found or unreadable: @material/select/mdc-select.",
       "lines": [
         {
           "lineIndex": 0,
           "lineNumber": 1,
-          "text": "@import '@material/toolbar/mdc-toolbar';",
+          "text": "@import \"@material/select/mdc-select\";",
           "errorCharStart": 1,
           "errorLength": 6
         },
@@ -30,16 +30,16 @@
       "level": "error",
       "type": "css",
       "language": "scss",
-      "header": "sass: src/components/o-demo-bar-select/o-demo-bar-select.scss, line: 1",
+      "header": "sass: src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss, line: 1",
       "code": "1",
-      "relFilePath": "src/components/o-demo-bar-select/o-demo-bar-select.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.scss",
-      "messageText": "File to import not found or unreadable: @material/select/mdc-select.",
+      "relFilePath": "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
+      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
+      "messageText": "File to import not found or unreadable: @material/toolbar/mdc-toolbar.",
       "lines": [
         {
           "lineIndex": 0,
           "lineNumber": 1,
-          "text": "@import \"@material/select/mdc-select\";",
+          "text": "@import '@material/toolbar/mdc-toolbar';",
           "errorCharStart": 1,
           "errorLength": 6
         },

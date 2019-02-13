@@ -1,6 +1,9 @@
 @import '@material/toolbar/mdc-toolbar';
 @import '../styles/global';
 :host {
+  .mdc-toolbar--fixed{
+    z-index: 5;
+  }
   section {
     margin: 0 1.5em 0 1.2em;
     .mdc-typography--subheading2 {
@@ -13,11 +16,27 @@
     -webkit-transition: opacity .25s ease-in-out;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 900px) {
     #left-panel {
-      display: none;
+      max-width: 30%;
+    }
+    #center-panel {
+      min-width: 40%;
     }
     #right-panel {
+      max-width: 30%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    #right-panel {
+      display: none;
+    }
+    #center-panel {
+      min-width: 100%;
+      padding : 0;
+    }
+    #left-panel {
       display: none;
     }
   }

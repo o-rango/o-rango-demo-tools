@@ -5,6 +5,7 @@ import {
   Listen
 } from '@stencil/core';
 import {CssClassMap} from '../utils/CssClassMap'
+const win = window as any;
 
 @Component({
   tag: 'o-demo-bar',
@@ -39,7 +40,9 @@ export class DemoBarComponent {
     this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
     this._setIframe();
     this.setViewPort();
+    this.stencilDevServer();
   }
+
 
   componentDidUpdate() {
     this._setIframe();
@@ -51,13 +54,21 @@ export class DemoBarComponent {
     window.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
   }
 
+  stencilDevServer(){
+    if ("WebSocket" in win && window['s-dev-server'] ) {
+      const ws = new WebSocket(`ws://localhost:${window.location.port}/`);
+      ws.onopen = ()=> {
+         console.log('reload-content-stencil-server');
+         this._setIframe();
+      };
+    };
+  }
 
   @Listen('code-editor-changed')
   codeEditorChangedHandler(event: CustomEvent){
       console.log( 'code' , event.detail);
       this._setIframe(event.detail)
   }
-
 
   @Listen('selectedCaseChanged')
   selectedCaseChangedHandler(event: CustomEvent) {
@@ -135,7 +146,6 @@ export class DemoBarComponent {
       iframe.contentWindow.document.write(html);
       iframe.contentWindow.document.close();
       this.codeEditor = html;
-
     });
   }
 
@@ -162,3 +172,5 @@ export class DemoBarComponent {
     );
   }
 }
+
+
