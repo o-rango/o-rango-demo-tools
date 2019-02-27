@@ -62,7 +62,7 @@
     "standard-version": "4.4.0",
     "tslint": "5.12.1",
     "tslint-react": "3.6.0",
-    "workbox-build": "3.6.3"
+    "workbox-build": "4.0.0"
   },
   "repository": {
     "type": "git",
