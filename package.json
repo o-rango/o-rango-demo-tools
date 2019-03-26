@@ -61,7 +61,7 @@
     "rollup-plugin-node-globals": "^1.4.0",
     "standard-version": "4.4.0",
     "tslint": "5.13.1",
-    "tslint-react": "3.6.0",
+    "tslint-react": "4.0.0",
     "workbox-build": "4.0.0"
   },
   "repository": {
