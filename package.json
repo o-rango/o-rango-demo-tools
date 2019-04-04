@@ -35,7 +35,8 @@
     "@material/fab": "^1.1.0",
     "@material/select": "1.1.0",
     "@material/snackbar": "^1.1.0",
-    "@material/toolbar": "^1.1.0"
+    "@material/toolbar": "^1.1.0",
+    "prismjs": "^1.16.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",

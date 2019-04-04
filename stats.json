@@ -5,35 +5,70 @@
       "type": "typescript",
       "language": "typescript",
       "header": "TypeScript",
-      "code": "2322",
-      "messageText": "Type '{ class: string; name: string; }' is not assignable to type 'SlotAttributes'. Property 'class' does not exist on type 'SlotAttributes'.",
-      "relFilePath": "src/components/o-demo-devices/devices.tsx",
-      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-devices/devices.tsx",
+      "code": "6133",
+      "messageText": "'Prism' is declared but its value is never read.",
+      "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
+      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
       "lines": [
         {
-          "lineIndex": 3,
-          "lineNumber": 4,
-          "text": "    <div class=\"device-frame\">",
+          "lineIndex": 0,
+          "lineNumber": 1,
+          "text": "import { Component, Prop, Element, Method,Event, EventEmitter } from '@stencil/core';",
           "errorCharStart": -1,
           "errorLength": -1
         },
         {
-          "lineIndex": 4,
-          "lineNumber": 5,
-          "text": "      <slot class=\"device-content\" name=\"screen\"></slot>",
-          "errorCharStart": 7,
-          "errorLength": 4
+          "lineIndex": 1,
+          "lineNumber": 2,
+          "text": "import Prism from 'prismjs';",
+          "errorCharStart": 0,
+          "errorLength": 28
         },
         {
-          "lineIndex": 5,
-          "lineNumber": 6,
-          "text": "    </div>",
+          "lineIndex": 2,
+          "lineNumber": 3,
+          "text": "import {MDCDialog} from '@material/dialog/index';",
           "errorCharStart": -1,
           "errorLength": -1
         }
       ],
-      "lineNumber": 5,
-      "columnNumber": 7
+      "lineNumber": 2,
+      "columnNumber": 0
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2304",
+      "messageText": "Cannot find name 'editor'.",
+      "relFilePath": "src/components/o-demo-modal/o-demo-modal.tsx",
+      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx",
+      "lines": [
+        {
+          "lineIndex": 53,
+          "lineNumber": 54,
+          "text": "  componentDidLoad() {",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 54,
+          "lineNumber": 55,
+          "text": "    console.log(editor);",
+          "errorCharStart": 16,
+          "errorLength": 6
+        },
+        {
+          "lineIndex": 55,
+          "lineNumber": 56,
+          "text": "    const rootEl = this.el.shadowRoot.querySelector('.mdc-dialog');",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 55,
+      "columnNumber": 16
     }
   ]
 }

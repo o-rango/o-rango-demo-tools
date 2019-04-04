@@ -1,4 +1,5 @@
 import { Component, Prop, Element, Method,Event, EventEmitter } from '@stencil/core';
+import Prism from 'prismjs';
 import {MDCDialog} from '@material/dialog/index';
 
 @Component({
@@ -51,6 +52,7 @@ export class DemoModalComponent {
   }
 
   componentDidLoad() {
+    console.log(Prism);
     const rootEl = this.el.shadowRoot.querySelector('.mdc-dialog');
     this.modalEl = new MDCDialog(rootEl);
 
@@ -82,7 +84,10 @@ export class DemoModalComponent {
     <div class="mdc-dialog__surface">
       <h2 class="mdc-dialog__title" id="my-dialog-title">Code Editor</h2>
       <div class="mdc-dialog__content" id="my-dialog-content">
-      Hola <div id="id-modal"/>
+      <pre contenteditable class="language-javascript" data-linenumber="0">
+      ${this.code}
+      </pre>
+   
       </div>
       <footer class="mdc-dialog__actions">
         <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">close</button>

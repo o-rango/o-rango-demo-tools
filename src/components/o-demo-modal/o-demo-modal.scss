@@ -1,9 +1,11 @@
 @import "@material/dialog/mdc-dialog";
+
+@import "../../../node_modules/prismjs/themes/prism.css";
 //@import '../../../node_modules/@timkendrick/monaco-editor/dist/external/monaco.css'
 
 :host{
   .mdc-dialog .mdc-dialog__surface {
     min-width: 1024px;
-    //min-height: 800px;
+    min-height: 800px;
 }
 }

@@ -31,7 +31,3 @@ export const config: Config = {
     { type: 'stats',  file: 'stats.json'}
   ]
 };
-
-
-
-

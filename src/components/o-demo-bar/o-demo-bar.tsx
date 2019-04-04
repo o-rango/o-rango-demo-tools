@@ -22,7 +22,7 @@ export class DemoBarComponent {
 
   @Prop() name: string;
   @Prop() events: string = '';
-  @Prop() backgroundColor: string;
+  @Prop() backgroundColor: string = "red";
   @Prop({ mutable : true}) caseOptionSelected : number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
@@ -100,6 +100,9 @@ export class DemoBarComponent {
       this.deviceSize = '458';
       this.deviceEmulate = true;
       break;
+      case 'grid-switch':
+      !this.deviceEmulate ? this.el.shadowRoot.querySelector('#frame-wrap').classList.toggle('pattern') : false;
+      break;
     }
     this._setIframe();
 
@@ -148,7 +151,7 @@ export class DemoBarComponent {
       iframe.contentWindow.document.open();
       iframe.contentWindow.document.write(html);
       iframe.contentWindow.document.close();
-      this.codeEditor = html;
+      this.codeEditor = htmlContent;
     });
   }
 
@@ -171,6 +174,7 @@ export class DemoBarComponent {
         <div id="frame-wrap" class={bgClasses}>
            {this.deviceEmulate ? mobileView : defaultView}
         </div>
+        <o-demo-modal code={this.codeEditor}id="modal-id"/>
       </div>
     );
   }

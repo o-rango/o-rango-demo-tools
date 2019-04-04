@@ -49,7 +49,7 @@
     },
     "o-demo-modal": {
       "bundleIds": {
-        "$": "o-demo-modal"
+        "$": "o-demo-bar"
       },
       "encapsulation": "shadow"
     },
