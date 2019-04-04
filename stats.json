@@ -2,133 +2,38 @@
   "diagnostics": [
     {
       "level": "error",
-      "type": "css",
-      "language": "scss",
-      "header": "sass: src/components/o-demo-bar-select/o-demo-bar-select.scss, line: 1",
-      "code": "1",
-      "relFilePath": "src/components/o-demo-bar-select/o-demo-bar-select.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.scss",
-      "messageText": "File to import not found or unreadable: @material/select/mdc-select.",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2322",
+      "messageText": "Type '{ class: string; name: string; }' is not assignable to type 'SlotAttributes'. Property 'class' does not exist on type 'SlotAttributes'.",
+      "relFilePath": "src/components/o-demo-devices/devices.tsx",
+      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-devices/devices.tsx",
       "lines": [
         {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "@import \"@material/select/mdc-select\";",
-          "errorCharStart": 1,
-          "errorLength": 6
+          "lineIndex": 3,
+          "lineNumber": 4,
+          "text": "    <div class=\"device-frame\">",
+          "errorCharStart": -1,
+          "errorLength": -1
         },
         {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "\n",
+          "lineIndex": 4,
+          "lineNumber": 5,
+          "text": "      <slot class=\"device-content\" name=\"screen\"></slot>",
+          "errorCharStart": 7,
+          "errorLength": 4
+        },
+        {
+          "lineIndex": 5,
+          "lineNumber": 6,
+          "text": "    </div>",
           "errorCharStart": -1,
           "errorLength": -1
         }
-      ]
-    },
-    {
-      "level": "error",
-      "type": "css",
-      "language": "scss",
-      "header": "sass: src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss, line: 1",
-      "code": "1",
-      "relFilePath": "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.scss",
-      "messageText": "File to import not found or unreadable: @material/toolbar/mdc-toolbar.",
-      "lines": [
-        {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "@import '@material/toolbar/mdc-toolbar';",
-          "errorCharStart": 1,
-          "errorLength": 6
-        },
-        {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "\n",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ]
-    },
-    {
-      "level": "error",
-      "type": "css",
-      "language": "scss",
-      "header": "sass: src/components/o-demo-fab/o-demo-fab.scss, line: 1",
-      "code": "1",
-      "relFilePath": "src/components/o-demo-fab/o-demo-fab.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-fab/o-demo-fab.scss",
-      "messageText": "File to import not found or unreadable: @material/fab/mdc-fab.",
-      "lines": [
-        {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "@import \"@material/fab/mdc-fab\";",
-          "errorCharStart": 1,
-          "errorLength": 6
-        },
-        {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "\n",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ]
-    },
-    {
-      "level": "error",
-      "type": "css",
-      "language": "scss",
-      "header": "sass: src/components/o-demo-snackbar/o-demo-snackbar.scss, line: 1",
-      "code": "1",
-      "relFilePath": "src/components/o-demo-snackbar/o-demo-snackbar.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.scss",
-      "messageText": "File to import not found or unreadable: @material/snackbar/mdc-snackbar.",
-      "lines": [
-        {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "@import \"@material/snackbar/mdc-snackbar\";",
-          "errorCharStart": 1,
-          "errorLength": 6
-        },
-        {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "\n",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ]
-    },
-    {
-      "level": "error",
-      "type": "css",
-      "language": "scss",
-      "header": "sass: src/components/o-demo-modal/o-demo-modal.scss, line: 1",
-      "code": "1",
-      "relFilePath": "src/components/o-demo-modal/o-demo-modal.scss",
-      "absFilePath": "/Users/roca/o-rango/devTools/o-demo-tools/src/components/o-demo-modal/o-demo-modal.scss",
-      "messageText": "File to import not found or unreadable: @material/dialog/mdc-dialog.",
-      "lines": [
-        {
-          "lineIndex": 0,
-          "lineNumber": 1,
-          "text": "@import \"@material/dialog/mdc-dialog\";",
-          "errorCharStart": 1,
-          "errorLength": 6
-        },
-        {
-          "lineIndex": 1,
-          "lineNumber": 2,
-          "text": "\n",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ]
+      ],
+      "lineNumber": 5,
+      "columnNumber": 7
     }
   ]
 }

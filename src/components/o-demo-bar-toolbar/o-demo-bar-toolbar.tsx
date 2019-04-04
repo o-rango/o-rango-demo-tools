@@ -17,9 +17,8 @@ export class DemoToolbarComponent {
   componentDidLoad() {
     this.rootEl = this.el.shadowRoot.querySelector('.mdc-toolbar');
     this.toolbar = new MDCToolbar(this.rootEl);
-    this.toolbar.fixedAdjustElement = this.el.shadowRoot.querySelector(
-      '.mdc-toolbar-fixed-adjust'
-    );
+    const elResizer =  this.el.parentElement;
+    this.toolbar.fixedAdjustElement = elResizer;
   }
 
   componentDidUnload() {
@@ -48,7 +47,6 @@ export class DemoToolbarComponent {
           </div>
           <slot name="base" />
         </header>
-        <main class="mdc-toolbar-fixed-adjust"/>
       </div>
     );
   }

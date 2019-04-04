@@ -15,7 +15,7 @@ export const config: Config = {
           preset: [
             'default',
             {
-              autoprefixer: { browsers: 'last 2 versions', add: true }
+              autoprefixer: { browsers: 'flex-start', add: true }
             },
           ],
         }),

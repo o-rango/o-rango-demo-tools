@@ -13,7 +13,7 @@ export class DemoDevicesComponent {
   @Prop() orientation : string;
   @State() selectedDevice = 0;
 
-  deviceArray = [ Devices.iphoneX ,Devices.iphone8 , Devices.note8 , Devices.nexus5 , Devices.lumia920]
+  deviceArray = [ Devices.iphoneX ,Devices.iphone8 , Devices.note8 , Devices.nexus5 , Devices.lumia920 , Devices.iPad]
 
   componentWillUpdate(){
     window.requestAnimationFrame(()=> this._sizeFrame());
@@ -22,6 +22,7 @@ export class DemoDevicesComponent {
   componentDidLoad() {
     this.evtListenerRotate = document.addEventListener('rotate-device' ,this.rotateDevice.bind(this));
     this.evtListenerDeviceChange = document.addEventListener('change-device' , this.changeDevice.bind(this));
+    this.el.forceUpdate();
   }
 
   componentDidUnload(){
@@ -39,10 +40,10 @@ export class DemoDevicesComponent {
 
   changeDevice(evt : any){
       if(evt.detail === 'navigate-next'){
-        this.selectedDevice < 4 ? this.selectedDevice++ : this.selectedDevice = 0;
+        this.selectedDevice < this.deviceArray.length -1 ? this.selectedDevice++ : this.selectedDevice = 0;
       }
       else if(evt.detail === 'navigate-before'){
-        this.selectedDevice > 0 ?  this.selectedDevice-- : this.selectedDevice = 4;
+        this.selectedDevice > 0 ?  this.selectedDevice-- : this.selectedDevice = this.deviceArray.length - 1;
       }
   }
 

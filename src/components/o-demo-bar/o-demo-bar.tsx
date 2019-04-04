@@ -141,7 +141,7 @@ export class DemoBarComponent {
 
       const htmlContent = code ? code : this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
       const html = code ? code : `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
-      iframe.height = `${(frameH - 85).toString()}px`;
+      iframe.height = `${frameH.toString()}px`;
       iframe.width = `${frameW.toString()}px`;
       iframe.style.border = 'none';
       iframeContainer.appendChild(iframe)
