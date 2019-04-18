@@ -5,35 +5,11 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import { JSX } from '@stencil/core';
 
 
 export namespace Components {
-
-  interface ODemoBarButtons {}
-  interface ODemoBarButtonsAttributes extends StencilHTMLAttributes {
-    'onToolbarButtonClicked'?: (event: CustomEvent) => void;
-  }
-
-  interface ODemoBarSelect {
-    'options': any;
-  }
-  interface ODemoBarSelectAttributes extends StencilHTMLAttributes {
-    'onSelectedCaseChanged'?: (event: CustomEvent) => void;
-    'options'?: any;
-  }
-
-  interface ODemoBarToolbar {
-    'name': string;
-    'options': any;
-  }
-  interface ODemoBarToolbarAttributes extends StencilHTMLAttributes {
-    'name'?: string;
-    'options'?: any;
-  }
-
   interface ODemoBar {
     'backgroundColor': string;
     'caseOptionSelected': number;
@@ -44,7 +20,39 @@ export namespace Components {
     'name': string;
     'pattern': boolean;
   }
-  interface ODemoBarAttributes extends StencilHTMLAttributes {
+  interface ODemoBarButtons {}
+  interface ODemoBarSelect {
+    'options': any;
+  }
+  interface ODemoBarToolbar {
+    'name': string;
+    'options': any;
+  }
+  interface ODemoCase {
+    'name': string;
+  }
+  interface ODemoDevices {
+    'orientation': string;
+  }
+  interface ODemoFab {}
+  interface ODemoModal {
+    'closeDialog': () => Promise<void>;
+    'code': any;
+    'open': boolean;
+    'openDialog': () => Promise<void>;
+  }
+  interface ODemoResizer {
+    'setActiveViewPort': (size?: string) => Promise<void>;
+    'size': string;
+    'viewport': string;
+  }
+  interface ODemoSnackbar {
+    'events': any;
+  }
+}
+
+declare namespace LocalJSX {
+  interface ODemoBar extends JSXBase.HTMLAttributes {
     'backgroundColor'?: string;
     'caseOptionSelected'?: number;
     'device'?: string;
@@ -54,64 +62,46 @@ export namespace Components {
     'name'?: string;
     'pattern'?: boolean;
   }
-
-  interface ODemoCase {
-    'name': string;
+  interface ODemoBarButtons extends JSXBase.HTMLAttributes {
+    'onToolbarButtonClicked'?: (event: CustomEvent<any>) => void;
   }
-  interface ODemoCaseAttributes extends StencilHTMLAttributes {
+  interface ODemoBarSelect extends JSXBase.HTMLAttributes {
+    'onSelectedCaseChanged'?: (event: CustomEvent<any>) => void;
+    'options'?: any;
+  }
+  interface ODemoBarToolbar extends JSXBase.HTMLAttributes {
+    'name'?: string;
+    'options'?: any;
+  }
+  interface ODemoCase extends JSXBase.HTMLAttributes {
     'name'?: string;
   }
-
-  interface ODemoDevices {
-    'orientation': string;
-  }
-  interface ODemoDevicesAttributes extends StencilHTMLAttributes {
+  interface ODemoDevices extends JSXBase.HTMLAttributes {
     'orientation'?: string;
   }
-
-  interface ODemoFab {}
-  interface ODemoFabAttributes extends StencilHTMLAttributes {
-    'onChange-device'?: (event: CustomEvent) => void;
-    'onRotate-device'?: (event: CustomEvent) => void;
+  interface ODemoFab extends JSXBase.HTMLAttributes {
+    'onChange-device'?: (event: CustomEvent<any>) => void;
+    'onRotate-device'?: (event: CustomEvent<any>) => void;
   }
-
-  interface ODemoModal {
-    'closeDialog': () => void;
-    'code': any;
-    'open': boolean;
-    'openDialog': () => void;
-  }
-  interface ODemoModalAttributes extends StencilHTMLAttributes {
+  interface ODemoModal extends JSXBase.HTMLAttributes {
     'code'?: any;
-    'onCode-editor-changed'?: (event: CustomEvent) => void;
+    'onCode-editor-changed'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
   }
-
-  interface ODemoResizer {
-    'setActiveViewPort': (size?: string) => void;
-    'size': string;
-    'viewport': string;
-  }
-  interface ODemoResizerAttributes extends StencilHTMLAttributes {
-    'onResizeButtonClicked'?: (event: CustomEvent) => void;
+  interface ODemoResizer extends JSXBase.HTMLAttributes {
+    'onResizeButtonClicked'?: (event: CustomEvent<any>) => void;
     'size'?: string;
     'viewport'?: string;
   }
-
-  interface ODemoSnackbar {
-    'events': any;
-  }
-  interface ODemoSnackbarAttributes extends StencilHTMLAttributes {
+  interface ODemoSnackbar extends JSXBase.HTMLAttributes {
     'events'?: any;
   }
-}
 
-declare global {
-  interface StencilElementInterfaces {
+  interface ElementInterfaces {
+    'ODemoBar': Components.ODemoBar;
     'ODemoBarButtons': Components.ODemoBarButtons;
     'ODemoBarSelect': Components.ODemoBarSelect;
     'ODemoBarToolbar': Components.ODemoBarToolbar;
-    'ODemoBar': Components.ODemoBar;
     'ODemoCase': Components.ODemoCase;
     'ODemoDevices': Components.ODemoDevices;
     'ODemoFab': Components.ODemoFab;
@@ -120,19 +110,36 @@ declare global {
     'ODemoSnackbar': Components.ODemoSnackbar;
   }
 
-  interface StencilIntrinsicElements {
-    'o-demo-bar-buttons': Components.ODemoBarButtonsAttributes;
-    'o-demo-bar-select': Components.ODemoBarSelectAttributes;
-    'o-demo-bar-toolbar': Components.ODemoBarToolbarAttributes;
-    'o-demo-bar': Components.ODemoBarAttributes;
-    'o-demo-case': Components.ODemoCaseAttributes;
-    'o-demo-devices': Components.ODemoDevicesAttributes;
-    'o-demo-fab': Components.ODemoFabAttributes;
-    'o-demo-modal': Components.ODemoModalAttributes;
-    'o-demo-resizer': Components.ODemoResizerAttributes;
-    'o-demo-snackbar': Components.ODemoSnackbarAttributes;
+  interface IntrinsicElements {
+    'ODemoBar': LocalJSX.ODemoBar;
+    'ODemoBarButtons': LocalJSX.ODemoBarButtons;
+    'ODemoBarSelect': LocalJSX.ODemoBarSelect;
+    'ODemoBarToolbar': LocalJSX.ODemoBarToolbar;
+    'ODemoCase': LocalJSX.ODemoCase;
+    'ODemoDevices': LocalJSX.ODemoDevices;
+    'ODemoFab': LocalJSX.ODemoFab;
+    'ODemoModal': LocalJSX.ODemoModal;
+    'ODemoResizer': LocalJSX.ODemoResizer;
+    'ODemoSnackbar': LocalJSX.ODemoSnackbar;
   }
+}
+export { LocalJSX as JSX };
 
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+declare global {
+
+
+  interface HTMLODemoBarElement extends Components.ODemoBar, HTMLStencilElement {}
+  var HTMLODemoBarElement: {
+    prototype: HTMLODemoBarElement;
+    new (): HTMLODemoBarElement;
+  };
 
   interface HTMLODemoBarButtonsElement extends Components.ODemoBarButtons, HTMLStencilElement {}
   var HTMLODemoBarButtonsElement: {
@@ -150,12 +157,6 @@ declare global {
   var HTMLODemoBarToolbarElement: {
     prototype: HTMLODemoBarToolbarElement;
     new (): HTMLODemoBarToolbarElement;
-  };
-
-  interface HTMLODemoBarElement extends Components.ODemoBar, HTMLStencilElement {}
-  var HTMLODemoBarElement: {
-    prototype: HTMLODemoBarElement;
-    new (): HTMLODemoBarElement;
   };
 
   interface HTMLODemoCaseElement extends Components.ODemoCase, HTMLStencilElement {}
@@ -193,12 +194,11 @@ declare global {
     prototype: HTMLODemoSnackbarElement;
     new (): HTMLODemoSnackbarElement;
   };
-
   interface HTMLElementTagNameMap {
+    'o-demo-bar': HTMLODemoBarElement
     'o-demo-bar-buttons': HTMLODemoBarButtonsElement
     'o-demo-bar-select': HTMLODemoBarSelectElement
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement
-    'o-demo-bar': HTMLODemoBarElement
     'o-demo-case': HTMLODemoCaseElement
     'o-demo-devices': HTMLODemoDevicesElement
     'o-demo-fab': HTMLODemoFabElement
@@ -208,10 +208,10 @@ declare global {
   }
 
   interface ElementTagNameMap {
+    'o-demo-bar': HTMLODemoBarElement;
     'o-demo-bar-buttons': HTMLODemoBarButtonsElement;
     'o-demo-bar-select': HTMLODemoBarSelectElement;
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
-    'o-demo-bar': HTMLODemoBarElement;
     'o-demo-case': HTMLODemoCaseElement;
     'o-demo-devices': HTMLODemoDevicesElement;
     'o-demo-fab': HTMLODemoFabElement;
@@ -219,14 +219,5 @@ declare global {
     'o-demo-resizer': HTMLODemoResizerElement;
     'o-demo-snackbar': HTMLODemoSnackbarElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+

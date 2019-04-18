@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Method,Event, EventEmitter } from '@stencil/core';
+import { Component, h, Prop, Element, Method,Event, EventEmitter } from '@stencil/core';
 import {MDCDialog} from '@material/dialog/index';
 
 @Component({
@@ -10,7 +10,7 @@ export class DemoModalComponent {
   public modalEl: any;
 
   @Element() el: HTMLElement;
-  @Event({ eventName: 'code-editor-changed' })codeEditorChanged : EventEmitter;
+  @Event({ eventName: 'code-editor-changed' }) codeEditorChanged : EventEmitter;
   @Prop({ mutable: true, reflectToAttr: true }) open: boolean = false;
   @Prop() code: any = '';
 
@@ -29,13 +29,12 @@ export class DemoModalComponent {
 
   //@Listen('editor-content')
   contentChanged(arg){
-    console.log('debounceing')
     this.codeEditorChanged.emit(arg.code);
     //this.debounce(100 , this.codeEditorChanged.emit(arg.code))
   }
 
   @Method()
-  openDialog(): void {
+  async openDialog() {
     if (!this.open) {
       this.modalEl.open();
       this.open = true;
@@ -43,7 +42,7 @@ export class DemoModalComponent {
   }
 
   @Method()
-  closeDialog(): void {
+  async closeDialog() {
     if (this.open) {
       this.modalEl.close();
       this.open = false;

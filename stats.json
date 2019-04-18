@@ -1,39 +1,19 @@
 {
   "diagnostics": [
     {
+      "header": "Optimize CSS: autoprefixer",
+      "messageText": "start value has mixed support, consider using flex-start instead",
+      "level": "warn",
+      "type": "css"
+    },
+    {
       "level": "error",
-      "type": "typescript",
-      "language": "typescript",
-      "header": "TypeScript",
-      "code": "2322",
-      "messageText": "Type '{ class: string; name: string; }' is not assignable to type 'SlotAttributes'. Property 'class' does not exist on type 'SlotAttributes'.",
-      "relFilePath": "src/components/o-demo-devices/devices.tsx",
-      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-devices/devices.tsx",
-      "lines": [
-        {
-          "lineIndex": 3,
-          "lineNumber": 4,
-          "text": "    <div class=\"device-frame\">",
-          "errorCharStart": -1,
-          "errorLength": -1
-        },
-        {
-          "lineIndex": 4,
-          "lineNumber": 5,
-          "text": "      <slot class=\"device-content\" name=\"screen\"></slot>",
-          "errorCharStart": 7,
-          "errorLength": 4
-        },
-        {
-          "lineIndex": 5,
-          "lineNumber": 6,
-          "text": "    </div>",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ],
-      "lineNumber": 5,
-      "columnNumber": 7
+      "type": "build",
+      "header": "Build Error",
+      "messageText": "TypeError: Cannot read property 'childNodes' of undefined\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1059:74)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at Object.serializeNodeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:954:13)\n    at generateIndexHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/compiler/index.js:6264:76)",
+      "relFilePath": null,
+      "absFilePath": null,
+      "lines": []
     }
   ]
 }

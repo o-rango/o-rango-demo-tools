@@ -1,4 +1,4 @@
-import {Component, Prop, Element, Event, EventEmitter} from '@stencil/core';
+import {Component, h, Prop, Element, Event, EventEmitter} from '@stencil/core';
 import {MDCSelect} from '@material/select/index';
 @Component({
     tag: 'o-demo-bar-select',

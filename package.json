@@ -31,15 +31,15 @@
     "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@material/dialog": "^1.1.0",
-    "@material/fab": "^1.1.0",
-    "@material/select": "1.1.0",
-    "@material/snackbar": "^1.1.0",
+    "@material/dialog": "^1.1.1",
+    "@material/fab": "^1.1.1",
+    "@material/select": "1.1.1",
+    "@material/snackbar": "^1.1.1",
     "@material/toolbar": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
-    "@stencil/core": "0.18.1",
+    "@stencil/core": "1.0.0-alpha.10",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",
@@ -47,7 +47,7 @@
     "@types/puppeteer": "1.12.3",
     "@types/cssnano": "^4.0.0",
     "cssnano": "^4.1.10",
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.5.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.7.1",
     "babel-preset-es2015": "6.24.1",
@@ -60,9 +60,9 @@
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
     "standard-version": "5.0.2",
-    "tslint": "5.15.0",
+    "tslint": "5.16.0",
     "tslint-react": "4.0.0",
-    "workbox-build": "4.2.0"
+    "workbox-build": "4.3.0"
   },
   "repository": {
     "type": "git",

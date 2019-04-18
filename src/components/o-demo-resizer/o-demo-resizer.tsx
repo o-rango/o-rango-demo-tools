@@ -1,5 +1,6 @@
 import {
-  Component,
+  Component, 
+  h,
   Event,
   EventEmitter,
   Element,
@@ -50,7 +51,7 @@ export class DemoResizerComponent {
 
 
   @Method()
-  setActiveViewPort(size?: string) {
+  async setActiveViewPort(size?: string) {
     const sizeList = Array.from(
       this.el.shadowRoot.querySelectorAll('.item-resize-toolbar')
     );
