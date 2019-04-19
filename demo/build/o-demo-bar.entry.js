@@ -1,4 +1,4 @@
-import { b as registerInstance, d as h, e as getElement } from './p-e440aaf7.js';
+import { c as registerInstance, e as h, f as getElement } from './p-2c32137b.js';
 
 const win = window;
 class DemoBarComponent {

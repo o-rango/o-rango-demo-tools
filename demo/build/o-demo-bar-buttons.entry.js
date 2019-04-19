@@ -1,4 +1,4 @@
-import { b as registerInstance, c as createEvent, d as h } from './p-e440aaf7.js';
+import { c as registerInstance, d as createEvent, e as h } from './p-2c32137b.js';
 
 class DemoButtonsComponent {
     constructor(hostRef) {

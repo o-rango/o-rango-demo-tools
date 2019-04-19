@@ -33,15 +33,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-System.register(['./orango-demo-tools-204882af.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h, getElement;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                createEvent = module.c;
-                h = module.d;
-                getElement = module.e;
+                registerInstance = module.c;
+                createEvent = module.d;
+                h = module.e;
+                getElement = module.f;
             }],
         execute: function () {
             var DemoResizerComponent = /** @class */ (function () {

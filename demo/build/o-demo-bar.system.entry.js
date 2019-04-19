@@ -1,11 +1,11 @@
-System.register(['./orango-demo-tools-204882af.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js'], function (exports, module) {
     'use strict';
     var registerInstance, h, getElement;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                h = module.d;
-                getElement = module.e;
+                registerInstance = module.c;
+                h = module.e;
+                getElement = module.f;
             }],
         execute: function () {
             var win = window;

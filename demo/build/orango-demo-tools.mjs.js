@@ -1,3 +1,5 @@
-import { a as defineCustomElements } from './p-e440aaf7.js';
+import { a as patchBrowser, b as defineCustomElements } from './p-2c32137b.js';
 
-defineCustomElements(window);
+patchBrowser().then(resourcesUrl => {
+  defineCustomElements(window, { resourcesUrl });
+});

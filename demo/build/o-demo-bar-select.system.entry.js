@@ -1,12 +1,12 @@
-System.register(['./orango-demo-tools-204882af.js', './chunk-8a5d6327.js', './chunk-5987fd85.js', './chunk-d438f2cf.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './chunk-5987fd85.js', './chunk-d438f2cf.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h, getElement, __extends, __assign, MDCFoundation, MDCComponent, closest, matches, __values, MDCRipple, MDCRippleFoundation;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                createEvent = module.c;
-                h = module.d;
-                getElement = module.e;
+                registerInstance = module.c;
+                createEvent = module.d;
+                h = module.e;
+                getElement = module.f;
             }, function (module) {
                 __extends = module.a;
                 __assign = module.b;

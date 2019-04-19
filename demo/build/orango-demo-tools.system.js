@@ -1,12 +1,15 @@
-System.register(['./orango-demo-tools-204882af.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js'], function (exports, module) {
     'use strict';
-    var defineCustomElements;
+    var patchBrowser, defineCustomElements;
     return {
         setters: [function (module) {
-                defineCustomElements = module.a;
+                patchBrowser = module.a;
+                defineCustomElements = module.b;
             }],
         execute: function () {
-            defineCustomElements(window);
+            patchBrowser().then(function (resourcesUrl) {
+                defineCustomElements(window, { resourcesUrl: resourcesUrl });
+            });
         }
     };
 });

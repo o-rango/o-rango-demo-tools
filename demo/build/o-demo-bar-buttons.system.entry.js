@@ -1,11 +1,11 @@
-System.register(['./orango-demo-tools-204882af.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                createEvent = module.c;
-                h = module.d;
+                registerInstance = module.c;
+                createEvent = module.d;
+                h = module.e;
             }],
         execute: function () {
             var DemoButtonsComponent = /** @class */ (function () {

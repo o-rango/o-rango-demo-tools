@@ -1,9 +1,9 @@
-System.register(['./orango-demo-tools-204882af.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js'], function (exports, module) {
     'use strict';
     var registerInstance;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
+                registerInstance = module.c;
             }],
         execute: function () {
             var DemoCaseComponent = /** @class */ (function () {

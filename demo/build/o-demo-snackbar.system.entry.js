@@ -1,11 +1,11 @@
-System.register(['./orango-demo-tools-204882af.js', './chunk-8a5d6327.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], function (exports, module) {
     'use strict';
     var registerInstance, h, getElement, __extends, __assign, MDCFoundation, closest, MDCComponent;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                h = module.d;
-                getElement = module.e;
+                registerInstance = module.c;
+                h = module.e;
+                getElement = module.f;
             }, function (module) {
                 __extends = module.a;
                 __assign = module.b;

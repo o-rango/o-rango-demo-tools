@@ -3,6 +3,7 @@
   "version": "1.0.6",
   "description": "O-RANGO development environoment for web components",
   "unpkg": "dist/orango-demo-tools.js",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs.js",
   "es2017": "dist/esm/index.mjs.js",
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
-    "@stencil/core": "1.0.0-alpha.10",
+    "@stencil/core": "1.0.0-alpha.11",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",

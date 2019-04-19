@@ -33,15 +33,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-System.register(['./orango-demo-tools-204882af.js', './chunk-8a5d6327.js', './chunk-5987fd85.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './chunk-5987fd85.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h, getElement, __extends, __assign, MDCFoundation, __values, matches$1, closest, MDCComponent, MDCRipple;
     return {
         setters: [function (module) {
-                registerInstance = module.b;
-                createEvent = module.c;
-                h = module.d;
-                getElement = module.e;
+                registerInstance = module.c;
+                createEvent = module.d;
+                h = module.e;
+                getElement = module.f;
             }, function (module) {
                 __extends = module.a;
                 __assign = module.b;

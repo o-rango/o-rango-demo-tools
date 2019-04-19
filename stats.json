@@ -1,19 +1,40 @@
 {
-  "diagnostics": [
-    {
-      "header": "Optimize CSS: autoprefixer",
-      "messageText": "start value has mixed support, consider using flex-start instead",
-      "level": "warn",
-      "type": "css"
-    },
-    {
-      "level": "error",
-      "type": "build",
-      "header": "Build Error",
-      "messageText": "TypeError: Cannot read property 'childNodes' of undefined\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1059:74)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at serializeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:1068:29)\n    at Object.serializeNodeToHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/mock-doc/index.js:954:13)\n    at generateIndexHtml (/Users/romulocintra/projects/OSS/o-rango-demo-tools/node_modules/@stencil/core/dist/compiler/index.js:6264:76)",
-      "relFilePath": null,
-      "absFilePath": null,
-      "lines": []
-    }
-  ]
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.0.0-alpha.11"
+  },
+  "app": {
+    "namespace": "OrangoDemoTools",
+    "fsNamespace": "orango-demo-tools",
+    "components": 0,
+    "entries": 0,
+    "bundles": 0
+  },
+  "options": {
+    "minifyJs": false,
+    "minifyCss": false,
+    "hashFileNames": false,
+    "hashedFileNameLength": 8,
+    "buildEs5": false
+  },
+  "components": [],
+  "entries": [],
+  "sourceGraph": {
+    "src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx": [],
+    "src/components/o-demo-bar-select/o-demo-bar-select.tsx": [],
+    "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx": [],
+    "src/components/o-demo-bar/o-demo-bar.tsx": [],
+    "src/components/o-demo-case/o-demo-case.tsx": [],
+    "src/components/o-demo-devices/devices.tsx": [],
+    "src/components/o-demo-devices/o-demo-devices.tsx": [
+      "src/components/o-demo-devices/devices"
+    ],
+    "src/components/o-demo-fab/o-demo-fab.tsx": [],
+    "src/components/o-demo-modal/o-demo-modal.tsx": [],
+    "src/components/o-demo-resizer/o-demo-resizer.tsx": [],
+    "src/components/o-demo-snackbar/o-demo-snackbar.tsx": [],
+    "src/components/utils/CssClassMap.ts": [],
+    "src/index.ts": []
+  },
+  "collections": []
 }
