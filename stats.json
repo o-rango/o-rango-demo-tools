@@ -1,39 +1,40 @@
 {
-  "diagnostics": [
-    {
-      "level": "error",
-      "type": "typescript",
-      "language": "typescript",
-      "header": "TypeScript",
-      "code": "2322",
-      "messageText": "Type '{ class: string; name: string; }' is not assignable to type 'SlotAttributes'. Property 'class' does not exist on type 'SlotAttributes'.",
-      "relFilePath": "src/components/o-demo-devices/devices.tsx",
-      "absFilePath": "/Users/roca/Projects/o-rango-demo-tools/src/components/o-demo-devices/devices.tsx",
-      "lines": [
-        {
-          "lineIndex": 3,
-          "lineNumber": 4,
-          "text": "    <div class=\"device-frame\">",
-          "errorCharStart": -1,
-          "errorLength": -1
-        },
-        {
-          "lineIndex": 4,
-          "lineNumber": 5,
-          "text": "      <slot class=\"device-content\" name=\"screen\"></slot>",
-          "errorCharStart": 7,
-          "errorLength": 4
-        },
-        {
-          "lineIndex": 5,
-          "lineNumber": 6,
-          "text": "    </div>",
-          "errorCharStart": -1,
-          "errorLength": -1
-        }
-      ],
-      "lineNumber": 5,
-      "columnNumber": 7
-    }
-  ]
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.0.0-alpha.11"
+  },
+  "app": {
+    "namespace": "OrangoDemoTools",
+    "fsNamespace": "orango-demo-tools",
+    "components": 0,
+    "entries": 0,
+    "bundles": 0
+  },
+  "options": {
+    "minifyJs": false,
+    "minifyCss": false,
+    "hashFileNames": false,
+    "hashedFileNameLength": 8,
+    "buildEs5": false
+  },
+  "components": [],
+  "entries": [],
+  "sourceGraph": {
+    "src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx": [],
+    "src/components/o-demo-bar-select/o-demo-bar-select.tsx": [],
+    "src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx": [],
+    "src/components/o-demo-bar/o-demo-bar.tsx": [],
+    "src/components/o-demo-case/o-demo-case.tsx": [],
+    "src/components/o-demo-devices/devices.tsx": [],
+    "src/components/o-demo-devices/o-demo-devices.tsx": [
+      "src/components/o-demo-devices/devices"
+    ],
+    "src/components/o-demo-fab/o-demo-fab.tsx": [],
+    "src/components/o-demo-modal/o-demo-modal.tsx": [],
+    "src/components/o-demo-resizer/o-demo-resizer.tsx": [],
+    "src/components/o-demo-snackbar/o-demo-snackbar.tsx": [],
+    "src/components/utils/CssClassMap.ts": [],
+    "src/index.ts": []
+  },
+  "collections": []
 }

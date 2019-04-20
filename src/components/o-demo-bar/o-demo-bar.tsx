@@ -1,5 +1,5 @@
 import {
-  Component,
+  Component, h,
   Prop,
   Element,
   Listen

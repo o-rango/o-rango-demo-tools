@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter} from '@stencil/core';
+import { Component, h, Element, Event, EventEmitter} from '@stencil/core';
 import { MDCRipple } from '@material/ripple/index';
 @Component({
   tag: 'o-demo-fab',

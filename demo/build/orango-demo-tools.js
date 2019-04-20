@@ -1,137 +1,24 @@
-/*!
- * O-RANGO - MIT License
- * 2019-04-04T14:13:46
- */
-(function(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components) {
-
-  function init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCorePolyfilled, hydratedCssClass, cmpTags, HTMLElementPrototype, App, x, y, scriptElm) {
-    // create global namespace if it doesn't already exist
-    App = win[namespace] = win[namespace] || {};
-    if (cmpTags) {
-        // auto hide components until they been fully hydrated
-        // reusing the "x" and "i" variables from the args for funzies
-        x = doc.createElement('style');
-        x.innerHTML = cmpTags + '{visibility:hidden}.' + hydratedCssClass + '{visibility:inherit}';
-        x.setAttribute('data-styles', '');
-        y = doc.head.querySelector('meta[charset]');
-        doc.head.insertBefore(x, y ? y.nextSibling : doc.head.firstChild);
-    }
-    createComponentOnReadyPrototype(win, namespace, HTMLElementPrototype);
-    resourcesUrl = resourcesUrl || App.resourcesUrl;
-    // figure out the script element for this current script
-    y = doc.querySelectorAll('script');
-    for (x = y.length - 1; x >= 0; x--) {
-        scriptElm = y[x];
-        if (scriptElm.src || scriptElm.hasAttribute('data-resources-url')) {
-            break;
-        }
-    }
-    // get the resource path attribute on this script element
-    y = scriptElm.getAttribute('data-resources-url');
-    if (!resourcesUrl && y) {
-        // the script element has a data-resources-url attribute, always use that
-        resourcesUrl = y;
-    }
-    if (!resourcesUrl && scriptElm.src) {
-        // we don't have an exact resourcesUrl, so let's
-        // figure it out relative to this script's src and app's filesystem namespace
-        y = scriptElm.src.split('/').slice(0, -1);
-        resourcesUrl = (y.join('/')) + (y.length ? '/' : '') + fsNamespace + '/';
-    }
-    // request the core this browser needs
-    // test for native support of custom elements and fetch
-    // if either of those are not supported, then use the core w/ polyfills
-    // also check if the page was build with ssr or not
-    x = doc.createElement('script');
-    if (usePolyfills(win, win.location, x, 'import("")')) {
-        // requires the es5/polyfilled core
-        x.src = resourcesUrl + appCorePolyfilled;
-    }
-    else {
-        // let's do this!
-        x.src = resourcesUrl + appCore;
-        x.setAttribute('type', 'module');
-        x.setAttribute('crossorigin', true);
-    }
-    x.setAttribute('data-resources-url', resourcesUrl);
-    x.setAttribute('data-namespace', fsNamespace);
-    doc.head.appendChild(x);
-}
-function usePolyfills(win, location, scriptElm, dynamicImportTest) {
-    // fyi, dev mode has verbose if/return statements
-    // but it minifies to a nice 'lil one-liner ;)
-    if (location.search.indexOf('core=esm') > 0) {
-        // force esm build
-        return false;
-    }
-    if ((location.search.indexOf('core=es5') > 0) ||
-        (location.protocol === 'file:') ||
-        (!(win.customElements && win.customElements.define)) ||
-        (!win.fetch) ||
-        (!(win.CSS && win.CSS.supports && win.CSS.supports('color', 'var(--c)'))) ||
-        (!('noModule' in scriptElm))) {
-        // es5 build w/ polyfills
+setTimeout(function(){ 
+    function supportsDynamicImports() {
+      try {
+        new Function('import("")');
         return true;
+      } catch (e) {}
+      return false;
     }
-    // final test to see if this browser support dynamic imports
-    return doesNotSupportsDynamicImports(dynamicImportTest);
-}
-function doesNotSupportsDynamicImports(dynamicImportTest) {
-    try {
-        new Function(dynamicImportTest);
-        return false;
+    var supportsEsModules = !!('noModule' in document.createElement('script'));
+
+    if (!supportsEsModules) {
+      document.body.innerHTML = '\n  \n<style>\nbody {\n  font-family: sans-serif;\n  padding: 20px;\n  line-height:22px;\n}\nh1 {\n  font-size: 18px;\n}\nh2 {\n  font-size: 14px;\n  margin-top: 40px;\n}\n</style>\n\n\n  <h1>This Stencil app is disabled for this browser.</h1>\n\n  <h2>Developers:</h2>\n  <ul>\n    <li>ES5 builds are disabled <strong>during development</strong> to take advantage of 2x faster build times.</li>\n    <li>Please see the example below or our <a href="https://stenciljs.com/docs/stencil-config" target="_blank">config docs</a> if you would like to develop on a browser that does not fully support ES2017 and custom elements.</li>\n    <li>Note that by default, ES5 builds and polyfills are enabled during production builds.</li>\n    <li>When testing browsers it is recommended to always test in production mode, and ES5 builds should always be enabled during production builds.</li>\n    <li><em>This is only an experiement and if it slows down app development then we will revert this and enable ES5 builds during dev.</em></li>\n  </ul>\n\n\n  <h2>Enabling ES5 builds during development:</h2>\n  <pre>\n    <code>npm run dev --es5</code>\n  </pre>\n  <p>For stencil-component-starter, use:</p>\n  <pre>\n    <code>npm start --es5</code>\n  </pre>\n\n\n  <h2>Enabling full production builds during development:</h2>\n  <pre>\n    <code>npm run dev --prod</code>\n  </pre>\n  <p>For stencil-component-starter, use:</p>\n  <pre>\n    <code>npm start --prod</code>\n  </pre>\n\n  <h2>Current Browser\'s Support:</h2>\n  <ul>\n    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES Module Imports</a>: <span id="es-modules-test"></span></li>\n    <li><a href="http://2ality.com/2017/01/import-operator.html">ES Dynamic Imports</a>: <span id="es-dynamic-modules-test"></span></li>\n    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements">Custom Elements</a>: <span id="custom-elements-test"></span></li>\n    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>: <span id="shadow-dom-test"></span></li>\n    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a>: <span id="fetch-test"></span></li>\n    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS Variables</a>: <span id="css-variables-test"></span></li>\n  </ul>\n\n  <h2>Current Browser:</h2>\n  <pre>\n    <code id="current-browser-output"></code>\n  </pre>\n';
+
+      document.getElementById('current-browser-output').textContent = window.navigator.userAgent;
+      document.getElementById('es-modules-test').textContent = supportsEsModules;
+      document.getElementById('es-dynamic-modules-test').textContent = supportsDynamicImports();
+      document.getElementById('shadow-dom-test').textContent = !!(document.head.attachShadow);
+      document.getElementById('custom-elements-test').textContent = !!(window.customElements);
+      document.getElementById('css-variables-test').textContent = !!(window.CSS && window.CSS.supports && window.CSS.supports('color', 'var(--c)'));
+      document.getElementById('fetch-test').textContent = !!(window.fetch);
+    } else {
+      document.body.innerHTML = '\n  \n<style>\nbody {\n  font-family: sans-serif;\n  padding: 20px;\n  line-height:22px;\n}\nh1 {\n  font-size: 18px;\n}\nh2 {\n  font-size: 14px;\n  margin-top: 40px;\n}\n</style>\n\n\n  <h1>Update src/index.html</h1>\n\n  <p>Stencil recently changed how scripts are loaded in order to improve performance.</p>\n\n  <h2>BEFORE:</h2>\n  <p>Previously, a single script was included that handled loading the correct JavaScript based on browser support.</p>\n  <pre>\n    <code>&lt;script src=&quot;build/orango-demo-tools.js&quot;&gt;&lt;/script&gt;\n</code>\n  </pre>\n\n  <h2 style="margin-top:0">AFTER:</h2>\n  <p>The index.html should now include two scripts using the modern ES Module script pattern.\n  Note that only one file will actually be requested and loaded based on the browser\'s native support for ES Modules.\n  For more info, please see <a href="https://developers.google.com/web/fundamentals/primers/modules#browser" target="_blank">Using JavaScript modules on the web</a>.\n  </p>\n  <pre>\n  <code>&lt;script <span style="background:yellow">type="module"</span> src="build/orango-demo-tools<span style="background:yellow">.mjs</span>.js"&gt;&lt;/script&gt;\n  &lt;script <span style="background:yellow">nomodule</span> src=&quot;build/orango-demo-tools.js&quot;&gt;&lt;/script&gt;</code>\n    </pre>\n';
     }
-    catch (e) { }
-    return true;
-}
-function createComponentOnReadyPrototype(win, namespace, HTMLElementPrototype) {
-    (win['s-apps'] = win['s-apps'] || []).push(namespace);
-    if (!HTMLElementPrototype.componentOnReady) {
-        HTMLElementPrototype.componentOnReady = function componentOnReady() {
-            /*tslint:disable*/
-            var elm = this;
-            function executor(resolve) {
-                if (elm.nodeName.indexOf('-') > 0) {
-                    // window hasn't loaded yet and there's a
-                    // good chance this is a custom element
-                    var apps = win['s-apps'];
-                    var appsReady = 0;
-                    // loop through all the app namespaces
-                    for (var i = 0; i < apps.length; i++) {
-                        // see if this app has "componentOnReady" setup
-                        if (win[apps[i]].componentOnReady) {
-                            // this app's core has loaded call its "componentOnReady"
-                            if (win[apps[i]].componentOnReady(elm, resolve)) {
-                                // this component does belong to this app and would
-                                // have fired off the resolve fn
-                                // let's stop here, we're good
-                                return;
-                            }
-                            appsReady++;
-                        }
-                    }
-                    if (appsReady < apps.length) {
-                        // not all apps are ready yet
-                        // add it to the queue to be figured out when they are
-                        (win['s-cr'] = win['s-cr'] || []).push([elm, resolve]);
-                        return;
-                    }
-                }
-                // not a recognized app component
-                resolve(null);
-            }
-            // callback wasn't provided, let's return a promise
-            if (win.Promise) {
-                // use native/polyfilled promise
-                return new win.Promise(executor);
-            }
-            // promise may not have been polyfilled yet
-            return { then: executor };
-        };
-    }
-}
-
-
-  init(win, doc, namespace, fsNamespace, resourcesUrl, appCore, appCoreSsr, appCorePolyfilled, hydratedCssClass, components);
-
-  })(window, document, "OrangoDemoTools","orango-demo-tools",0,"orango-demo-tools.core.js","es5-build-disabled.js","hydrated","o-demo-bar,o-demo-bar-buttons,o-demo-bar-select,o-demo-bar-toolbar,o-demo-case,o-demo-devices,o-demo-fab,o-demo-modal,o-demo-resizer,o-demo-snackbar",HTMLElement.prototype);
+   }, 10)

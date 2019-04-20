@@ -1,3 +1,6 @@
+
+import { h } from '@stencil/core';
+
 export class Devices {
   public static readonly iphoneX = (
     <div class="marvel-device iphone-x">

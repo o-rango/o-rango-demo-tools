@@ -1,4 +1,4 @@
-import { Component, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element } from '@stencil/core';
 import { MDCToolbar } from '@material/toolbar/index';
 
 @Component({
