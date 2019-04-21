@@ -1,7 +1,7 @@
 import { c as registerInstance, d as createEvent, e as h, f as getElement } from './p-2c32137b.js';
-import './p-e83e1e7b.js';
-import { a as MDCRipple } from './p-87d0d530.js';
-import './p-c29074e7.js';
+import './p-ee65326d.js';
+import { a as MDCRipple } from './p-302fde31.js';
+import './p-fac5950c.js';
 
 class DemoFabComponent {
     constructor(hostRef) {

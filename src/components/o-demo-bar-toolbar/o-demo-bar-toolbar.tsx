@@ -1,4 +1,4 @@
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element, ComponentInterface } from '@stencil/core';
 import { MDCToolbar } from '@material/toolbar/index';
 
 @Component({
@@ -6,7 +6,7 @@ import { MDCToolbar } from '@material/toolbar/index';
   styleUrl: 'o-demo-bar-toolbar.scss',
   shadow: true
 })
-export class DemoToolbarComponent {
+export class DemoToolbarComponent implements ComponentInterface {
 
   @Element() el: HTMLElement;
   @Prop() name: string;

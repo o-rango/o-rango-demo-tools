@@ -1,4 +1,4 @@
-import { Component , Prop , Element , State} from '@stencil/core';
+import { Component , Prop , Element , State , ComponentInterface} from '@stencil/core';
 import {Devices} from './devices';
 @Component({
   tag: 'o-demo-devices',
@@ -6,7 +6,7 @@ import {Devices} from './devices';
   shadow: true
 })
 
-export class DemoDevicesComponent {
+export class DemoDevicesComponent implements ComponentInterface {
   private evtListenerRotate : any;
   private evtListenerDeviceChange : any;
   @Element() el: any;

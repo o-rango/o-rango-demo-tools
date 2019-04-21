@@ -1,4 +1,4 @@
-System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './chunk-5987fd85.js', './chunk-d438f2cf.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-9a9e9621.js', './chunk-fcc0f081.js', './chunk-e336a53f.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h, getElement, __extends, __assign, MDCFoundation, MDCComponent, closest, matches, __values, MDCRipple, MDCRippleFoundation;
     return {
@@ -47,6 +47,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 LABEL_SHAKE: 'mdc-floating-label--shake',
                 ROOT: 'mdc-floating-label',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -146,6 +147,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCFloatingLabelFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -210,6 +212,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCFloatingLabel;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -232,6 +235,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -258,6 +262,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 LINE_RIPPLE_ACTIVE: 'mdc-line-ripple--active',
                 LINE_RIPPLE_DEACTIVATING: 'mdc-line-ripple--deactivating',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -342,6 +347,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCLineRippleFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -409,6 +415,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCLineRipple;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -431,6 +438,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -509,6 +517,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 Corner[Corner["BOTTOM_START"] = 9] = "BOTTOM_START";
                 Corner[Corner["BOTTOM_END"] = 13] = "BOTTOM_END";
             })(Corner || (Corner = {}));
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -542,6 +551,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 LIST_SELECTOR: '.mdc-list',
                 SELECTED_EVENT: 'MDCMenu:selected',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -590,6 +600,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
             var numbers$1 = {
                 UNSET_INDEX: -1,
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -1019,6 +1030,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCListFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -1259,6 +1271,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCList;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -1281,6 +1294,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -1741,6 +1755,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCMenuSurfaceFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -1777,6 +1792,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 }
                 return cachedCssTransformPropertyName_;
             }
+            //# sourceMappingURL=util.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -1962,6 +1978,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCMenuSurface;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -1984,6 +2001,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -2116,6 +2134,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCMenuFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -2312,6 +2331,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCMenu;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -2334,6 +2354,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -2368,6 +2389,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 OUTLINE_NOTCHED: 'mdc-notched-outline--notched',
                 OUTLINE_UPGRADED: 'mdc-notched-outline--upgraded',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -2454,6 +2476,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCNotchedOutlineFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -2527,6 +2550,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCNotchedOutline;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -2549,6 +2573,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -2599,6 +2624,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
             var numbers$3 = {
                 LABEL_SCALE: 0.75,
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -2846,6 +2872,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelectFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -2876,6 +2903,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 HELPER_TEXT_PERSISTENT: 'mdc-select-helper-text--persistent',
                 HELPER_TEXT_VALIDATION_MSG: 'mdc-select-helper-text--validation-msg',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -2995,6 +3023,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelectHelperTextFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -3052,6 +3081,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelectHelperText;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -3074,6 +3104,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -3100,6 +3131,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 ICON_EVENT: 'MDCSelect:icon',
                 ICON_ROLE: 'button',
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -3198,6 +3230,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelectIconFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -3256,6 +3289,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelectIcon;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -3278,6 +3312,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -3824,6 +3859,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCSelect;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -3846,6 +3882,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             var DemoSelectComponent = /** @class */ (function () {
                 function DemoSelectComponent(hostRef) {
                     registerInstance(this, hostRef);

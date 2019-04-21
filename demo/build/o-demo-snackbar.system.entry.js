@@ -1,4 +1,4 @@
-System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-9a9e9621.js'], function (exports, module) {
     'use strict';
     var registerInstance, h, getElement, __extends, __assign, MDCFoundation, closest, MDCComponent;
     return {
@@ -68,6 +68,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], func
                  */
                 ARIA_LIVE_DELAY_MS: 1000,
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -148,6 +149,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], func
                     labelEl.textContent = labelText;
                 }, ARIA_LIVE_DELAY_MS);
             }
+            //# sourceMappingURL=util.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -336,6 +338,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], func
                 };
                 return MDCSnackbarFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2018 Google Inc.
@@ -494,6 +497,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], func
                 };
                 return MDCSnackbar;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -516,6 +520,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js'], func
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             var DemoSnackbarComponent = /** @class */ (function () {
                 function DemoSnackbarComponent(hostRef) {
                     registerInstance(this, hostRef);

@@ -1,6 +1,6 @@
 import { c as registerInstance, e as h, f as getElement } from './p-2c32137b.js';
-import { a as __extends, b as __assign, c as MDCFoundation, d as MDCComponent } from './p-e83e1e7b.js';
-import { a as MDCRipple } from './p-87d0d530.js';
+import { a as __extends, b as __assign, c as MDCFoundation, d as MDCComponent } from './p-ee65326d.js';
+import { a as MDCRipple } from './p-302fde31.js';
 
 /**
  * @license
@@ -46,6 +46,7 @@ var numbers = {
     TOOLBAR_ROW_HEIGHT: 64,
     TOOLBAR_ROW_MOBILE_HEIGHT: 56,
 };
+//# sourceMappingURL=constants.js.map
 
 /**
  * @license
@@ -265,6 +266,7 @@ var MDCToolbarFoundation = /** @class */ (function (_super) {
     };
     return MDCToolbarFoundation;
 }(MDCFoundation));
+//# sourceMappingURL=foundation.js.map
 
 /**
  * @license
@@ -366,6 +368,7 @@ var MDCToolbar = /** @class */ (function (_super) {
     };
     return MDCToolbar;
 }(MDCComponent));
+//# sourceMappingURL=component.js.map
 
 /**
  * @license
@@ -389,6 +392,7 @@ var MDCToolbar = /** @class */ (function (_super) {
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+//# sourceMappingURL=index.js.map
 
 class DemoToolbarComponent {
     constructor(hostRef) {

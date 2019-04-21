@@ -5,7 +5,8 @@ import {
   EventEmitter,
   Element,
   Prop,
-  Method
+  Method,
+  ComponentInterface
 } from '@stencil/core';
 
 
@@ -14,7 +15,7 @@ import {
   styleUrl: 'o-demo-resizer.scss',
   shadow: true
 })
-export class DemoResizerComponent {
+export class DemoResizerComponent implements ComponentInterface{
   private desktop: any[] = [
     { size: '1600', name: 'Window xxlarge' },
     { size: '1440', name: 'Window xlarge' },

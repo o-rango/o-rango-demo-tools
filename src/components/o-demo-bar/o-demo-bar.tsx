@@ -2,7 +2,8 @@ import {
   Component, h,
   Prop,
   Element,
-  Listen
+  Listen,
+  ComponentInterface
 } from '@stencil/core';
 import {CssClassMap} from '../utils/CssClassMap'
 const win = window as any;
@@ -13,7 +14,7 @@ const win = window as any;
   shadow: true
 })
 
-export class DemoBarComponent {
+export class DemoBarComponent implements ComponentInterface {
   private demoCases: any;
   private casesOptions: any;
   private resizeComponent:any;

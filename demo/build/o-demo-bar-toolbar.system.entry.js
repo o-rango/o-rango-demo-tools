@@ -1,4 +1,4 @@
-System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './chunk-5987fd85.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-9a9e9621.js', './chunk-fcc0f081.js'], function (exports, module) {
     'use strict';
     var registerInstance, h, getElement, __extends, __assign, MDCFoundation, MDCComponent, MDCRipple;
     return {
@@ -59,6 +59,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 TOOLBAR_ROW_HEIGHT: 64,
                 TOOLBAR_ROW_MOBILE_HEIGHT: 56,
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -277,6 +278,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCToolbarFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -377,6 +379,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCToolbar;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -399,6 +402,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             var DemoToolbarComponent = /** @class */ (function () {
                 function DemoToolbarComponent(hostRef) {
                     registerInstance(this, hostRef);

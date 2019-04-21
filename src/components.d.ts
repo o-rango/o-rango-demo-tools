@@ -28,13 +28,41 @@ export namespace Components {
     'name': string;
     'options': any;
   }
+  interface ODemoBarToolbar {
+    'name': string;
+    'options': any;
+  }
+  interface ODemoBarToolbar {
+    'name': string;
+    'options': any;
+  }
+  interface ODemoCase {
+    'name': string;
+  }
+  interface ODemoCase {
+    'name': string;
+  }
   interface ODemoCase {
     'name': string;
   }
   interface ODemoDevices {
     'orientation': string;
   }
+  interface ODemoDevices {
+    'orientation': string;
+  }
+  interface ODemoDevices {
+    'orientation': string;
+  }
   interface ODemoFab {}
+  interface ODemoFab {}
+  interface ODemoFab {}
+  interface ODemoModal {
+    'closeDialog': () => Promise<void>;
+    'code': any;
+    'open': boolean;
+    'openDialog': () => Promise<void>;
+  }
   interface ODemoModal {
     'closeDialog': () => Promise<void>;
     'code': any;
@@ -45,6 +73,22 @@ export namespace Components {
     'setActiveViewPort': (size?: string) => Promise<void>;
     'size': string;
     'viewport': string;
+  }
+  interface ODemoResizer {
+    'setActiveViewPort': (size?: string) => Promise<void>;
+    'size': string;
+    'viewport': string;
+  }
+  interface ODemoResizer {
+    'setActiveViewPort': (size?: string) => Promise<void>;
+    'size': string;
+    'viewport': string;
+  }
+  interface ODemoSnackbar {
+    'events': any;
+  }
+  interface ODemoSnackbar {
+    'events': any;
   }
   interface ODemoSnackbar {
     'events': any;
@@ -73,8 +117,28 @@ declare namespace LocalJSX {
     'name'?: string;
     'options'?: any;
   }
+  interface ODemoBarToolbar extends JSXBase.HTMLAttributes {
+    'name'?: string;
+    'options'?: any;
+  }
+  interface ODemoBarToolbar extends JSXBase.HTMLAttributes {
+    'name'?: string;
+    'options'?: any;
+  }
   interface ODemoCase extends JSXBase.HTMLAttributes {
     'name'?: string;
+  }
+  interface ODemoCase extends JSXBase.HTMLAttributes {
+    'name'?: string;
+  }
+  interface ODemoCase extends JSXBase.HTMLAttributes {
+    'name'?: string;
+  }
+  interface ODemoDevices extends JSXBase.HTMLAttributes {
+    'orientation'?: string;
+  }
+  interface ODemoDevices extends JSXBase.HTMLAttributes {
+    'orientation'?: string;
   }
   interface ODemoDevices extends JSXBase.HTMLAttributes {
     'orientation'?: string;
@@ -82,6 +146,19 @@ declare namespace LocalJSX {
   interface ODemoFab extends JSXBase.HTMLAttributes {
     'onChange-device'?: (event: CustomEvent<any>) => void;
     'onRotate-device'?: (event: CustomEvent<any>) => void;
+  }
+  interface ODemoFab extends JSXBase.HTMLAttributes {
+    'onChange-device'?: (event: CustomEvent<any>) => void;
+    'onRotate-device'?: (event: CustomEvent<any>) => void;
+  }
+  interface ODemoFab extends JSXBase.HTMLAttributes {
+    'onChange-device'?: (event: CustomEvent<any>) => void;
+    'onRotate-device'?: (event: CustomEvent<any>) => void;
+  }
+  interface ODemoModal extends JSXBase.HTMLAttributes {
+    'code'?: any;
+    'onCode-editor-changed'?: (event: CustomEvent<any>) => void;
+    'open'?: boolean;
   }
   interface ODemoModal extends JSXBase.HTMLAttributes {
     'code'?: any;
@@ -93,6 +170,22 @@ declare namespace LocalJSX {
     'size'?: string;
     'viewport'?: string;
   }
+  interface ODemoResizer extends JSXBase.HTMLAttributes {
+    'onResizeButtonClicked'?: (event: CustomEvent<any>) => void;
+    'size'?: string;
+    'viewport'?: string;
+  }
+  interface ODemoResizer extends JSXBase.HTMLAttributes {
+    'onResizeButtonClicked'?: (event: CustomEvent<any>) => void;
+    'size'?: string;
+    'viewport'?: string;
+  }
+  interface ODemoSnackbar extends JSXBase.HTMLAttributes {
+    'events'?: any;
+  }
+  interface ODemoSnackbar extends JSXBase.HTMLAttributes {
+    'events'?: any;
+  }
   interface ODemoSnackbar extends JSXBase.HTMLAttributes {
     'events'?: any;
   }
@@ -102,11 +195,24 @@ declare namespace LocalJSX {
     'ODemoBarButtons': Components.ODemoBarButtons;
     'ODemoBarSelect': Components.ODemoBarSelect;
     'ODemoBarToolbar': Components.ODemoBarToolbar;
+    'ODemoBarToolbar': Components.ODemoBarToolbar;
+    'ODemoBarToolbar': Components.ODemoBarToolbar;
+    'ODemoCase': Components.ODemoCase;
+    'ODemoCase': Components.ODemoCase;
     'ODemoCase': Components.ODemoCase;
     'ODemoDevices': Components.ODemoDevices;
+    'ODemoDevices': Components.ODemoDevices;
+    'ODemoDevices': Components.ODemoDevices;
+    'ODemoFab': Components.ODemoFab;
+    'ODemoFab': Components.ODemoFab;
     'ODemoFab': Components.ODemoFab;
     'ODemoModal': Components.ODemoModal;
+    'ODemoModal': Components.ODemoModal;
     'ODemoResizer': Components.ODemoResizer;
+    'ODemoResizer': Components.ODemoResizer;
+    'ODemoResizer': Components.ODemoResizer;
+    'ODemoSnackbar': Components.ODemoSnackbar;
+    'ODemoSnackbar': Components.ODemoSnackbar;
     'ODemoSnackbar': Components.ODemoSnackbar;
   }
 
@@ -115,11 +221,24 @@ declare namespace LocalJSX {
     'ODemoBarButtons': LocalJSX.ODemoBarButtons;
     'ODemoBarSelect': LocalJSX.ODemoBarSelect;
     'ODemoBarToolbar': LocalJSX.ODemoBarToolbar;
+    'ODemoBarToolbar': LocalJSX.ODemoBarToolbar;
+    'ODemoBarToolbar': LocalJSX.ODemoBarToolbar;
+    'ODemoCase': LocalJSX.ODemoCase;
+    'ODemoCase': LocalJSX.ODemoCase;
     'ODemoCase': LocalJSX.ODemoCase;
     'ODemoDevices': LocalJSX.ODemoDevices;
+    'ODemoDevices': LocalJSX.ODemoDevices;
+    'ODemoDevices': LocalJSX.ODemoDevices;
+    'ODemoFab': LocalJSX.ODemoFab;
+    'ODemoFab': LocalJSX.ODemoFab;
     'ODemoFab': LocalJSX.ODemoFab;
     'ODemoModal': LocalJSX.ODemoModal;
+    'ODemoModal': LocalJSX.ODemoModal;
     'ODemoResizer': LocalJSX.ODemoResizer;
+    'ODemoResizer': LocalJSX.ODemoResizer;
+    'ODemoResizer': LocalJSX.ODemoResizer;
+    'ODemoSnackbar': LocalJSX.ODemoSnackbar;
+    'ODemoSnackbar': LocalJSX.ODemoSnackbar;
     'ODemoSnackbar': LocalJSX.ODemoSnackbar;
   }
 }
@@ -159,10 +278,46 @@ declare global {
     new (): HTMLODemoBarToolbarElement;
   };
 
+  interface HTMLODemoBarToolbarElement extends Components.ODemoBarToolbar, HTMLStencilElement {}
+  var HTMLODemoBarToolbarElement: {
+    prototype: HTMLODemoBarToolbarElement;
+    new (): HTMLODemoBarToolbarElement;
+  };
+
+  interface HTMLODemoBarToolbarElement extends Components.ODemoBarToolbar, HTMLStencilElement {}
+  var HTMLODemoBarToolbarElement: {
+    prototype: HTMLODemoBarToolbarElement;
+    new (): HTMLODemoBarToolbarElement;
+  };
+
   interface HTMLODemoCaseElement extends Components.ODemoCase, HTMLStencilElement {}
   var HTMLODemoCaseElement: {
     prototype: HTMLODemoCaseElement;
     new (): HTMLODemoCaseElement;
+  };
+
+  interface HTMLODemoCaseElement extends Components.ODemoCase, HTMLStencilElement {}
+  var HTMLODemoCaseElement: {
+    prototype: HTMLODemoCaseElement;
+    new (): HTMLODemoCaseElement;
+  };
+
+  interface HTMLODemoCaseElement extends Components.ODemoCase, HTMLStencilElement {}
+  var HTMLODemoCaseElement: {
+    prototype: HTMLODemoCaseElement;
+    new (): HTMLODemoCaseElement;
+  };
+
+  interface HTMLODemoDevicesElement extends Components.ODemoDevices, HTMLStencilElement {}
+  var HTMLODemoDevicesElement: {
+    prototype: HTMLODemoDevicesElement;
+    new (): HTMLODemoDevicesElement;
+  };
+
+  interface HTMLODemoDevicesElement extends Components.ODemoDevices, HTMLStencilElement {}
+  var HTMLODemoDevicesElement: {
+    prototype: HTMLODemoDevicesElement;
+    new (): HTMLODemoDevicesElement;
   };
 
   interface HTMLODemoDevicesElement extends Components.ODemoDevices, HTMLStencilElement {}
@@ -177,10 +332,40 @@ declare global {
     new (): HTMLODemoFabElement;
   };
 
+  interface HTMLODemoFabElement extends Components.ODemoFab, HTMLStencilElement {}
+  var HTMLODemoFabElement: {
+    prototype: HTMLODemoFabElement;
+    new (): HTMLODemoFabElement;
+  };
+
+  interface HTMLODemoFabElement extends Components.ODemoFab, HTMLStencilElement {}
+  var HTMLODemoFabElement: {
+    prototype: HTMLODemoFabElement;
+    new (): HTMLODemoFabElement;
+  };
+
   interface HTMLODemoModalElement extends Components.ODemoModal, HTMLStencilElement {}
   var HTMLODemoModalElement: {
     prototype: HTMLODemoModalElement;
     new (): HTMLODemoModalElement;
+  };
+
+  interface HTMLODemoModalElement extends Components.ODemoModal, HTMLStencilElement {}
+  var HTMLODemoModalElement: {
+    prototype: HTMLODemoModalElement;
+    new (): HTMLODemoModalElement;
+  };
+
+  interface HTMLODemoResizerElement extends Components.ODemoResizer, HTMLStencilElement {}
+  var HTMLODemoResizerElement: {
+    prototype: HTMLODemoResizerElement;
+    new (): HTMLODemoResizerElement;
+  };
+
+  interface HTMLODemoResizerElement extends Components.ODemoResizer, HTMLStencilElement {}
+  var HTMLODemoResizerElement: {
+    prototype: HTMLODemoResizerElement;
+    new (): HTMLODemoResizerElement;
   };
 
   interface HTMLODemoResizerElement extends Components.ODemoResizer, HTMLStencilElement {}
@@ -194,16 +379,41 @@ declare global {
     prototype: HTMLODemoSnackbarElement;
     new (): HTMLODemoSnackbarElement;
   };
+
+  interface HTMLODemoSnackbarElement extends Components.ODemoSnackbar, HTMLStencilElement {}
+  var HTMLODemoSnackbarElement: {
+    prototype: HTMLODemoSnackbarElement;
+    new (): HTMLODemoSnackbarElement;
+  };
+
+  interface HTMLODemoSnackbarElement extends Components.ODemoSnackbar, HTMLStencilElement {}
+  var HTMLODemoSnackbarElement: {
+    prototype: HTMLODemoSnackbarElement;
+    new (): HTMLODemoSnackbarElement;
+  };
   interface HTMLElementTagNameMap {
     'o-demo-bar': HTMLODemoBarElement
     'o-demo-bar-buttons': HTMLODemoBarButtonsElement
     'o-demo-bar-select': HTMLODemoBarSelectElement
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement
+    'o-demo-case': HTMLODemoCaseElement
+    'o-demo-case': HTMLODemoCaseElement
     'o-demo-case': HTMLODemoCaseElement
     'o-demo-devices': HTMLODemoDevicesElement
+    'o-demo-devices': HTMLODemoDevicesElement
+    'o-demo-devices': HTMLODemoDevicesElement
+    'o-demo-fab': HTMLODemoFabElement
+    'o-demo-fab': HTMLODemoFabElement
     'o-demo-fab': HTMLODemoFabElement
     'o-demo-modal': HTMLODemoModalElement
+    'o-demo-modal': HTMLODemoModalElement
     'o-demo-resizer': HTMLODemoResizerElement
+    'o-demo-resizer': HTMLODemoResizerElement
+    'o-demo-resizer': HTMLODemoResizerElement
+    'o-demo-snackbar': HTMLODemoSnackbarElement
+    'o-demo-snackbar': HTMLODemoSnackbarElement
     'o-demo-snackbar': HTMLODemoSnackbarElement
   }
 
@@ -212,11 +422,24 @@ declare global {
     'o-demo-bar-buttons': HTMLODemoBarButtonsElement;
     'o-demo-bar-select': HTMLODemoBarSelectElement;
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
+    'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
+    'o-demo-case': HTMLODemoCaseElement;
+    'o-demo-case': HTMLODemoCaseElement;
     'o-demo-case': HTMLODemoCaseElement;
     'o-demo-devices': HTMLODemoDevicesElement;
+    'o-demo-devices': HTMLODemoDevicesElement;
+    'o-demo-devices': HTMLODemoDevicesElement;
+    'o-demo-fab': HTMLODemoFabElement;
+    'o-demo-fab': HTMLODemoFabElement;
     'o-demo-fab': HTMLODemoFabElement;
     'o-demo-modal': HTMLODemoModalElement;
+    'o-demo-modal': HTMLODemoModalElement;
     'o-demo-resizer': HTMLODemoResizerElement;
+    'o-demo-resizer': HTMLODemoResizerElement;
+    'o-demo-resizer': HTMLODemoResizerElement;
+    'o-demo-snackbar': HTMLODemoSnackbarElement;
+    'o-demo-snackbar': HTMLODemoSnackbarElement;
     'o-demo-snackbar': HTMLODemoSnackbarElement;
   }
 }

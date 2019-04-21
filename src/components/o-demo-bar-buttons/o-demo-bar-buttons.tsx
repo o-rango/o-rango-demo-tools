@@ -1,11 +1,11 @@
-import { Component, h, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Event, EventEmitter, ComponentInterface } from '@stencil/core';
 
 @Component({
   tag: 'o-demo-bar-buttons',
   styleUrl: 'o-demo-bar-buttons.scss',
   shadow: true
 })
-export class DemoButtonsComponent {
+export class DemoButtonsComponent implements ComponentInterface {
   @Event() toolbarButtonClicked: EventEmitter;
   handleClick(event: any) {
     let evt = event.currentTarget.getAttribute('data-btn');

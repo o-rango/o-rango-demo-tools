@@ -1,5 +1,5 @@
 import { c as registerInstance, e as h, f as getElement } from './p-2c32137b.js';
-import { a as __extends, b as __assign, c as MDCFoundation, e as closest, d as MDCComponent } from './p-e83e1e7b.js';
+import { a as __extends, b as __assign, c as MDCFoundation, e as closest, d as MDCComponent } from './p-ee65326d.js';
 
 /**
  * @license
@@ -55,6 +55,7 @@ var numbers = {
      */
     ARIA_LIVE_DELAY_MS: 1000,
 };
+//# sourceMappingURL=constants.js.map
 
 /**
  * @license
@@ -134,6 +135,7 @@ function announce(ariaEl, labelEl) {
         labelEl.textContent = labelText;
     }, ARIA_LIVE_DELAY_MS);
 }
+//# sourceMappingURL=util.js.map
 
 /**
  * @license
@@ -321,6 +323,7 @@ var MDCSnackbarFoundation = /** @class */ (function (_super) {
     };
     return MDCSnackbarFoundation;
 }(MDCFoundation));
+//# sourceMappingURL=foundation.js.map
 
 /**
  * @license
@@ -476,6 +479,7 @@ var MDCSnackbar = /** @class */ (function (_super) {
     };
     return MDCSnackbar;
 }(MDCComponent));
+//# sourceMappingURL=component.js.map
 
 /**
  * @license
@@ -499,6 +503,7 @@ var MDCSnackbar = /** @class */ (function (_super) {
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+//# sourceMappingURL=index.js.map
 
 class DemoSnackbarComponent {
     constructor(hostRef) {

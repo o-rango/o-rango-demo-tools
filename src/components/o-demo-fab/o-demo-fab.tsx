@@ -1,4 +1,4 @@
-import { Component, h, Element, Event, EventEmitter} from '@stencil/core';
+import { Component, h, Element, Event, EventEmitter, ComponentInterface} from '@stencil/core';
 import { MDCRipple } from '@material/ripple/index';
 @Component({
   tag: 'o-demo-fab',
@@ -6,7 +6,7 @@ import { MDCRipple } from '@material/ripple/index';
   shadow: true
 })
 
-export class DemoFabComponent {
+export class DemoFabComponent  implements ComponentInterface{
   private ripple: any;
   @Element() el: HTMLElement;
   @Event({ eventName: 'rotate-device' }) fabBtnRotate: EventEmitter;

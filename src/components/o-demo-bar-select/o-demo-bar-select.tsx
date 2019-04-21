@@ -1,4 +1,4 @@
-import {Component, h, Prop, Element, Event, EventEmitter} from '@stencil/core';
+import {Component, h, Prop, Element, Event, EventEmitter , ComponentInterface} from '@stencil/core';
 import {MDCSelect} from '@material/select/index';
 @Component({
     tag: 'o-demo-bar-select',
@@ -6,7 +6,7 @@ import {MDCSelect} from '@material/select/index';
     shadow: true
   })
 
-export class DemoSelectComponent {
+export class DemoSelectComponent implements ComponentInterface{
   private select : any;
   @Element()el : HTMLElement;
   @Event()selectedCaseChanged : EventEmitter;

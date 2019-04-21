@@ -71,21 +71,13 @@
   "author": "Orango Team",
   "license": "MIT",
   "jest": {
+    "preset": "@stencil/core/testing",
     "transform": {
-      "^.+\\.js?$": "babel-jest",
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+      "^.+\\.js?$": "babel-jest"
+     },
     "transformIgnorePatterns": [
       "/node_modules/(?!@material/)",
       "/node_modules/(?!@material)"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
     ]
   },
   "bugs": {

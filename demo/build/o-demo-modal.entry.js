@@ -1,6 +1,6 @@
 import { c as registerInstance, d as createEvent, e as h, f as getElement } from './p-2c32137b.js';
-import { a as __extends, b as __assign, c as MDCFoundation, g as __values, f as matches$1, e as closest, d as MDCComponent } from './p-e83e1e7b.js';
-import { a as MDCRipple } from './p-87d0d530.js';
+import { a as __extends, b as __assign, c as MDCFoundation, g as __values, f as matches$1, e as closest, d as MDCComponent } from './p-ee65326d.js';
+import { a as MDCRipple } from './p-302fde31.js';
 
 var candidateSelectors = [
   'input',
@@ -567,6 +567,7 @@ function areTopsMisaligned(els) {
     [].forEach.call(els, function (el) { return tops.add(el.offsetTop); });
     return tops.size > 1;
 }
+//# sourceMappingURL=util.js.map
 
 /**
  * @license
@@ -621,6 +622,7 @@ var numbers = {
     DIALOG_ANIMATION_CLOSE_TIME_MS: 75,
     DIALOG_ANIMATION_OPEN_TIME_MS: 150,
 };
+//# sourceMappingURL=constants.js.map
 
 /**
  * @license
@@ -861,6 +863,7 @@ var MDCDialogFoundation = /** @class */ (function (_super) {
     };
     return MDCDialogFoundation;
 }(MDCFoundation));
+//# sourceMappingURL=foundation.js.map
 
 /**
  * @license
@@ -1034,6 +1037,7 @@ var MDCDialog = /** @class */ (function (_super) {
     };
     return MDCDialog;
 }(MDCComponent));
+//# sourceMappingURL=component.js.map
 
 /**
  * @license
@@ -1057,6 +1061,7 @@ var MDCDialog = /** @class */ (function (_super) {
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+//# sourceMappingURL=index.js.map
 
 class DemoModalComponent {
     constructor(hostRef) {

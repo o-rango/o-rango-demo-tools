@@ -1,4 +1,4 @@
-import { Component, h, Prop, Element, Method,Event, EventEmitter } from '@stencil/core';
+import { Component, h, Prop, Element, Method,Event, EventEmitter, ComponentInterface } from '@stencil/core';
 import {MDCDialog} from '@material/dialog/index';
 
 @Component({
@@ -6,7 +6,7 @@ import {MDCDialog} from '@material/dialog/index';
   styleUrl: 'o-demo-modal.scss',
   shadow: true
 })
-export class DemoModalComponent {
+export class DemoModalComponent implements ComponentInterface {
   public modalEl: any;
 
   @Element() el: HTMLElement;

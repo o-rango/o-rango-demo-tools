@@ -33,7 +33,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './chunk-5987fd85.js'], function (exports, module) {
+System.register(['./orango-demo-tools-a1d349ad.js', './chunk-9a9e9621.js', './chunk-fcc0f081.js'], function (exports, module) {
     'use strict';
     var registerInstance, createEvent, h, getElement, __extends, __assign, MDCFoundation, __values, matches$1, closest, MDCComponent, MDCRipple;
     return {
@@ -546,6 +546,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 [].forEach.call(els, function (el) { return tops.add(el.offsetTop); });
                 return tops.size > 1;
             }
+            //# sourceMappingURL=util.js.map
             /**
              * @license
              * Copyright 2016 Google Inc.
@@ -599,6 +600,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 DIALOG_ANIMATION_CLOSE_TIME_MS: 75,
                 DIALOG_ANIMATION_OPEN_TIME_MS: 150,
             };
+            //# sourceMappingURL=constants.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -840,6 +842,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCDialogFoundation;
             }(MDCFoundation));
+            //# sourceMappingURL=foundation.js.map
             /**
              * @license
              * Copyright 2017 Google Inc.
@@ -1020,6 +1023,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
                 };
                 return MDCDialog;
             }(MDCComponent));
+            //# sourceMappingURL=component.js.map
             /**
              * @license
              * Copyright 2019 Google Inc.
@@ -1042,6 +1046,7 @@ System.register(['./orango-demo-tools-a1d349ad.js', './chunk-8a5d6327.js', './ch
              * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
              * THE SOFTWARE.
              */
+            //# sourceMappingURL=index.js.map
             var DemoModalComponent = /** @class */ (function () {
                 function DemoModalComponent(hostRef) {
                     registerInstance(this, hostRef);

@@ -1,4 +1,4 @@
-import { Component, h,Prop, Element } from '@stencil/core';
+import { Component, h,Prop, Element,ComponentInterface} from '@stencil/core';
 import { MDCSnackbar } from '@material/snackbar/index';
 
 @Component({
@@ -6,7 +6,7 @@ import { MDCSnackbar } from '@material/snackbar/index';
   styleUrl: 'o-demo-snackbar.scss',
   shadow: true
 })
-export class DemoSnackbarComponent {
+export class DemoSnackbarComponent implements ComponentInterface {
   public snackbarToast: any;
 
   @Element() el: HTMLElement;
