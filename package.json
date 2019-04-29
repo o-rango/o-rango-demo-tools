@@ -31,11 +31,11 @@
     "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@material/dialog": "^1.1.1",
-    "@material/fab": "^1.1.1",
-    "@material/select": "1.1.1",
-    "@material/snackbar": "^1.1.1",
-    "@material/toolbar": "^1.1.0"
+    "@material/dialog": "^2.0.0",
+    "@material/fab": "^2.0.0",
+    "@material/select": "2.0.0",
+    "@material/snackbar": "^2.0.0",
+    "@material/toolbar": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
