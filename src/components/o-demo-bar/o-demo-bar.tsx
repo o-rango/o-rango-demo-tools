@@ -8,12 +8,34 @@ import {
 } from '@stencil/core';
 import { CssClassMap } from '../utils/CssClassMap'
 const win = window as any;
+const colors = {
+  ORANGO: "#fd2b2b",
+  WARN: '#f39c12',
+  ERROR: '#c0392b',
+  INFO: '#3498db'
+}
+
+/*
+const FAVICONS = {
+  IDLE: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAFAAUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoKKKK+LPrD//Z",
+  WORKING: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAFAAUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC3RRRXgnlH/9k=",
+}
+*/
+
+const log = function (color, prefix, msg) {
+  var styledPrefix = [
+    '%c' + prefix,
+    "background: " + color + "; color: white; padding: 4px 5px; border-radius: 3px; font-size: 0.9em;"
+  ];
+  console.log.apply(console, styledPrefix.concat([msg]));
+}
 
 @Component({
   tag: 'o-demo-bar',
   styleUrl: 'o-demo-bar.scss',
   shadow: true
 })
+
 
 export class DemoBarComponent implements ComponentInterface {
   private demoCases: any;
@@ -68,14 +90,41 @@ export class DemoBarComponent implements ComponentInterface {
   }
 
   stencilDevServer() {
+
+    /*
+        var fav : any;
+    if(!doc.querySelector("link[rel='shortcut icon']")) {
+      var linkElm: any = doc.createElement('link');
+      linkElm.rel = 'shortcut icon';
+      linkElm.href = FAVICONS.WORKING;
+      doc.head.appendChild(linkElm);
+    }else{
+      fav = doc.querySelector("link[rel='shortcut icon']");
+    }
+
+    */
+
     if ("WebSocket" in win && win['s-dev-server']) {
       const ws = new WebSocket(`ws://localhost:${win.location.port}/`);
+    
+    
       ws.onopen = () => {
-        console.log('reload-content-stencil-server-activated');
+        log(colors.ORANGO, 'Server', 'Connected Stencil HMR');
         this._setIframe();
         setTimeout(() => {
           this.el.forceUpdate();
         }, 20);
+      };
+
+      ws.onmessage = (message) => {
+        var msg = JSON.parse(message.data);
+        if (msg.buildLog) {
+          log(colors.INFO, 'Build Status', 'Status Table');
+          msg.buildLog.messages.forEach((msgContent)=>{
+            console.log(msgContent);
+          });           
+          return;
+        }
       };
     };
   }
@@ -159,8 +208,8 @@ export class DemoBarComponent implements ComponentInterface {
       const iframeContainer = this.el.shadowRoot.querySelector('#iframeContainer');
       const iframe = document.createElement('iframe');
       const frameH = Math.max(document.documentElement.clientHeight);
-      const frameW = this.fullScreen ?  '100%' : `${this.deviceSize.toString()}px`;;
-      const style = this.fullScreen ?  `body{margin:0;` : `body{margin:0;}`;
+      const frameW = this.fullScreen ? '100%' : `${this.deviceSize.toString()}px`;;
+      const style = this.fullScreen ? `body{margin:0;` : `body{margin:0;}`;
       const htmlContent = code ? code : this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
       // TODO use different way to set content to improve perf
       const html = code ? code : `<html><head></head><style>${style}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
@@ -181,11 +230,11 @@ export class DemoBarComponent implements ComponentInterface {
   }
 
   mobileView() {
-    return [<o-demo-fab/>, <o-demo-devices><div id="iframeContainer" class="pattern" slot="screen" /></o-demo-devices>];
+    return [<o-demo-fab />, <o-demo-devices><div id="iframeContainer" class="pattern" slot="screen" /></o-demo-devices>];
   }
 
   fullscreenView() {
-    return [<o-demo-fab close/>, <div id="iframeContainer" />]
+    return [<o-demo-fab close />, <div id="iframeContainer" />]
   }
 
   mainView() {
