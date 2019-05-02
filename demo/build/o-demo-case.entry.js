@@ -1,4 +1,4 @@
-import { c as registerInstance } from './p-2c32137b.js';
+import { c as registerInstance } from './orango-demo-tools-91db82ff.js';
 
 class DemoCaseComponent {
     constructor(hostRef) {

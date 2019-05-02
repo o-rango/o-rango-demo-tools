@@ -15,30 +15,30 @@
 
 ## Events
 
-| Event                 | Description | Type                |
-| --------------------- | ----------- | ------------------- |
-| `code-editor-changed` |             | `CustomEvent<void>` |
+| Event                 | Description | Type               |
+| --------------------- | ----------- | ------------------ |
+| `code-editor-changed` |             | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `closeDialog() => void`
+### `closeDialog() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `openDialog() => void`
+### `openDialog() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

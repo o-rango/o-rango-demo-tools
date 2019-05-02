@@ -7,10 +7,23 @@
 
 ## Events
 
-| Event                  | Description | Type                |
-| ---------------------- | ----------- | ------------------- |
-| `toolbarButtonClicked` |             | `CustomEvent<void>` |
+| Event                  | Description | Type               |
+| ---------------------- | ----------- | ------------------ |
+| `toolbarButtonClicked` |             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Used by
+
+ - [o-demo-bar](../o-demo-bar)
+
+### Graph
+```mermaid
+graph TD;
+  o-demo-bar --> o-demo-bar-buttons
+  style o-demo-bar-buttons fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

@@ -15,29 +15,36 @@
 
 ## Events
 
-| Event                 | Description | Type                |
-| --------------------- | ----------- | ------------------- |
-| `resizeButtonClicked` |             | `CustomEvent<void>` |
+| Event                 | Description | Type               |
+| --------------------- | ----------- | ------------------ |
+| `resizeButtonClicked` |             | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `setActiveViewPort(size?: string) => void`
+### `setActiveViewPort(size?: string) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name   | Type     | Description |
-| ------ | -------- | ----------- |
-| `size` | `string` |             |
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [o-demo-bar](../o-demo-bar)
+
+### Graph
+```mermaid
+graph TD;
+  o-demo-bar --> o-demo-resizer
+  style o-demo-resizer fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

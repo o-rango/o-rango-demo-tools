@@ -1,4 +1,4 @@
-import { c as registerInstance, d as createEvent, e as h, f as getElement } from './p-2c32137b.js';
+import { c as registerInstance, f as createEvent, d as h, e as getElement } from './orango-demo-tools-91db82ff.js';
 
 class DemoResizerComponent {
     constructor(hostRef) {
@@ -46,11 +46,6 @@ class DemoResizerComponent {
             var cssSize = { width: `${option.size}px` };
             return (h("div", { onClick: (event) => this.handleClick(event), class: "item-resize-toolbar", style: cssSize, "data-name": option.size, "data-size": option.size }, h("div", { class: "left device-resizer" }, option.size, "px"), h("div", { class: "rigth device-resizer" }, option.size, "px")));
         }))));
-    }
-    static get originalStyleUrls() {
-        return {
-            "$": ["o-demo-resizer.scss"]
-        };
     }
     get el() { return getElement(this); }
     static get style() { return ":host .resize-toolbar-container{margin-top:4px;color:#212121;height:16px;white-space:nowrap;font-weight:500;border-top:1px solid #ddd;background:#fff;position:relative}:host .resize-toolbar{position:absolute;left:-100px;right:-100px}:host .item-resize-toolbar{-webkit-box-sizing:border-box;box-sizing:border-box;border-left:1px solid #ddd;border-right:1px solid #ddd;padding:1px;color:#212121;cursor:pointer;font-size:7.5px;font-weight:400;height:16px;left:0;line-height:16px;margin-left:auto;margin-right:auto;position:absolute;right:0}:host .item-resize-toolbar .left{float:left}:host .item-resize-toolbar .rigth{float:right}:host .active{background:rgba(0,0,0,.08)}"; }

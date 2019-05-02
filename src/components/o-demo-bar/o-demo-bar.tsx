@@ -5,7 +5,7 @@ import {
   Listen,
   ComponentInterface
 } from '@stencil/core';
-import {CssClassMap} from '../utils/CssClassMap'
+import { CssClassMap } from '../utils/CssClassMap'
 const win = window as any;
 
 @Component({
@@ -17,14 +17,14 @@ const win = window as any;
 export class DemoBarComponent implements ComponentInterface {
   private demoCases: any;
   private casesOptions: any;
-  private resizeComponent:any;
-  private  codeEditor : any = '';
+  private resizeComponent: any;
+  private codeEditor: any = '';
   @Element() el: any;
 
   @Prop() name: string;
   @Prop() events: string = '';
   @Prop() backgroundColor: string;
-  @Prop({ mutable : true}) caseOptionSelected : number = 0;
+  @Prop({ mutable: true }) caseOptionSelected: number = 0;
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
@@ -51,27 +51,27 @@ export class DemoBarComponent implements ComponentInterface {
   }
 
   // Utils
-  setViewPort():void{
+  setViewPort(): void {
     win.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
   }
 
-  stencilDevServer(){
-    if ("WebSocket" in win && win['s-dev-server'] ) {
+  stencilDevServer() {
+    if ("WebSocket" in win && win['s-dev-server']) {
       const ws = new WebSocket(`ws://localhost:${win.location.port}/`);
-      ws.onopen = ()=> {
-         console.log('reload-content-stencil-server-activated');
-         this._setIframe();
-         setTimeout(()=>{
+      ws.onopen = () => {
+        console.log('reload-content-stencil-server-activated');
+        this._setIframe();
+        setTimeout(() => {
           this.el.forceUpdate();
-         } , 20);
+        }, 20);
       };
     };
   }
 
   @Listen('code-editor-changed')
-  codeEditorChangedHandler(event: CustomEvent){
-      console.log( 'code' , event.detail);
-      this._setIframe(event.detail)
+  codeEditorChangedHandler(event: CustomEvent) {
+    console.log('code', event.detail);
+    this._setIframe(event.detail)
   }
 
   @Listen('selectedCaseChanged')
@@ -84,43 +84,43 @@ export class DemoBarComponent implements ComponentInterface {
     switch (event.detail) {
       case 'code-editor':
         this.el.shadowRoot.querySelector('#modal-id').openDialog();
-        document.addEventListener('on-editor-content' , ()=>{ console.log(this.codeEditor)})
+        document.addEventListener('on-editor-content', () => { console.log(this.codeEditor) })
         break;
       case 'mobile':
-      this.device = event.detail;
-      this.deviceSize = '412';
-      this.deviceEmulate = false;
+        this.device = event.detail;
+        this.deviceSize = '412';
+        this.deviceEmulate = false;
         break;
       case 'desktop':
-      this.device = event.detail;
-      this.deviceSize = '1024';
-      this.deviceEmulate = false;
+        this.device = event.detail;
+        this.deviceSize = '1024';
+        this.deviceEmulate = false;
         break;
       case 'other-devices':
-      this.device = event.detail;
-      this.deviceSize = '458';
-      this.deviceEmulate = true;
-      break;
+        this.device = event.detail;
+        this.deviceSize = '458';
+        this.deviceEmulate = true;
+        break;
     }
     this._setIframe();
 
-    if(event.detail !== 'other-devices'){
-      setTimeout(()=>{
+    if (event.detail !== 'other-devices') {
+      setTimeout(() => {
         this.el.forceUpdate();
         this.setViewPort();
-      } , 20);
+      }, 20);
     }
-}
+  }
 
 
   @Listen('resizeButtonClicked')
   resizeButtonClickedHandler(event: CustomEvent) {
     this.el.shadowRoot.querySelector('iframe').width = event.detail;
-    this.deviceSize =  event.detail;
+    this.deviceSize = event.detail;
   }
 
   _setSelect() {
-    return Array.from(this.demoCases).map(function(item: any) {
+    return Array.from(this.demoCases).map(function (item: any) {
       return item.getAttribute('name');
     });
   }
@@ -132,10 +132,10 @@ export class DemoBarComponent implements ComponentInterface {
     }
   }
 
-  _setIframe(code? : string) {
-    win.requestAnimationFrame(()=>{
+  _setIframe(code?: string) {
+    win.requestAnimationFrame(() => {
       this._cleanIframe();
-      const  iframeContainer =  this.el.shadowRoot.querySelector('#iframeContainer');
+      const iframeContainer = this.el.shadowRoot.querySelector('#iframeContainer');
       const iframe = document.createElement('iframe');
       const frameH = Math.max(document.documentElement.clientHeight);
       const frameW = this.deviceSize;
@@ -153,24 +153,29 @@ export class DemoBarComponent implements ComponentInterface {
     });
   }
 
-  render() {
-    const bgClasses: CssClassMap = { pattern : this.pattern && !this.deviceEmulate}
-    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
+  // Partials View Functions
+  defaultView() {
+    return [<div id="iframeContainer" class="defaultView" />];
+  }
 
-    // Templates for default view or Mobile View
-    const defaultView = [<div id="iframeContainer"  class="defaultView"/>];
-    const mobileView = [ <o-demo-fab/>,<o-demo-devices><div id="iframeContainer" class="pattern" slot="screen"/></o-demo-devices>];
+  mobileView() {
+    return [<o-demo-fab />, <o-demo-devices><div id="iframeContainer" class="pattern" slot="screen" /></o-demo-devices>];
+  }
+
+  render() {
+    const bgClasses: CssClassMap = { pattern: this.pattern && !this.deviceEmulate }
+    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
 
     return (
       <div id="demo-bar">
         {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
         <o-demo-bar-toolbar name={this.name}>
           <o-demo-bar-select slot="center" options={this.casesOptions} />
-          <o-demo-bar-buttons slot="right"/>
-        <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base"/>
+          <o-demo-bar-buttons slot="right" />
+          <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base" />
         </o-demo-bar-toolbar>
         <div id="frame-wrap" class={bgClasses}>
-           {this.deviceEmulate ? mobileView : defaultView}
+          {this.deviceEmulate ? this.mobileView() : this.defaultView()}
         </div>
       </div>
     );

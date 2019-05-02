@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
-    "@stencil/core": "1.0.0-alpha.11",
+    "@stencil/core": "1.0.0-alpha.15",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",
@@ -74,7 +74,7 @@
     "preset": "@stencil/core/testing",
     "transform": {
       "^.+\\.js?$": "babel-jest"
-     },
+    },
     "transformIgnorePatterns": [
       "/node_modules/(?!@material/)",
       "/node_modules/(?!@material)"

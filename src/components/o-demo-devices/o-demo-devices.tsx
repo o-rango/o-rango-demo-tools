@@ -1,5 +1,6 @@
-import { Component , Prop , Element , State , ComponentInterface} from '@stencil/core';
-import {Devices} from './devices';
+import { Component , Element , State , ComponentInterface,h} from '@stencil/core';
+import {devices} from './devices';
+
 @Component({
   tag: 'o-demo-devices',
   styleUrl: 'o-demo-devices.scss',
@@ -10,10 +11,10 @@ export class DemoDevicesComponent implements ComponentInterface {
   private evtListenerRotate : any;
   private evtListenerDeviceChange : any;
   @Element() el: any;
-  @Prop() orientation : string;
+
   @State() selectedDevice = 0;
 
-  deviceArray = [ Devices.iphoneX ,Devices.iphone8 , Devices.note8 , Devices.nexus5 , Devices.lumia920 , Devices.iPad]
+  deviceArray = Object.keys(devices) as Array<keyof typeof devices>
 
   componentWillUpdate(){
     window.requestAnimationFrame(()=> this._sizeFrame());
@@ -51,7 +52,12 @@ export class DemoDevicesComponent implements ComponentInterface {
     this._sizeFrame();
     this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
+
+  mobile(){
+    return devices[this.deviceArray[this.selectedDevice]];
+  }
+  
   render() {
-    return this.deviceArray[this.selectedDevice];
+    return (<div>{this.mobile()}</div>)
   }
 }

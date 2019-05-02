@@ -14,10 +14,23 @@
 
 ## Events
 
-| Event                 | Description | Type                |
-| --------------------- | ----------- | ------------------- |
-| `selectedCaseChanged` |             | `CustomEvent<void>` |
+| Event                 | Description | Type               |
+| --------------------- | ----------- | ------------------ |
+| `selectedCaseChanged` |             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Used by
+
+ - [o-demo-bar](../o-demo-bar)
+
+### Graph
+```mermaid
+graph TD;
+  o-demo-bar --> o-demo-bar-select
+  style o-demo-bar-select fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
