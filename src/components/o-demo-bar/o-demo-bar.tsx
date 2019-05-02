@@ -3,7 +3,8 @@ import {
   Prop,
   Element,
   Listen,
-  ComponentInterface
+  ComponentInterface,
+  State
 } from '@stencil/core';
 import { CssClassMap } from '../utils/CssClassMap'
 const win = window as any;
@@ -19,6 +20,8 @@ export class DemoBarComponent implements ComponentInterface {
   private casesOptions: any;
   private resizeComponent: any;
   private codeEditor: any = '';
+  private urlParams = new URLSearchParams(win.location.search);
+
   @Element() el: any;
 
   @Prop() name: string;
@@ -29,18 +32,25 @@ export class DemoBarComponent implements ComponentInterface {
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
   @Prop({ mutable: true }) deviceEmulate: boolean = false;
+  @State() fullScreen = false;
 
   // LifeCycle Hooks
   componentWillLoad() {
     document.body.style.margin = '0';
     this.demoCases = this.el.querySelectorAll('o-demo-case');
     this.casesOptions = this._setSelect();
+    this.fullScreen = this.urlParams.has('fullscreen');
   }
 
   componentDidLoad() {
-    this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
-    this._setIframe();
-    this.setViewPort();
+    if (!this.fullScreen) {
+      this.resizeComponent = this.el.shadowRoot.querySelector('o-demo-resizer');
+      this._setIframe();
+      this.setViewPort();
+    } else {
+      let caseSel: any = sessionStorage.getItem('o-demo-key') ? sessionStorage.getItem('o-demo-key') : 0;
+      this.caseOptionSelected = parseInt(caseSel);
+    }
     this.stencilDevServer();
   }
 
@@ -52,7 +62,9 @@ export class DemoBarComponent implements ComponentInterface {
 
   // Utils
   setViewPort(): void {
-    win.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
+    if (!this.fullScreen) {
+      win.requestAnimationFrame(() => this.resizeComponent.setActiveViewPort(this.deviceSize));
+    }
   }
 
   stencilDevServer() {
@@ -88,9 +100,10 @@ export class DemoBarComponent implements ComponentInterface {
         break;
       case 'launch-window':
         this._launcWindow();
-      break;
+        break;
       case 'mobile':
         this.device = event.detail;
+
         this.deviceSize = '412';
         this.deviceEmulate = false;
         break;
@@ -122,11 +135,9 @@ export class DemoBarComponent implements ComponentInterface {
     this.deviceSize = event.detail;
   }
 
-  _launcWindow(){
-    const search = win.location.search;
-    const urlParams = new URLSearchParams(search);
-    urlParams.has('fullscreen') ? false : urlParams.set("fullscreen", "true");
-                                          win.location.search = urlParams.toString();
+  _launcWindow() {
+    this.urlParams.has('fullscreen') ? false : this.urlParams.set("fullscreen", "true");
+    win.location.search = this.urlParams.toString();
   }
 
   _setSelect() {
@@ -148,12 +159,13 @@ export class DemoBarComponent implements ComponentInterface {
       const iframeContainer = this.el.shadowRoot.querySelector('#iframeContainer');
       const iframe = document.createElement('iframe');
       const frameH = Math.max(document.documentElement.clientHeight);
-      const frameW = this.deviceSize;
-
+      const frameW = this.fullScreen ?  '100%' : `${this.deviceSize.toString()}px`;;
+      const style = this.fullScreen ?  `body{margin:0;` : `body{margin:0;}`;
       const htmlContent = code ? code : this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
-      const html = code ? code : `<html><head></head><style>body{margin:0}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
+      // TODO use different way to set content to improve perf
+      const html = code ? code : `<html><head></head><style>${style}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
       iframe.height = `${frameH.toString()}px`;
-      iframe.width = `${frameW.toString()}px`;
+      iframe.width = frameW
       iframe.style.border = 'none';
       iframeContainer.appendChild(iframe)
       iframe.contentWindow.document.open();
@@ -169,26 +181,31 @@ export class DemoBarComponent implements ComponentInterface {
   }
 
   mobileView() {
-    return [<o-demo-fab />, <o-demo-devices><div id="iframeContainer" class="pattern" slot="screen" /></o-demo-devices>];
+    return [<o-demo-fab/>, <o-demo-devices><div id="iframeContainer" class="pattern" slot="screen" /></o-demo-devices>];
+  }
+
+  fullscreenView() {
+    return [<o-demo-fab close/>, <div id="iframeContainer" />]
+  }
+
+  mainView() {
+    const bgClasses: CssClassMap = { pattern: this.pattern && !this.deviceEmulate }
+    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
+    return (<div id="demo-bar">
+      {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
+      <o-demo-bar-toolbar name={this.name}>
+        <o-demo-bar-select slot="center" options={this.casesOptions} />
+        <o-demo-bar-buttons slot="right" />
+        <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base" />
+      </o-demo-bar-toolbar>
+      <div id="frame-wrap" class={bgClasses}>
+        {this.deviceEmulate ? this.mobileView() : this.defaultView()}
+      </div>
+    </div>)
   }
 
   render() {
-    const bgClasses: CssClassMap = { pattern: this.pattern && !this.deviceEmulate }
-    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
-
-    return (
-      <div id="demo-bar">
-        {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
-        <o-demo-bar-toolbar name={this.name}>
-          <o-demo-bar-select slot="center" options={this.casesOptions} />
-          <o-demo-bar-buttons slot="right" />
-          <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base" />
-        </o-demo-bar-toolbar>
-        <div id="frame-wrap" class={bgClasses}>
-          {this.deviceEmulate ? this.mobileView() : this.defaultView()}
-        </div>
-      </div>
-    );
+    return this.fullScreen ? this.fullscreenView() : this.mainView();
   }
 }
 

@@ -32,7 +32,9 @@ export namespace Components {
     'name': string;
   }
   interface ODemoDevices {}
-  interface ODemoFab {}
+  interface ODemoFab {
+    'close': boolean;
+  }
   interface ODemoModal {
     'closeDialog': () => Promise<void>;
     'code': any;
@@ -76,6 +78,7 @@ declare namespace LocalJSX {
   }
   interface ODemoDevices extends JSXBase.HTMLAttributes {}
   interface ODemoFab extends JSXBase.HTMLAttributes {
+    'close'?: boolean;
     'onChange-device'?: (event: CustomEvent<any>) => void;
     'onRotate-device'?: (event: CustomEvent<any>) => void;
   }
