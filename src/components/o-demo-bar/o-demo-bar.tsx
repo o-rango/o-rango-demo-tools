@@ -86,6 +86,9 @@ export class DemoBarComponent implements ComponentInterface {
         this.el.shadowRoot.querySelector('#modal-id').openDialog();
         document.addEventListener('on-editor-content', () => { console.log(this.codeEditor) })
         break;
+      case 'launch-window':
+        this._launcWindow();
+      break;
       case 'mobile':
         this.device = event.detail;
         this.deviceSize = '412';
@@ -117,6 +120,13 @@ export class DemoBarComponent implements ComponentInterface {
   resizeButtonClickedHandler(event: CustomEvent) {
     this.el.shadowRoot.querySelector('iframe').width = event.detail;
     this.deviceSize = event.detail;
+  }
+
+  _launcWindow(){
+    const search = win.location.search;
+    const urlParams = new URLSearchParams(search);
+    urlParams.has('fullscreen') ? false : urlParams.set("fullscreen", "true");
+                                          win.location.search = urlParams.toString();
   }
 
   _setSelect() {
