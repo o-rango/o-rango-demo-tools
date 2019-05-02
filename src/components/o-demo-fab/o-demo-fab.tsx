@@ -25,7 +25,8 @@ export class DemoFabComponent implements ComponentInterface {
   }
 
   returnPrevious():void{
-    win.location.replace(win.location.origin);
+    // Find a proper solution for more use cases
+    win.location.replace(win.location.href.split('?')[0]);
   }
 
   showContextMenu(): void {
