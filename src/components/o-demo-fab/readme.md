@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type      | Default |
+| -------- | --------- | ----------- | --------- | ------- |
+| `close`  | `close`   |             | `boolean` | `false` |
+
+
 ## Events
 
 | Event           | Description | Type               |

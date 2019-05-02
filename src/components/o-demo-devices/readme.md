@@ -5,13 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property      | Attribute     | Description | Type     | Default     |
-| ------------- | ------------- | ----------- | -------- | ----------- |
-| `orientation` | `orientation` |             | `string` | `undefined` |
-
-
 ## Dependencies
 
 ### Used by
