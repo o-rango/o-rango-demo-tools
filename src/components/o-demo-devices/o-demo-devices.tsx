@@ -1,4 +1,4 @@
-import { Component , Element , State , ComponentInterface,h} from '@stencil/core';
+import { Component , Element , State , ComponentInterface} from '@stencil/core';
 import {devices} from './devices';
 
 @Component({
@@ -28,7 +28,7 @@ export class DemoDevicesComponent implements ComponentInterface {
 
   componentDidUnload(){
     document.removeEventListener('rotate-device' , this.evtListenerRotate );
-    document.removeEventListener('rotate-device' , this.evtListenerDeviceChange );
+    document.removeEventListener('change-device' , this.evtListenerDeviceChange );
   }
 
   _sizeFrame(){
@@ -53,11 +53,9 @@ export class DemoDevicesComponent implements ComponentInterface {
     this.el.shadowRoot.querySelector('.marvel-device').classList.toggle('landscape');
   }
 
-  mobile(){
-    return devices[this.deviceArray[this.selectedDevice]];
-  }
+
   
   render() {
-    return (<div>{this.mobile()}</div>)
+    return devices[this.deviceArray[this.selectedDevice]]();
   }
 }

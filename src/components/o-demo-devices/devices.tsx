@@ -2,7 +2,7 @@
 import { h } from '@stencil/core';
 
 export const devices = {
-  iphoneX :(
+  iphoneX :()=>(
    <div class="marvel-device iphone-x">
      <div class="notch">
        <div class="camera"></div>
@@ -25,7 +25,7 @@ export const devices = {
    </div>
  ),
 
-iphone8 :(
+iphone8 :()=>(
    <div class="marvel-device iphone8 silver">
      <div class="top-bar"></div>
      <div class="sleep"></div>
@@ -41,7 +41,7 @@ iphone8 :(
    </div>
  ),
 
- note8: (
+ note8:()=> (
    <div class="marvel-device note8">
      <div class="inner"></div>
      <div class="overflow">
@@ -58,7 +58,7 @@ iphone8 :(
      </div>
    </div>
  ),
- nexus5:(
+ nexus5:()=>(
    <div class="marvel-device nexus5">
      <div class="top-bar"></div>
      <div class="sleep"></div>
@@ -70,7 +70,7 @@ iphone8 :(
    </div>
  ),
 
- lumia920: (
+ lumia920:()=>(
    <div class="marvel-device lumia920 yellow">
      <div class="top-bar"></div>
      <div class="volume"></div>
@@ -82,7 +82,7 @@ iphone8 :(
    </div>
  ),
 
- iPad:(
+ iPad:()=>(
    <div class="marvel-device ipad silver">
      <div class="camera"></div>
      <div class="screen">
