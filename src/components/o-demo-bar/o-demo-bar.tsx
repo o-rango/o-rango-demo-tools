@@ -119,10 +119,11 @@ export class DemoBarComponent implements ComponentInterface {
       ws.onmessage = (message) => {
         var msg = JSON.parse(message.data);
         if (msg.buildLog) {
-          log(colors.INFO, 'Build Status', 'Status Table');
+          log(colors.INFO, 'Build Status', ':::::::: Updating ::::::::');
           msg.buildLog.messages.forEach((msgContent)=>{
             console.log(msgContent);
-          });           
+          }); 
+          this.el.forceUpdate();          
           return;
         }
       };
