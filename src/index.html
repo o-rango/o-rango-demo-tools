@@ -11,7 +11,7 @@
 
 <body>
 
-  <o-demo-bar name="Basic Demo Components">
+  <o-demo-bar name="Basic Demo Components"  events="myBtnClicked">
     <o-demo-case name="Placeholders Square Avatar">
       <template>
         <script src="https://unpkg.com/@o-rango/o-content-placeholder@0.1.1/dist/o-content-placeholder.js"></script>
@@ -126,31 +126,32 @@
         <br>
         <o-button type="default" fill="solid">Submit</o-button>
 
-      </br>
-        </br>  <o-button type="warning" fill="solid">Submit</o-button>
+        </br>
+        </br>
+        <o-button type="warning" fill="solid">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="error" fill="solid">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="success" fill="solid">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="info" fill="solid">Submit</o-button>
         <br>
 
         <o-button type="default" fill="outline">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="warning" fill="outline">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="error" fill="outline">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="success" fill="outline">Submit</o-button>
 
-      </br>
+        </br>
         <o-button type="info" fill="outline">Submit</o-button>
 
         </br>
@@ -184,43 +185,43 @@
         <o-button type="info" rounded="" fill="solid">Submit</o-button>
         <o-button type="info" fill="outline">Submit</o-button>
 
-      </br>
-      <o-button type="default" block="" rounded="" fill="dashed">Submit</o-button>
+        </br>
+        <o-button type="default" block="" rounded="" fill="dashed">Submit</o-button>
 
-      </br>
-      <o-button type="warning" rounded="" fill="dashed">Submit</o-button>
+        </br>
+        <o-button type="warning" rounded="" fill="dashed">Submit</o-button>
 
-      </br>
-      <o-button type="error" rounded="" fill="dashed">Submit</o-button>
+        </br>
+        <o-button type="error" rounded="" fill="dashed">Submit</o-button>
 
-      </br>
-      <o-button type="success" rounded="" fill="dashed">Submit</o-button>
+        </br>
+        <o-button type="success" rounded="" fill="dashed">Submit</o-button>
 
-      </br>
-      <o-button type="info" rounded="" fill="dashed">Submit</o-button>
+        </br>
+        <o-button type="info" rounded="" fill="dashed">Submit</o-button>
 
-      </br>
-      <o-button type="default" rounded="" fill="solid">Submit</o-button>
+        </br>
+        <o-button type="default" rounded="" fill="solid">Submit</o-button>
 
-      </br>
-      <o-button type="warning" rounded="" fill="solid">Submit</o-button>
+        </br>
+        <o-button type="warning" rounded="" fill="solid">Submit</o-button>
 
-      </br>
-      <o-button type="error" rounded="" block="" fill="solid">Submit</o-button>
+        </br>
+        <o-button type="error" rounded="" block="" fill="solid">Submit</o-button>
 
-      </br>
-      <o-button type="success" rounded="" fill="solid">Submit</o-button>
+        </br>
+        <o-button type="success" rounded="" fill="solid">Submit</o-button>
 
-      </br>
-      <o-button type="info" rounded="" fill="solid">Submit</o-button>
+        </br>
+        <o-button type="info" rounded="" fill="solid">Submit</o-button>
       </template>
     </o-demo-case>
 
     <o-demo-case name="Material Buttons">
       <template>
         <script src="https://unpkg.com/@o-rango/orango-material-design@0.0.2-beta/dist/orango-material.js"></script>
-        <o-mdc-button onClick="alert(JSON.stringify(event))" raised>
-          Raised
+        <o-mdc-button id="my-btn" raised>
+          Raised - Event Trigger;
         </o-mdc-button>
 
         <o-mdc-button raised disabled>
@@ -247,6 +248,18 @@
           <i class="material-icons mdc-button__icon">favorite</i>
           Button
         </o-mdc-button>
+        <script>
+          var el = document.querySelector('#my-btn');
+          el.addEventListener('click', function () {
+            var event = new CustomEvent("myBtnClicked", {
+              detail: {
+                myBTN: true
+              }
+            });
+            console.log('event:launched => my-btn-clicked');
+            document.dispatchEvent(event);
+          });
+        </script>
       </template>
     </o-demo-case>
 

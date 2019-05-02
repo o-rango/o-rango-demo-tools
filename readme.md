@@ -3,6 +3,34 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1deb8aa719ba4df0be9a650626dc7340)](https://www.codacy.com/app/romulocintra/orango-demo-tools?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=o-rango/orango-demo-tools&amp;utm_campaign=Badge_Grade)
 
 
+## Alpha Test : 
+To help on testing alpha versions : 
+
+```html
+<script type="module" src="https://unpkg.com/@o-rango/orango-demo-tools@2.0.0-alpha.0/dist/orango-demo-tools/orango-demo-tools.esm.js"></script>
+<script nomodule src="https://unpkg.com/@o-rango/orango-demo-tools@2.0.0-alpha.0/dist/orango-demo-tools/orango-demo-tools.js"></script>
+```
+
+### Future releases
+
+In order to load correctly next `stable`  >= 2.x releases : 
+
+```html
+<script type="module" src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools/orango-demo-tools.esm.js"></script>
+<script nomodule src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools/orango-demo-tools.js"></script>
+```
+
+## Breaking Changes
+
+> Breaking changes for 2.0.0 UNPKG : 
+ To correctly load library as module
+
+```diff
++   <script type="module" src="https://unpkg.com/@o-rango/orango-demo-tools@2.x.x/dist/orango-demo-tools/orango-demo-tools.esm.js"></script>
++    <script nomodule src="https://unpkg.com/@o-rango/orango-demo-tools@2.x.x.x/dist/orango-demo-tools/orango-demo-tools.js"></script>
+
+- <script async src="https://unpkg.com/@o-rango/orango-demo-tools@1.0.0/dist/orango-demo-tools.js"></script>
+```
 
 
 > Breaking change UNPKG : 
@@ -27,7 +55,12 @@ o-demo-bar is a simple and flexible  demo bar component for developers and showc
 
 ### Script tag
 
-- Put a script tag similar to this ``` <script src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools.js"></script>``` in the head of your index.html
+- Put a script similar to this one , [use the most recent version ](https://www.npmjs.com/package/@o-rango/orango-demo-tools?activeTab=versions);
+```html
+<script type="module" src="https://unpkg.com/@o-rango/orango-demo-tools@2.0.0-alpha.0/dist/orango-demo-tools/orango-demo-tools.esm.js"></script>
+<script nomodule src="https://unpkg.com/@o-rango/orango-demo-tools@2.0.0-alpha.0/dist/orango-demo-tools/orango-demo-tools.js"></script>
+```
+-  in the head of your index.html
 - Then you can add o-demo-case tags in your code 
 
 ### Node Modules

@@ -7,15 +7,15 @@
     "namespace": "OrangoDemoTools",
     "fsNamespace": "orango-demo-tools",
     "components": 10,
-    "entries": 2,
+    "entries": 10,
     "bundles": 0
   },
   "options": {
-    "minifyJs": true,
-    "minifyCss": true,
-    "hashFileNames": true,
+    "minifyJs": false,
+    "minifyCss": false,
+    "hashFileNames": false,
     "hashedFileNameLength": 8,
-    "buildEs5": true
+    "buildEs5": false
   },
   "components": [
     {
@@ -72,6 +72,11 @@
       "dependencies": []
     },
     {
+      "tag": "o-demo-modal",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
       "tag": "o-demo-resizer",
       "dependencyOf": [
         "o-demo-bar"
@@ -84,16 +89,11 @@
         "o-demo-bar"
       ],
       "dependencies": []
-    },
-    {
-      "tag": "o-demo-modal",
-      "dependencyOf": [],
-      "dependencies": []
     }
   ],
   "entries": [
     {
-      "entryId": "o-demo-bar.o-demo-bar-buttons.o-demo-bar-select.o-demo-bar-toolbar.o-demo-case.o-demo-devices.o-demo-fab.o-demo-resizer.o-demo-snackbar",
+      "entryId": "o-demo-bar",
       "components": [
         {
           "tag": "o-demo-bar",
@@ -107,56 +107,24 @@
             "o-demo-resizer",
             "o-demo-snackbar"
           ]
-        },
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar/o-demo-bar.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-bar-buttons",
+      "components": [
         {
           "tag": "o-demo-bar-buttons",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-bar-select",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-bar-toolbar",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-case",
-          "dependencyOf": [],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-devices",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-fab",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-resizer",
-          "dependencyOf": [
-            "o-demo-bar"
-          ],
-          "dependencies": []
-        },
-        {
-          "tag": "o-demo-snackbar",
           "dependencyOf": [
             "o-demo-bar"
           ],
@@ -165,15 +133,115 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar/o-demo-bar.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-case/o-demo-case.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-devices/o-demo-devices.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-fab/o-demo-fab.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-resizer/o-demo-resizer.tsx",
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.tsx"
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-bar-select",
+      "components": [
+        {
+          "tag": "o-demo-bar-select",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-bar-toolbar",
+      "components": [
+        {
+          "tag": "o-demo-bar-toolbar",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-case",
+      "components": [
+        {
+          "tag": "o-demo-case",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-case/o-demo-case.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-devices",
+      "components": [
+        {
+          "tag": "o-demo-devices",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-devices/o-demo-devices.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-fab",
+      "components": [
+        {
+          "tag": "o-demo-fab",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-fab/o-demo-fab.tsx"
       ],
       "modes": [
         "$"
@@ -194,6 +262,50 @@
       "bundles": [],
       "inputs": [
         "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-resizer",
+      "components": [
+        {
+          "tag": "o-demo-resizer",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-resizer/o-demo-resizer.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-snackbar",
+      "components": [
+        {
+          "tag": "o-demo-snackbar",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.tsx"
       ],
       "modes": [
         "$"
