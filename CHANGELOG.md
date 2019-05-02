@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0-0](https://github.com/o-rango/orango-demo-tools/compare/v1.0.6...v1.1.0-0) (2019-05-02)
+
+
+### Bug Fixes
+
+* minor lint and interface fixes ([9d8fa04](https://github.com/o-rango/orango-demo-tools/commit/9d8fa04))
+
+
+### Features
+
+* add fullscreen btn ([5cb664a](https://github.com/o-rango/orango-demo-tools/commit/5cb664a))
+* update demos ([1a27462](https://github.com/o-rango/orango-demo-tools/commit/1a27462))
+* update deps and fix regressions ([e4271dd](https://github.com/o-rango/orango-demo-tools/commit/e4271dd))
+
+
+### Performance Improvements
+
+* device selector perf improve ([d1da828](https://github.com/o-rango/orango-demo-tools/commit/d1da828))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/o-rango/orango-demo-tools/compare/v1.0.5...v1.0.6) (2019-02-13)
 
