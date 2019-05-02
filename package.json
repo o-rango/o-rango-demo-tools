@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "description": "O-RANGO development environoment for web components",
   "unpkg": "dist/orango-demo-tools.js",
   "main": "dist/index.js",

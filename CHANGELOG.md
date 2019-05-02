@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-alpha.1](https://github.com/o-rango/orango-demo-tools/compare/v1.1.0-0...v2.0.0-alpha.1) (2019-05-02)
+
+
+### Bug Fixes
+
+* close going back href instead of origin ([59ad901](https://github.com/o-rango/orango-demo-tools/commit/59ad901))
+
+
+### Features
+
+* add snakbar new template ([7c0bc2c](https://github.com/o-rango/orango-demo-tools/commit/7c0bc2c))
+
+
+
 # [2.0.0-alpha.0](https://github.com/o-rango/orango-demo-tools/compare/v1.1.0-0...v2.0.0-alpha.0) (2019-05-02)
 
 ### Bug Fixes
