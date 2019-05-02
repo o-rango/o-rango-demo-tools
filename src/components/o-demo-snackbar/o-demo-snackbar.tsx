@@ -51,17 +51,18 @@ export class DemoSnackbarComponent implements ComponentInterface {
 
   render() {
     return (
-      <div
-        class="mdc-snackbar mdc-snackbar--align-start"
-        aria-live="assertive"
-        aria-atomic="true"
-        aria-hidden="true"
-      >
-        <div class="mdc-snackbar__text" />
-        <div class="mdc-snackbar__action-wrapper">
-          <button type="button" class="mdc-snackbar__action-button" />
+      <div class="mdc-snackbar">
+      <div class="mdc-snackbar__surface">
+        <div class="mdc-snackbar__label"
+             role="status"
+             aria-live="polite">
+          Can't send photo. Retry in 5 seconds.
+        </div>
+        <div class="mdc-snackbar__actions">
+          <button type="button" class="mdc-button mdc-snackbar__action">Retry</button>
         </div>
       </div>
+    </div>
     );
   }
 }
