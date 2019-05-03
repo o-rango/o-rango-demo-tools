@@ -167,10 +167,7 @@ export class DemoBarComponent implements ComponentInterface {
     }
     this._setIframe();
 
-    if (event.detail !== 'other-devices') {
-      this.el.forceUpdate();
-      this.setViewPort();
-    }
+
   }
 
 
