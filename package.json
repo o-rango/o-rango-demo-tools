@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "2.1.0-alpha.3",
+  "version": "2.1.0-alpha.4",
   "description": "O-RANGO development environoment for web components",
   "unpkg": "dist/orango-demo-tools.js",
   "main": "dist/index.js",
@@ -28,8 +28,7 @@
     "changelog": "conventional-changelog -p  -i CHANGELOG.md -s -r 0",
     "test": "NODE_ENV=test jest --no-cache --coverage",
     "test.watch": "NODE_ENV=test jest --watch --no-cache",
-    "test:e2e": "stencil test --spec --e2e",
-    "test:watch": "stencil test --spec --e2e --watchAll"
+    "test:e2e": "stencil test --spec --e2e"
   },
   "dependencies": {
     "@material/dialog": "^1.1.1",

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0-alpha.4](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.3...v2.1.0-alpha.4) (2019-05-03)
+
+
+### Performance Improvements
+
+* avoid rerender on Update ([c98354f](https://github.com/o-rango/orango-demo-tools/commit/c98354f))
+
+
+
 # [2.1.0-alpha.3](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.2...v2.1.0-alpha.3) (2019-05-03)
 
 
