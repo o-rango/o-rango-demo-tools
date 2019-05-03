@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/orango-demo-tools",
-  "version": "2.0.0-alpha.2",
+  "version": "2.1.0-alpha.2",
   "description": "O-RANGO development environoment for web components",
   "unpkg": "dist/orango-demo-tools.js",
   "main": "dist/index.js",
@@ -21,6 +21,7 @@
     "docs": "stencil build --docs",
     "docs:data": "stencil build --docs-json ./docs.json",
     "release": "standard-version",
+    "prerelease": "standard-version --prerelease alpha",
     "publish-npm": "git push --follow-tags origin master && npm publish --access=public",
     "serve": "stencil build --dev --watch --serve",
     "start": "npm run dev",
@@ -39,7 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
-    "@stencil/core": "1.0.0-alpha.15",
+    "@stencil/core": "1.0.0-alpha.17",
     "@stencil/postcss": "0.1.0",
     "@stencil/sass": "latest",
     "@stencil/utils": "latest",

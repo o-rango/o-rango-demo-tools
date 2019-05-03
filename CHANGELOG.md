@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0-alpha.2](https://github.com/o-rango/orango-demo-tools/compare/v2.0.0-alpha.2...v2.1.0-alpha.2) (2019-05-03)
+
+
+### Features
+
+* **devices:** added HTC device ([f6eb819](https://github.com/o-rango/orango-demo-tools/commit/f6eb819))
+
+
+### Performance Improvements
+
+* minor enhancements ([1fd914b](https://github.com/o-rango/orango-demo-tools/commit/1fd914b))
+* remove workarounds for rendering and typos ([cc36745](https://github.com/o-rango/orango-demo-tools/commit/cc36745))
+
+
+
+# [2.1.0-alpha.1](https://github.com/o-rango/orango-demo-tools/compare/v2.0.0-alpha.2...v2.1.0-alpha.1) (2019-05-03)
+
+
+### Features
+
+* **devices:** added HTC device ([f6eb819](https://github.com/o-rango/orango-demo-tools/commit/f6eb819))
+
+
+### Performance Improvements
+
+* minor enhancements ([1fd914b](https://github.com/o-rango/orango-demo-tools/commit/1fd914b))
+* remove workarounds for rendering and typos ([cc36745](https://github.com/o-rango/orango-demo-tools/commit/cc36745))
+
+
+
+# [2.1.0-alpha.0](https://github.com/o-rango/orango-demo-tools/compare/v2.0.0-alpha.2...v2.1.0-alpha.0) (2019-05-03)
+
+
+### Features
+
+* **devices:** added HTC device ([f6eb819](https://github.com/o-rango/orango-demo-tools/commit/f6eb819))
+
+
+### Performance Improvements
+
+* minor enhancements ([1fd914b](https://github.com/o-rango/orango-demo-tools/commit/1fd914b))
+* remove workarounds for rendering and typos ([cc36745](https://github.com/o-rango/orango-demo-tools/commit/cc36745))
+
+
+
+# [2.0.0](https://github.com/o-rango/orango-demo-tools/compare/v2.0.0-alpha.2...v2.0.0) (2019-05-03)
+
+
+### Features
+
+* **devices:** added HTC device ([f6eb819](https://github.com/o-rango/orango-demo-tools/commit/f6eb819))
+
+
+### Performance Improvements
+
+* minor enhancements ([1fd914b](https://github.com/o-rango/orango-demo-tools/commit/1fd914b))
+* remove workarounds for rendering and typos ([cc36745](https://github.com/o-rango/orango-demo-tools/commit/cc36745))
+
+
+
 # [2.0.0-alpha.2](https://github.com/o-rango/orango-demo-tools/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2019-05-02)
 
 
