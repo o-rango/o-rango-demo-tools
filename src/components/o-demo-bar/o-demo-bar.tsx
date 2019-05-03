@@ -78,7 +78,6 @@ export class DemoBarComponent implements ComponentInterface {
 
 
   componentDidUpdate() {
-    this._setIframe();
     this.setViewPort();
   }
 
@@ -136,6 +135,7 @@ export class DemoBarComponent implements ComponentInterface {
   @Listen('selectedCaseChanged')
   selectedCaseChangedHandler(event: CustomEvent) {
     this.caseOptionSelected = event.detail;
+    this._setIframe();
   }
 
   @Listen('toolbarButtonClicked')
