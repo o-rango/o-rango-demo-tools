@@ -150,7 +150,6 @@ export class DemoBarComponent implements ComponentInterface {
         break;
       case 'mobile':
         this.device = event.detail;
-
         this.deviceSize = '412';
         this.deviceEmulate = false;
         break;
@@ -166,8 +165,6 @@ export class DemoBarComponent implements ComponentInterface {
         break;
     }
     this._setIframe();
-
-
   }
 
 
