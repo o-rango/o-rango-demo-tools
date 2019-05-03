@@ -111,9 +111,6 @@ export class DemoBarComponent implements ComponentInterface {
       ws.onopen = () => {
         log(colors.ORANGO, 'Server', 'Connected Stencil HMR');
         this._setIframe();
-        setTimeout(() => {
-          this.el.forceUpdate();
-        }, 20);
       };
 
       ws.onmessage = (message) => {
@@ -149,7 +146,7 @@ export class DemoBarComponent implements ComponentInterface {
         document.addEventListener('on-editor-content', () => { console.log(this.codeEditor) })
         break;
       case 'launch-window':
-        this._launcWindow();
+        this._launchWindow();
         break;
       case 'mobile':
         this.device = event.detail;
@@ -171,10 +168,8 @@ export class DemoBarComponent implements ComponentInterface {
     this._setIframe();
 
     if (event.detail !== 'other-devices') {
-      setTimeout(() => {
-        this.el.forceUpdate();
-        this.setViewPort();
-      }, 20);
+      this.el.forceUpdate();
+      this.setViewPort();
     }
   }
 
@@ -185,7 +180,7 @@ export class DemoBarComponent implements ComponentInterface {
     this.deviceSize = event.detail;
   }
 
-  _launcWindow() {
+  _launchWindow() {
     this.urlParams.has('fullscreen') ? false : this.urlParams.set("fullscreen", "true");
     win.location.search = this.urlParams.toString();
   }
