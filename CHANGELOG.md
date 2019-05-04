@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0-alpha.7](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.6...v2.1.0-alpha.7) (2019-05-04)
+
+
+
 # [2.1.0-alpha.6](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.5...v2.1.0-alpha.6) (2019-05-04)
 
 
