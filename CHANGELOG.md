@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0-alpha.6](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.5...v2.1.0-alpha.6) (2019-05-04)
+
+
+### Features
+
+* add background-color property to custom bg ([482e99a](https://github.com/o-rango/orango-demo-tools/commit/482e99a))
+
+
+
 # [2.1.0-alpha.5](https://github.com/o-rango/orango-demo-tools/compare/v2.1.0-alpha.4...v2.1.0-alpha.5) (2019-05-03)
 
 
