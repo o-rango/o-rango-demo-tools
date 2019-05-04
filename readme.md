@@ -142,7 +142,7 @@ If you want o-demo-bar to listen certain events from your components just add th
 
 * [x] Add resizer options for mobiles using  [Marvel Devices](https://marvelapp.github.io/devices.css/)
 * [x] Fix and improve desktop resizer inspired in [Resizer](https://material.io/resizer/#device=window&url=https%3A%2F%2Fwww.android.com%2F&width=840)
-* Add posibility to change background color and patterns in context menu 
+* [x] Add posibility to change background color and patterns in context menu 
 * [x] Store Preferences in localstorage 
 * Show Code panel
 
