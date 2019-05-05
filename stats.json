@@ -1,13 +1,13 @@
 {
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.0.0-alpha.15"
+    "version": "1.0.0-alpha.20"
   },
   "app": {
     "namespace": "OrangoDemoTools",
     "fsNamespace": "orango-demo-tools",
-    "components": 10,
-    "entries": 10,
+    "components": 11,
+    "entries": 11,
     "bundles": 0
   },
   "options": {
@@ -26,6 +26,7 @@
         "o-demo-bar-select",
         "o-demo-bar-toolbar",
         "o-demo-devices",
+        "o-demo-editor",
         "o-demo-fab",
         "o-demo-resizer",
         "o-demo-snackbar"
@@ -59,6 +60,13 @@
     },
     {
       "tag": "o-demo-devices",
+      "dependencyOf": [
+        "o-demo-bar"
+      ],
+      "dependencies": []
+    },
+    {
+      "tag": "o-demo-editor",
       "dependencyOf": [
         "o-demo-bar"
       ],
@@ -103,6 +111,7 @@
             "o-demo-bar-select",
             "o-demo-bar-toolbar",
             "o-demo-devices",
+            "o-demo-editor",
             "o-demo-fab",
             "o-demo-resizer",
             "o-demo-snackbar"
@@ -111,7 +120,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar/o-demo-bar.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar/o-demo-bar.tsx"
       ],
       "modes": [
         "$"
@@ -133,7 +142,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-buttons/o-demo-bar-buttons.tsx"
       ],
       "modes": [
         "$"
@@ -155,7 +164,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-select/o-demo-bar-select.tsx"
       ],
       "modes": [
         "$"
@@ -177,7 +186,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-bar-toolbar/o-demo-bar-toolbar.tsx"
       ],
       "modes": [
         "$"
@@ -197,7 +206,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-case/o-demo-case.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-case/o-demo-case.tsx"
       ],
       "modes": [
         "$"
@@ -219,7 +228,29 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-devices/o-demo-devices.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-devices/o-demo-devices.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "o-demo-editor",
+      "components": [
+        {
+          "tag": "o-demo-editor",
+          "dependencyOf": [
+            "o-demo-bar"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-editor/o-demo-editor.tsx"
       ],
       "modes": [
         "$"
@@ -241,7 +272,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-fab/o-demo-fab.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-fab/o-demo-fab.tsx"
       ],
       "modes": [
         "$"
@@ -261,7 +292,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-modal/o-demo-modal.tsx"
       ],
       "modes": [
         "$"
@@ -283,7 +314,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-resizer/o-demo-resizer.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-resizer/o-demo-resizer.tsx"
       ],
       "modes": [
         "$"
@@ -305,7 +336,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/u189083/projects/OSS/o-rango-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.tsx"
+        "/Users/romulocintra/projects/OSS/o-rango-demo-tools/src/components/o-demo-snackbar/o-demo-snackbar.tsx"
       ],
       "modes": [
         "$"
@@ -325,6 +356,7 @@
     "src/components/o-demo-devices/o-demo-devices.tsx": [
       "src/components/o-demo-devices/devices"
     ],
+    "src/components/o-demo-editor/o-demo-editor.tsx": [],
     "src/components/o-demo-fab/o-demo-fab.tsx": [],
     "src/components/o-demo-modal/o-demo-modal.tsx": [],
     "src/components/o-demo-resizer/o-demo-resizer.tsx": [],

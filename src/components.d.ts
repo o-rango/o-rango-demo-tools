@@ -14,7 +14,6 @@ export namespace Components {
     'backgroundColor': string;
     'caseOptionSelected': number;
     'device': string;
-    'deviceEmulate': boolean;
     'deviceSize': string;
     'events': string;
     'name': string;
@@ -32,6 +31,9 @@ export namespace Components {
     'name': string;
   }
   interface ODemoDevices {}
+  interface ODemoEditor {
+    'code': string;
+  }
   interface ODemoFab {
     'close': boolean;
   }
@@ -56,7 +58,6 @@ declare namespace LocalJSX {
     'backgroundColor'?: string;
     'caseOptionSelected'?: number;
     'device'?: string;
-    'deviceEmulate'?: boolean;
     'deviceSize'?: string;
     'events'?: string;
     'name'?: string;
@@ -77,6 +78,9 @@ declare namespace LocalJSX {
     'name'?: string;
   }
   interface ODemoDevices extends JSXBase.HTMLAttributes {}
+  interface ODemoEditor extends JSXBase.HTMLAttributes {
+    'code'?: string;
+  }
   interface ODemoFab extends JSXBase.HTMLAttributes {
     'close'?: boolean;
     'onChange-device'?: (event: CustomEvent<any>) => void;
@@ -103,6 +107,7 @@ declare namespace LocalJSX {
     'ODemoBarToolbar': Components.ODemoBarToolbar;
     'ODemoCase': Components.ODemoCase;
     'ODemoDevices': Components.ODemoDevices;
+    'ODemoEditor': Components.ODemoEditor;
     'ODemoFab': Components.ODemoFab;
     'ODemoModal': Components.ODemoModal;
     'ODemoResizer': Components.ODemoResizer;
@@ -116,6 +121,7 @@ declare namespace LocalJSX {
     'ODemoBarToolbar': LocalJSX.ODemoBarToolbar;
     'ODemoCase': LocalJSX.ODemoCase;
     'ODemoDevices': LocalJSX.ODemoDevices;
+    'ODemoEditor': LocalJSX.ODemoEditor;
     'ODemoFab': LocalJSX.ODemoFab;
     'ODemoModal': LocalJSX.ODemoModal;
     'ODemoResizer': LocalJSX.ODemoResizer;
@@ -170,6 +176,12 @@ declare global {
     new (): HTMLODemoDevicesElement;
   };
 
+  interface HTMLODemoEditorElement extends Components.ODemoEditor, HTMLStencilElement {}
+  var HTMLODemoEditorElement: {
+    prototype: HTMLODemoEditorElement;
+    new (): HTMLODemoEditorElement;
+  };
+
   interface HTMLODemoFabElement extends Components.ODemoFab, HTMLStencilElement {}
   var HTMLODemoFabElement: {
     prototype: HTMLODemoFabElement;
@@ -200,6 +212,7 @@ declare global {
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement
     'o-demo-case': HTMLODemoCaseElement
     'o-demo-devices': HTMLODemoDevicesElement
+    'o-demo-editor': HTMLODemoEditorElement
     'o-demo-fab': HTMLODemoFabElement
     'o-demo-modal': HTMLODemoModalElement
     'o-demo-resizer': HTMLODemoResizerElement
@@ -213,6 +226,7 @@ declare global {
     'o-demo-bar-toolbar': HTMLODemoBarToolbarElement;
     'o-demo-case': HTMLODemoCaseElement;
     'o-demo-devices': HTMLODemoDevicesElement;
+    'o-demo-editor': HTMLODemoEditorElement;
     'o-demo-fab': HTMLODemoFabElement;
     'o-demo-modal': HTMLODemoModalElement;
     'o-demo-resizer': HTMLODemoResizerElement;

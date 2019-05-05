@@ -11,7 +11,6 @@ Component for bar
 | `backgroundColor`    | `background-color`     |             | `string`  | `undefined` |
 | `caseOptionSelected` | `case-option-selected` |             | `number`  | `0`         |
 | `device`             | `device`               |             | `string`  | `'desktop'` |
-| `deviceEmulate`      | `device-emulate`       |             | `boolean` | `false`     |
 | `deviceSize`         | `device-size`          |             | `string`  | `'1024'`    |
 | `events`             | `events`               |             | `string`  | `''`        |
 | `name`               | `name`                 |             | `string`  | `undefined` |
@@ -24,6 +23,7 @@ Component for bar
 
 - [o-demo-fab](../o-demo-fab)
 - [o-demo-devices](../o-demo-devices)
+- [o-demo-editor](../o-demo-editor)
 - [o-demo-snackbar](../o-demo-snackbar)
 - [o-demo-bar-toolbar](../o-demo-bar-toolbar)
 - [o-demo-bar-select](../o-demo-bar-select)
@@ -35,6 +35,7 @@ Component for bar
 graph TD;
   o-demo-bar --> o-demo-fab
   o-demo-bar --> o-demo-devices
+  o-demo-bar --> o-demo-editor
   o-demo-bar --> o-demo-snackbar
   o-demo-bar --> o-demo-bar-toolbar
   o-demo-bar --> o-demo-bar-select

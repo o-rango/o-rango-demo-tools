@@ -1,4 +1,25 @@
 :host {
+
+
+  .code-wrapper {
+    margin: 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    width: 100%;
+  }
+  
   #iframe-wrap {
     flex: 1;
     display: flex;
@@ -24,7 +45,7 @@
   }
 
   #iframeContainer {
-    margin: auto;
+    margin: 0;
     position: relative;
     display: flex;
     align-items: center;

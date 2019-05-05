@@ -6,7 +6,9 @@ import {
   ComponentInterface,
   State
 } from '@stencil/core';
-import { CssClassMap } from '../utils/CssClassMap'
+import { CssClassMap } from '../utils/CssClassMap';
+
+
 const win = window as any;
 const colors = {
   ORANGO: "#fd2b2b",
@@ -46,7 +48,7 @@ export class DemoBarComponent implements ComponentInterface {
   @Prop({ mutable: true }) pattern: boolean = true;
   @Prop({ mutable: true }) device: string = 'desktop';
   @Prop({ mutable: true }) deviceSize: string = '1024';
-  @Prop({ mutable: true }) deviceEmulate: boolean = false;
+  @State() showResizer: boolean = false;
   @State() fullScreen = false;
 
   // LifeCycle Hooks
@@ -83,23 +85,10 @@ export class DemoBarComponent implements ComponentInterface {
 
   stencilDevServer() {
 
-    /*
-        var fav : any;
-    if(!doc.querySelector("link[rel='shortcut icon']")) {
-      var linkElm: any = doc.createElement('link');
-      linkElm.rel = 'shortcut icon';
-      linkElm.href = FAVICONS.WORKING;
-      doc.head.appendChild(linkElm);
-    }else{
-      fav = doc.querySelector("link[rel='shortcut icon']");
-    }
-
-    */
-
     if ("WebSocket" in win && win['s-dev-server']) {
       const ws = new WebSocket(`ws://localhost:${win.location.port}/`);
-    
-    
+
+
       ws.onopen = () => {
         log(colors.ORANGO, 'Server', 'Connected Stencil HMR');
         this._setIframe();
@@ -109,10 +98,10 @@ export class DemoBarComponent implements ComponentInterface {
         var msg = JSON.parse(message.data);
         if (msg.buildLog) {
           log(colors.INFO, 'Build Status', ':::::::: Updating ::::::::');
-          msg.buildLog.messages.forEach((msgContent)=>{
+          msg.buildLog.messages.forEach((msgContent) => {
             console.log(msgContent);
-          }); 
-          this.el.forceUpdate();          
+          });
+          this.el.forceUpdate();
           return;
         }
       };
@@ -135,8 +124,9 @@ export class DemoBarComponent implements ComponentInterface {
   toolbarButtonClickedHandler(event: CustomEvent) {
     switch (event.detail) {
       case 'code-editor':
-        this.el.shadowRoot.querySelector('#modal-id').openDialog();
-        document.addEventListener('on-editor-content', () => { console.log(this.codeEditor) })
+        this.device = 'editor';
+        this.deviceSize = '800';
+        this.showResizer = true;
         break;
       case 'launch-window':
         this._launchWindow();
@@ -144,17 +134,17 @@ export class DemoBarComponent implements ComponentInterface {
       case 'mobile':
         this.device = event.detail;
         this.deviceSize = '412';
-        this.deviceEmulate = false;
+        this.showResizer = false;
         break;
       case 'desktop':
         this.device = event.detail;
         this.deviceSize = '1024';
-        this.deviceEmulate = false;
+        this.showResizer = false;
         break;
       case 'other-devices':
         this.device = event.detail;
         this.deviceSize = '458';
-        this.deviceEmulate = true;
+        this.showResizer = true;
         break;
     }
     this._setIframe();
@@ -190,13 +180,14 @@ export class DemoBarComponent implements ComponentInterface {
       this._cleanIframe();
       const iframeContainer = this.el.shadowRoot.querySelector('#iframeContainer');
       //Custom BackGround Color
-      if(this.backgroundColor){ iframeContainer.style.backgroundColor = this.backgroundColor};
+      if (this.backgroundColor) { iframeContainer.style.backgroundColor = this.backgroundColor };
 
       const iframe = document.createElement('iframe');
       const frameH = Math.max(document.documentElement.clientHeight);
       const frameW = this.fullScreen ? '100%' : `${this.deviceSize.toString()}px`;;
       const style = this.fullScreen ? `body{margin:0;` : `body{margin:0;}`;
       const htmlContent = code ? code : this.demoCases[this.caseOptionSelected].querySelector('template').innerHTML;
+      this.codeEditor = htmlContent;
       // TODO use different way to set content to improve perf
       const html = code ? code : `<html><head></head><style>${style}</style><body unresolved ontouchstart id="frameBody">${htmlContent}</body></html>`;
       iframe.height = `${frameH.toString()}px`;
@@ -206,7 +197,6 @@ export class DemoBarComponent implements ComponentInterface {
       iframe.contentWindow.document.open();
       iframe.contentWindow.document.write(html);
       iframe.contentWindow.document.close();
-      this.codeEditor = html;
     });
   }
 
@@ -223,9 +213,28 @@ export class DemoBarComponent implements ComponentInterface {
     return [<o-demo-fab close />, <div id="iframeContainer" />]
   }
 
+  codeEditorView() {
+    return [
+    <div class='code-wrapper'>
+      <div class='row'>
+        <div class='column'>
+          <div id="iframeContainer" />
+        </div>
+        <div class='column'>
+          <o-demo-editor code={this.codeEditor}></o-demo-editor>
+        </div>
+      </div>
+    </div>]
+  }
+
+  viewComposer(){
+      return this.device === 'editor' ? this.codeEditorView() 
+                                      : this.mobileView();
+  }
+
   mainView() {
-    const bgClasses: CssClassMap = { pattern: this.pattern && !this.deviceEmulate }
-    const deviceClasses: CssClassMap = { hide: this.deviceEmulate }
+    const bgClasses: CssClassMap = { pattern: this.pattern && !this.showResizer }
+    const deviceClasses: CssClassMap = { hide: this.showResizer }
     return (<div id="demo-bar">
       {this.events.length !== 0 ? <o-demo-snackbar events={this.events} /> : null}
       <o-demo-bar-toolbar name={this.name}>
@@ -234,7 +243,9 @@ export class DemoBarComponent implements ComponentInterface {
         <o-demo-resizer class={deviceClasses} size={this.deviceSize} viewport={this.device} slot="base" />
       </o-demo-bar-toolbar>
       <div id="frame-wrap" class={bgClasses}>
-        {this.deviceEmulate ? this.mobileView() : this.defaultView()}
+        { 
+        }
+        {this.showResizer ? this.viewComposer() : this.defaultView()}
       </div>
     </div>)
   }
