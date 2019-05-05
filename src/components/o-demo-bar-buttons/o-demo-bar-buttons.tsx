@@ -16,6 +16,22 @@ export class DemoButtonsComponent implements ComponentInterface {
     return (
       <div class="toolbar-icons">
         <button
+          title="Code Editor" 
+          data-btn="code-editor"
+          onClick={(event: UIEvent) => this.handleClick(event)}
+          class="toolbar-button"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+          </svg>
+        </button>
+        <button
+          title="Devices view" 
           data-btn="other-devices"
           onClick={(event: UIEvent) => this.handleClick(event)}
           class="toolbar-button"
@@ -31,6 +47,7 @@ export class DemoButtonsComponent implements ComponentInterface {
           </svg>
         </button>
         <button
+          title="Mobile view" 
           data-btn="mobile"
           onClick={(event: UIEvent) => this.handleClick(event)}
           class="toolbar-button"
@@ -46,6 +63,7 @@ export class DemoButtonsComponent implements ComponentInterface {
           </svg>
         </button>
         <button
+          title="Desktop view" 
           data-btn="desktop"
           onClick={(event: UIEvent) => this.handleClick(event)}
           class="toolbar-button"
@@ -61,17 +79,18 @@ export class DemoButtonsComponent implements ComponentInterface {
           </svg>
         </button>
         <button
+          title="New Tab" 
           data-btn="launch-window"
           onClick={(event: UIEvent) => this.handleClick(event)}
           class="toolbar-button"
         >
-        <svg 
-             width="24" 
-             height="24" 
-             xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24">
-             <path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" /><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+          </svg>
         </button>
       </div>
     );
