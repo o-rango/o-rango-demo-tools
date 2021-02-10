@@ -56,7 +56,7 @@
     "jest": "24.7.1",
     "jest-cli": "24.7.1",
     "makeshift": "1.1.0",
-    "puppeteer": "2.0.0",
+    "puppeteer": "7.0.4",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
     "standard-version": "5.0.2",
